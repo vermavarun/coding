@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/LinkedList/Creation/bin/Debug/net5.0/Creation.dll",
+            "program": "${workspaceFolder}/RoughWork/bin/Debug/net5.0/RoughWork.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/LinkedList/Creation",
+            "cwd": "${workspaceFolder}/RoughWork",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
