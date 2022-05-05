@@ -17,13 +17,13 @@ namespace CreationTraversal
     {
         static void Main(string[] args)
         {
-            Node root = CreateTree(5);
+            Node root = CreateTree();
             // int height = CalculateTreeHeight(root);
             // Console.WriteLine(height);
              PrintLevelOrderTraversal(root);
         }
 
-        public static Node CreateTree(int numOfNodes) {
+        public static Node CreateTree() {
 
             Node root = new Node(0);
             Node firstLeft = new Node(1);
