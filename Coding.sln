@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFS", "Tree\DFS\DFS.csproj"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "graph", "graph", "{54703409-C01F-4E29-BA2E-672D50DC4B0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphArray", "graph\GraphArray\GraphArray.csproj", "{0EE34C82-CEC5-48EA-BB15-8ECEC44BC8FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphArray", "Graph\GraphArray\GraphArray.csproj", "{0EE34C82-CEC5-48EA-BB15-8ECEC44BC8FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
