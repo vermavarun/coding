@@ -35,7 +35,7 @@ namespace GraphArray
 				Console.Write("Adjacency Matrix of vertex " + row.ToString() + " :");
 				for (var col = 0; col < this.size; col++)
 				{
-					if (this.node[row, col] == 1)
+					if (this.node[row, col] == 1) // if edge exist 
 					{
 						Console.Write(" " + col.ToString());
 					}
