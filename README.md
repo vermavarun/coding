@@ -1,5 +1,6 @@
 # Coding
-Coding problems including implementation of Data Structures 
+Coding problems including implementation of Data Structures.
+Aim is to have one stop shop for all coding problems 
 
 
 
