@@ -68,6 +68,7 @@ namespace GraphArray
 		g.addEdge(4, 2);
 		g.addEdge(4, 5);
 		g.addEdge(5, 2);
+		g.addEdge(1, 5);
 		// Display node and edge status
 		g.adjacencyNode();
         }
