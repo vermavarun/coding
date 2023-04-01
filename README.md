@@ -10,3 +10,4 @@ Aim is to have one stop shop for all coding problems
 - Linked List
 - Tree
 - Graph
+- Priority Queue
