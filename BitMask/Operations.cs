@@ -3,6 +3,15 @@
 DisplayOneByOne();
 DisplayZeroByZero();
 ToggleBit();
+AllOnesUptoPosition();
+
+static void AllOnesUptoPosition() {
+    int num = 128;
+    DecimalToBinary(num);
+    num = (1 << 4) - 1 ; // num will be updated to num of pos (3 in this case) in binary = 000111, so 4 will be 001111
+    DecimalToBinary(num);
+    Console.WriteLine(num);
+}
 
 static void ToggleBit() {
     int num = 55;
