@@ -6,47 +6,83 @@
 // "dvdf"
 // "xxzqi"
 
-public class Solution
-{
-    public int LengthOfLongestSubstring(string s)
-    {
-        if (s.Length == 0) {
+
+// Solution only one loop
+public class Solution {
+    public int LengthOfLongestSubstring(string s) {
+        
+        if(s.Length==0)
             return 0;
+        int currentMax = 0;
+        int max = 0;
+        int startSlidingWindow = 0;
+        int endSlidingWindow = 0;
+        int charIndex = 0;
+        Dictionary<char,int> uniqueCharacters = new Dictionary<char,int>();
+        while(endSlidingWindow >= startSlidingWindow && charIndex < s.Length) {
+            if(!uniqueCharacters.ContainsKey(s[charIndex])) {
+                uniqueCharacters.TryAdd(s[charIndex],1);
+                endSlidingWindow++;
+                currentMax++;
+            }
+            else {
+                startSlidingWindow++;
+                endSlidingWindow = startSlidingWindow;
+                uniqueCharacters.Clear();
+                if(max < currentMax) {
+                    max = currentMax;
+                }
+                currentMax = 0;
+                charIndex = startSlidingWindow -1;
+            }
+            charIndex++;
         }
         
-         if (s.Length == 1) {
-            return 1;
-        }
-        
-        int startWindow = 0;
-        int endWindow = 0;
-        int max = 0 ;
-        Dictionary<char,int> map = new Dictionary<char,int>();
-
-        while(endWindow < s.Length) {
-            
-            if(!map.ContainsKey(s[endWindow])) {
-                map.Add(s[endWindow],1);                            
-            }
-            else{
-                int valueKey = map[s[endWindow]];
-                map[s[endWindow]] = valueKey + 1;
-            }
-            
-            while(map.ContainsKey(s[endWindow]) && map[s[endWindow]] > 1 ) {
-
-                int valueKey = map[s[startWindow]];
-                map[s[startWindow]] = valueKey - 1;
-
-                startWindow++;
-            }            
-                
-             max = Math.Max(max,endWindow - startWindow + 1);
-             endWindow++;     
-        }
-        return max;
-    }               
+        return max > currentMax ? max : currentMax; // special case to handle " "
+    }
 }
+
+// public class Solution
+// {
+//     public int LengthOfLongestSubstring(string s)
+//     {
+//         if (s.Length == 0) {
+//             return 0;
+//         }
+        
+//          if (s.Length == 1) {
+//             return 1;
+//         }
+        
+//         int startWindow = 0;
+//         int endWindow = 0;
+//         int max = 0 ;
+//         Dictionary<char,int> map = new Dictionary<char,int>();
+
+//         while(endWindow < s.Length) {
+            
+//             if(!map.ContainsKey(s[endWindow])) {
+//                 map.Add(s[endWindow],1);                            
+//             }
+//             else{
+//                 int valueKey = map[s[endWindow]];
+//                 map[s[endWindow]] = valueKey + 1;
+//             }
+            
+//             while(map.ContainsKey(s[endWindow]) && map[s[endWindow]] > 1 ) {
+
+//                 int valueKey = map[s[startWindow]];
+//                 map[s[startWindow]] = valueKey - 1;
+
+//                 startWindow++;
+//             }            
+                
+//              max = Math.Max(max,endWindow - startWindow + 1);
+//              endWindow++;     
+//         }
+//         return max;
+//     }               
+// }
 
 
 // Better Space InterviewBit Solution.
