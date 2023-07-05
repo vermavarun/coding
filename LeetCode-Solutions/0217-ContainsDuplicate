@@ -18,3 +18,22 @@ public class Solution {
         return false;
     }
 }
+
+
+// Another Solution
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+       
+        int index = 0;
+        Array.Sort(nums);
+        while(index < nums.Length - 1) {
+            if(nums[index] == nums[index+1])
+                return true;
+            index++;
+        }
+
+        return false;
+
+
+    }
+}
