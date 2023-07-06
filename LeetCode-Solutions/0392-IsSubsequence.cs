@@ -1,25 +1,19 @@
-public class Solution {
-    public bool IsSubsequence(string s, string t) {
-        if (s=="") return true;
-        if (t=="") return false;
-
+public class Solution
+{
+    public bool IsSubsequence(string s, string t)
+    {
         int indexS = 0;
         int indexT = 0;
-        int match = 0;
+        while (indexS < s.Length && indexT < t.Length)
+        {
 
-        while(indexS < s.Length && indexT < t.Length) {
-
-            if(s[indexS] == t[indexT]) {
+            if (s[indexS] == t[indexT])
+            {
                 indexS++;
-                indexT++;
-                match++;
             }
-            else{
-                indexT++;
-            }
+            indexT++;
         }
 
-        return s.Length==match?true:false;
-
+        return s.Length == indexS ? true : false;
     }
 }
