@@ -19,7 +19,13 @@ Declaration
 Bitwise
 
     XOR
-    
+
     a ^ 0 = a
     a ^ a = 0
     a ^ b = 1
+
+HashSet
+
+    HashSet<String> hs = new HashSet<String>();
+    hs.Add();
+    hs.Count();
