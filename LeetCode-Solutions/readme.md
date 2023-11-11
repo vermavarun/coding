@@ -29,3 +29,24 @@ HashSet
     HashSet<String> hs = new HashSet<String>();
     hs.Add();
     hs.Count();
+    hs.Contains();
+
+String
+
+    Split('@')
+    Replace("."."")
+
+Arrays:
+
+    int[] age = new int[5];
+    age[0] = 12;
+
+    or
+
+    int [] numbers = {1, 2, 3, 4, 5};
+
+
+STEPS TO SOLVE:
+
+1) Try BruteForce
+2) Try Sorting
