@@ -9,7 +9,7 @@
 
 //         public Node(int data) {
 //             this._data = data;
-//             this.left = this.right =  null;            
+//             this.left = this.right =  null;
 //         }
 //     }
 
@@ -45,7 +45,7 @@
 //             for (int i = 1; i <= height; i++ ) {
 //                 PrintCurrentLevel(root,i);
 //             }
-            
+
 //         }
 
 //         public static void PrintCurrentLevel (Node root, int level) {
@@ -77,29 +77,63 @@
 // }
 
 
+// using System;
+
+// namespace Graph
+// {
+//     class Graph {
+//         public int[,] node;
+//         public int size;
+
+//         public Graph(int size) {
+//             this.node = new int [size,size];
+//             this.size = size;
+//         }
+
+//         public addEdge (int start, int end) {
+//             this.node[start,end] = 1;
+//         }
+
+//     }
+
+//     class Program {
+//         public static void Main(string[] args) {
+//             Console.WriteLine("Hey!");
+//         }
+//     }
+
+// }
+
 using System;
-
-namespace Graph
+using System.Linq;
+using System.Collections.Generic;
+namespace Practice
 {
-    class Graph {
-        public int[,] node;
-        public int size;
 
-        public Graph(int size) {
-            this.node = new int [size,size];
-            this.size = size;
-        }
-
-        public addEdge (int start, int end) {
-            this.node[start,end] = 1;
-        }
-        
-    }
-
-    class Program {
+    class Practice {
         public static void Main(string[] args) {
-            Console.WriteLine("Hey!");
+            string[] arr = new string[]{"eat","tea","tan","ate","nat","bat"};
+            var output = GroupAnagrams(arr);
+            foreach(var item in output) {
+                Console.WriteLine(string.Join(",", item));
+            }
+        }
+
+        // static List<List<string>> GroupAnagrams(string[] arr) {
+        //     return arr.GroupBy(x => new string(x.OrderBy(c => c).ToArray())).Select(x => x.ToList()).ToList();
+        // }
+        static List<List<string>> GroupAnagrams(string[] arr) {
+            Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+            foreach(var item in arr) {
+                var key = new string(item.OrderBy(c => c).ToArray());
+                if(dict.ContainsKey(key)) {
+                    dict[key].Add(item);
+                }
+                else {
+                    dict.Add(key, new List<string>(){item});
+                }
+            }
+            return dict.Values.ToList();
         }
     }
-    
 }
