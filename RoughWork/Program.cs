@@ -110,30 +110,71 @@ using System.Collections.Generic;
 namespace Practice
 {
 
-    class Practice {
-        public static void Main(string[] args) {
-            string[] arr = new string[]{"eat","tea","tan","ate","nat","bat"};
-            var output = GroupAnagrams(arr);
-            foreach(var item in output) {
-                Console.WriteLine(string.Join(",", item));
-            }
+    class Practice
+    {
+        public static void Main(string[] args)
+        {
+            // GroupAnagrams
+            // string[] arr = new string[]{"eat","tea","tan","ate","nat","bat"};
+            // var output = GroupAnagrams(arr);
+            // foreach(var item in output) {
+            //     Console.WriteLine(string.Join(",", item));
+            // }
+
+            // IsIsomorphic
+            string s = "egg";
+            string t = "add";
+            Console.WriteLine(IsIsomorphic(s, t));
         }
 
         // static List<List<string>> GroupAnagrams(string[] arr) {
         //     return arr.GroupBy(x => new string(x.OrderBy(c => c).ToArray())).Select(x => x.ToList()).ToList();
         // }
-        static List<List<string>> GroupAnagrams(string[] arr) {
-            Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
-            foreach(var item in arr) {
-                var key = new string(item.OrderBy(c => c).ToArray());
-                if(dict.ContainsKey(key)) {
-                    dict[key].Add(item);
+        // static List<List<string>> GroupAnagrams(string[] arr) {
+        //     Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+        //     foreach(var item in arr) {
+        //         var key = new string(item.OrderBy(c => c).ToArray());
+        //         if(dict.ContainsKey(key)) {
+        //             dict[key].Add(item);
+        //         }
+        //         else {
+        //             dict.Add(key, new List<string>(){item});
+        //         }
+        //     }
+        //     return dict.Values.ToList();
+        // }
+        static bool IsIsomorphic(string s, string t)
+        {
+            if (s.Length != t.Length)
+            {
+                return false;
+            }
+
+            Dictionary<char, char> map = new Dictionary<char, char>();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                char sChar = s[i];
+                char tChar = t[i];
+
+                if (map.ContainsKey(sChar))
+                {
+                    if (map[sChar] != tChar)
+                    {
+                        return false;
+                    }
                 }
-                else {
-                    dict.Add(key, new List<string>(){item});
+                else
+                {
+                    if (map.ContainsValue(tChar))
+                    {
+                        return false;
+                    }
+                    map.Add(sChar, tChar);
                 }
             }
-            return dict.Values.ToList();
+
+            return true;
         }
     }
 }
