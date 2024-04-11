@@ -36,6 +36,13 @@
     Split('@')
     Replace("."."")
 
+## Stacks
+
+    Stack myStack = new Stack();
+    myStack.Push("Hello");
+    Peek()
+    Pop()
+
 ## Arrays:
 
     int[] age = new int[5];
@@ -50,6 +57,7 @@
 
 1) Try BruteForce
 2) Try Sorting
+3) Use Stacks if there is increasing or decreasing order.
 
 
 <hr/>
