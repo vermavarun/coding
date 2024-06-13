@@ -9,7 +9,7 @@
 
 
     Stack
-
+    // Use when there is increasing decreasing order
     Stack<char> pstack = new Stack<char>();
 
     pstack.Push(c);
@@ -28,8 +28,10 @@
 
     HashSet<String> hs = new HashSet<String>();
     hs.Add();
+    hs.Remove();
     hs.Count();
     hs.Contains();
+    hs.Single(); // To return the only element
 
 ## String
 
