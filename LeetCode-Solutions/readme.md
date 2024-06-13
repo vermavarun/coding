@@ -32,6 +32,9 @@
     hs.Count();
     hs.Contains();
     hs.Single(); // To return the only element
+    hs1.ExceptWith(hs2); // This method is used to remove all elements in the specified collection from the current HashSet object.
+    hs1.UnionWith(hs2) //  This method is used to modify the current HashSet object to contain all elements that are present in itself, the specified collection, or both.
+    hs1.IntersectWith(hs2) // This method is used to modify the current HashSet object to contain only elements that are present in that object and in the specified collection.
 
 ## String
 
