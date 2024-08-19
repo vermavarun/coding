@@ -1,4 +1,7 @@
-// Approach 1 : Brute Force
+// Approach 1 : Using Stack and Dictionary
+// Time Complexity : O(n)
+// Space Complexity : O(n)
+
 
 public class Solution {
     public int[] NextGreaterElement(int[] nums1, int[] nums2) {
