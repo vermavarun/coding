@@ -1,108 +1,7 @@
-﻿// using System;
-
-//     namespace CreationTraversal
-// {
-//     class Node {
-//         public int _data;
-//         public Node left;
-//         public Node right;
-
-//         public Node(int data) {
-//             this._data = data;
-//             this.left = this.right =  null;
-//         }
-//     }
-
-//     class Program
-//     {
-//         static void Main(string[] args)
-//         {
-//             Node root = CreateTree(5);
-//              int height = CalculateTreeHeight(root);
-//              Console.WriteLine(height);
-//              PrintLevelOrderTraversal(root, height);
-//         }
-
-//         public static Node CreateTree(int numOfNodes) {
-
-//             Node root = new Node(0);
-//             Node firstLeft = new Node(1);
-//             Node firstRight = new Node(2);
-//             Node secondLeft = new Node(3);
-
-//             root.left = firstLeft;
-//             firstLeft.left = secondLeft;
-//             root.right = firstRight;
-
-//             return root;
-//         }
-
-//         public static void PrintLevelOrderTraversal(Node root, int height) {
-//             if(root == null) {
-//                return;
-//             }
-
-//             for (int i = 1; i <= height; i++ ) {
-//                 PrintCurrentLevel(root,i);
-//             }
-
-//         }
-
-//         public static void PrintCurrentLevel (Node root, int level) {
-//             if(root == null) {
-//                 return;
-//             }
-
-//             if (level == 1) {
-//                 Console.Write(root._data + ":");
-//             }
-//             else if (level > 1) {
-//                 PrintCurrentLevel(root.left, level - 1);
-//                 PrintCurrentLevel(root.right, level - 1);
-//             }
-//         }
-
-//         public static int CalculateTreeHeight(Node root) {
-
-//             if(root == null) {
-//                 return 0;
-//             }
-
-//             int lHeight = CalculateTreeHeight(root.left);
-//             int rHeight = CalculateTreeHeight(root.right);
-
-//             return rHeight > lHeight ? rHeight + 1 : lHeight + 1;
-//         }
-//     }
-// }
+﻿
 
 
-// using System;
 
-// namespace Graph
-// {
-//     class Graph {
-//         public int[,] node;
-//         public int size;
-
-//         public Graph(int size) {
-//             this.node = new int [size,size];
-//             this.size = size;
-//         }
-
-//         public addEdge (int start, int end) {
-//             this.node[start,end] = 1;
-//         }
-
-//     }
-
-//     class Program {
-//         public static void Main(string[] args) {
-//             Console.WriteLine("Hey!");
-//         }
-//     }
-
-// }
 
 using System;
 using System.Linq;
@@ -122,27 +21,83 @@ namespace Practice
             // }
 
             // IsIsomorphic
-            string s = "egg";
-            string t = "add";
-            Console.WriteLine(IsIsomorphic(s, t));
+            // string s = "egg";
+            // string t = "add";
+            // Console.WriteLine(IsIsomorphic(s, t));
+
+            // FindPivot
+            // int[] nums = new int[]{1, 7, 3, 6, 5, 6};
+            // Console.WriteLine(FindPivot(nums));
+
+            // FindDisappearedNumbers
+            //int[] nums = new int[]{4,3,2,7,8,2,3,1};
+            // int[] nums = new int[]{1,1};
+            // var output = FindDisappearedNumbers(nums);
+            // foreach(var item in output) {
+            //     Console.WriteLine(item);
+            // }
+
+            // MaxNumberOfBalloons
+            // int result = MaxNumberOfBalloons("loonbalxballpoon");
+            // System.Console.WriteLine(result);
+
+            // WordPattern
+            // bool result = WordPattern("abba", "dog cat cat fish");
+            // bool result = WordPattern("abba","dog cat cat dog");
+            //  bool result = WordPattern("abba","dog dog dog dog");
+            // System.Console.WriteLine(result);
+
+            // IsMonoTonic
+            int[] nums = new int[]{1,2,2,3};
+            bool result = IsMonotonic(nums);
+            System.Console.WriteLine(result);
+
+
         }
 
-        // static List<List<string>> GroupAnagrams(string[] arr) {
-        //     return arr.GroupBy(x => new string(x.OrderBy(c => c).ToArray())).Select(x => x.ToList()).ToList();
-        // }
-        // static List<List<string>> GroupAnagrams(string[] arr) {
-        //     Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
-        //     foreach(var item in arr) {
-        //         var key = new string(item.OrderBy(c => c).ToArray());
-        //         if(dict.ContainsKey(key)) {
-        //             dict[key].Add(item);
-        //         }
-        //         else {
-        //             dict.Add(key, new List<string>(){item});
-        //         }
-        //     }
-        //     return dict.Values.ToList();
-        // }
+        static bool IsMonotonic(int[] nums) {
+
+            return IsIncreasingMonotonic(nums) || IsDecreasingMonotonic(nums);
+
+        }
+
+
+        static bool IsIncreasingMonotonic(int[] nums) {
+            int index = 0;
+            while(index < nums.Length - 1) {
+                if (nums[index] > nums [index + 1])  return false;
+                index++;
+            }
+
+            return true;
+        }
+
+        static bool IsDecreasingMonotonic(int[] nums) {
+            int index = 0;
+            while(index < nums.Length - 1) {
+                if (nums[index] < nums [index + 1])  return false;
+                index++;
+            }
+
+            return true;
+        }
+
+        static List<List<string>> GroupAnagrams(string[] arr) {
+            return arr.GroupBy(x => new string(x.OrderBy(c => c).ToArray())).Select(x => x.ToList()).ToList();
+        }
+        static List<List<string>> GroupAnagrams_1(string[] arr) {
+            Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+            foreach(var item in arr) {
+                var key = new string(item.OrderBy(c => c).ToArray());
+                if(dict.ContainsKey(key)) {
+                    dict[key].Add(item);
+                }
+                else {
+                    dict.Add(key, new List<string>(){item});
+                }
+            }
+            return dict.Values.ToList();
+        }
         static bool IsIsomorphic(string s, string t)
         {
             if (s.Length != t.Length)
@@ -175,6 +130,162 @@ namespace Practice
             }
 
             return true;
+        }
+
+        static int FindPivot(int[] nums) {
+            // {1, 7, 3, 6, 5, 6}
+            // [1,2,3]
+            // [2,1,-1]
+            // [0]
+
+            int currentIndex = 0;
+            int sumLeft = 0;
+            int sumRight = 0;
+            int totalSum = nums.Sum();
+
+            while(currentIndex < nums.Length) {
+                sumRight = totalSum - sumLeft - nums[currentIndex];
+
+                if(sumLeft == sumRight) {
+                    return currentIndex;
+                }
+                sumLeft = sumLeft + nums[currentIndex];
+                currentIndex++;
+            }
+
+            return -1;
+
+        }
+
+        static IList<int> FindDisappearedNumbers(int[] nums) {
+
+
+            // int[] nums = new int[]{4,3,2,7,8,2,3,1};
+
+            int[] check = new int[nums.Length];
+            IList<int> result = new List<int>();
+            int i=0;
+
+            while(i < nums.Length) {
+                check[i] = i+1;
+                i++;
+            }
+
+            i=0;
+            while(i < nums.Length) {
+                check[nums[i] - 1] = -1;
+                i++;
+            }
+
+            i=0;
+            while(i < check.Length) {
+                if (check[i] != -1) {
+                    result.Add(check[i]);
+                }
+                i++;
+            }
+
+            return result;
+        }
+
+        static int MaxNumberOfBalloons(string text) {
+            // text = loonbalxballpoon
+            string balloon = "balloon";
+
+            Dictionary<char,int> text_dict = new Dictionary<char, int>();
+            Dictionary<char,int> balloon_dict = new Dictionary<char, int>();
+            IList<int> count = new List<int>();
+
+            int numOfTextChar = 0;
+            int numOfBalloonsChar = 0;
+
+            foreach(char c in balloon) {
+                if(balloon_dict.ContainsKey(c)) {
+                    balloon_dict[c] = balloon_dict[c] + 1;
+                }
+                else {
+                    balloon_dict.Add(c,1);
+                }
+            }
+
+            foreach(char c in text) {
+                if(text_dict.ContainsKey(c)) {
+                    text_dict[c] = text_dict[c] + 1;
+                }
+                else {
+                    text_dict.Add(c,1);
+                }
+            }
+
+            foreach(var kv in balloon_dict) {
+
+                numOfBalloonsChar = kv.Value;
+
+                if(text_dict.ContainsKey(kv.Key)) {
+                    numOfTextChar = text_dict[kv.Key];
+                    count.Add(numOfTextChar/numOfBalloonsChar);
+                }
+                else {
+                    return 0;
+                }
+
+            }
+
+            return count.Min();
+        }
+
+        static bool WordPattern(string pattern, string s) {
+
+            // Input: pattern = "abba", s = "dog cat cat fish"
+            // Input: pattern = "aaaa", s = "dog cat cat dog"
+            // Input: pattern = "abba", s = "dog cat cat dog"
+            // Input: pattern = "abba", s = "dog dog dog dog"
+
+            Dictionary<string,char> dictWordToPattern = new Dictionary<string, char>();
+            Dictionary<char,string> dictPatternToWord = new Dictionary<char, string>();
+
+            var words = s.Split(' ');
+            var patternChars = pattern.ToCharArray();
+
+            if (words.Length != patternChars.Length) return false;
+
+            int wordsPointer = 0;
+            int patternPointer = 0;
+
+            while(patternPointer < pattern.Length) {
+
+                var currentPattern = pattern[patternPointer];
+                var currentWord = words[wordsPointer];
+
+                if (dictPatternToWord.ContainsKey(currentPattern) && dictPatternToWord[currentPattern] != currentWord) return false;
+
+                if (dictWordToPattern.ContainsKey(currentWord) && dictWordToPattern[currentWord] != currentPattern) return false;
+
+
+                dictPatternToWord[currentPattern] = currentWord;
+                dictWordToPattern[currentWord] = currentPattern;
+
+                // if (!dictPatternToWord.ContainsKey(currentPattern)) {
+
+                //     dictPatternToWord.Add(currentPattern,currentWord);  // a->dog
+                //     dictWordToPattern.Add(currentWord,currentPattern);  // dog->a
+                // }
+                // else {
+
+                //     var wordToMatch = dictPatternToWord[currentPattern];
+                //     if(!wordToMatch.Equals(currentWord)) return false;
+
+                // }
+
+                wordsPointer++;
+                patternPointer++;
+
+            }
+
+            return true;
+
+
+
         }
     }
 }
