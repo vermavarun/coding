@@ -48,11 +48,56 @@ namespace Practice
             // System.Console.WriteLine(result);
 
             // IsMonoTonic
-            int[] nums = new int[]{1,2,2,3};
-            bool result = IsMonotonic(nums);
+            // int[] nums = new int[]{1,2,2,3};
+            // bool result = IsMonotonic(nums);
+            // System.Console.WriteLine(result);
+
+            // MaxProductDifference
+            // int[] nums = new int[]{5,6,2,7,4}; // 34
+            int[] nums = new int[]{4,2,5,9,7,4,8}; // 64
+            int result = MaxProductDifference(nums);
             System.Console.WriteLine(result);
 
+        }
 
+        // max1=5
+        // max2=
+        // min1=
+        // min2=5
+        static int MaxProductDifference(int[] nums) {
+
+            int max1, max2, min1, min2, index,currentNumber;
+            max1 = max2 = int.MinValue;
+            min1 = min2 = int.MaxValue;
+            index = 0;
+
+            while (index < nums.Length) {
+
+                currentNumber = nums[index];
+
+                if (currentNumber > max2) {
+                    max2 = currentNumber;
+                }
+
+                if(currentNumber > max1) {
+                    max2 = max1;
+                    max1 = currentNumber;
+                }
+
+                if(currentNumber < min2) {
+                    min2 = currentNumber;
+                }
+
+                if(currentNumber < min1) {
+                    min2 = min1;
+                    min1 = currentNumber;
+                }
+
+                index++;
+
+            }
+
+            return (max1 * max2) - (min1 * min2);
         }
 
         static bool IsMonotonic(int[] nums) {
@@ -60,8 +105,6 @@ namespace Practice
             return IsIncreasingMonotonic(nums) || IsDecreasingMonotonic(nums);
 
         }
-
-
         static bool IsIncreasingMonotonic(int[] nums) {
             int index = 0;
             while(index < nums.Length - 1) {
@@ -287,5 +330,6 @@ namespace Practice
 
 
         }
+
     }
 }
