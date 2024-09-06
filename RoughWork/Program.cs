@@ -61,10 +61,48 @@ namespace Practice
             // MaxScore
             // string s = "011101"; // 5
             // string s = "1111";  //  3
-            string s = "00" // 1
-            int result = MaxScore(s);
+            // string s = "00" // 1
+            // int result = MaxScore(s);
+            // System.Console.WriteLine(result);
+
+            // IsPathCrossing
+            string path = "NES"; // false
+            //string path = "NESWW"; // true
+            bool result = IsPathCrossing(path);
             System.Console.WriteLine(result);
 
+        }
+
+        static bool IsPathCrossing(string path) {
+            HashSet<(int,int)> set = new HashSet<(int,int)>();
+            int x,y;
+            x = y = 0;
+            set.Add((0,0));
+
+            foreach(char c in path) {
+                switch (c) {
+
+                    case 'N':
+                        y=y+1;
+                        break;
+                    case 'E':
+                        x=x+1;
+                        break;
+                    case 'S':
+                        y=y-1;
+                        break;
+                    case 'W':
+                        x=x-1;
+                        break;
+                }
+
+                if (set.Contains((x,y)))
+                    return true;
+                set.Add((x,y));
+
+            }
+
+            return false;
         }
 
         static int MaxScore(string s) {
