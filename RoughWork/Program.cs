@@ -54,16 +54,52 @@ namespace Practice
 
             // MaxProductDifference
             // int[] nums = new int[]{5,6,2,7,4}; // 34
-            int[] nums = new int[]{4,2,5,9,7,4,8}; // 64
-            int result = MaxProductDifference(nums);
+            // int[] nums = new int[]{4,2,5,9,7,4,8}; // 64
+            // int result = MaxProductDifference(nums);
+            // System.Console.WriteLine(result);
+
+            // MaxScore
+            // string s = "011101"; // 5
+            // string s = "1111";  //  3
+            string s = "00" // 1
+            int result = MaxScore(s);
             System.Console.WriteLine(result);
 
         }
 
-        // max1=5
-        // max2=
-        // min1=
-        // min2=5
+        static int MaxScore(string s) {
+
+            int currentIndex, numOfZerosInLeftPart, numOfOnesInRightPart, score, maxScore;
+            currentIndex = numOfZerosInLeftPart = numOfOnesInRightPart = score = maxScore = 0;
+
+            while(currentIndex < s.Length) {
+
+                if(s[currentIndex] == '1') numOfOnesInRightPart++;
+                currentIndex++;
+
+            }
+
+            currentIndex = 0;
+
+            while(currentIndex < s.Length - 1) {
+
+                if (s[currentIndex] == '0') {
+                    numOfZerosInLeftPart++;
+                }
+                else {
+                    numOfOnesInRightPart--;
+                }
+
+                score = numOfZerosInLeftPart + numOfOnesInRightPart;
+                if (score > maxScore) maxScore = score;
+                currentIndex++;
+
+            }
+
+            return maxScore;
+
+        }
+
         static int MaxProductDifference(int[] nums) {
 
             int max1, max2, min1, min2, index,currentNumber;
@@ -99,7 +135,6 @@ namespace Practice
 
             return (max1 * max2) - (min1 * min2);
         }
-
         static bool IsMonotonic(int[] nums) {
 
             return IsIncreasingMonotonic(nums) || IsDecreasingMonotonic(nums);
@@ -114,7 +149,6 @@ namespace Practice
 
             return true;
         }
-
         static bool IsDecreasingMonotonic(int[] nums) {
             int index = 0;
             while(index < nums.Length - 1) {
@@ -124,7 +158,6 @@ namespace Practice
 
             return true;
         }
-
         static List<List<string>> GroupAnagrams(string[] arr) {
             return arr.GroupBy(x => new string(x.OrderBy(c => c).ToArray())).Select(x => x.ToList()).ToList();
         }
