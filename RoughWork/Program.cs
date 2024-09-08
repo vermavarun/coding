@@ -66,13 +66,82 @@ namespace Practice
             // System.Console.WriteLine(result);
 
             // IsPathCrossing
-            string path = "NES"; // false
-            //string path = "NESWW"; // true
-            bool result = IsPathCrossing(path);
+            // string path = "NES"; // false
+            // string path = "NESWW"; // true
+            // bool result = IsPathCrossing(path);
+            //System.Console.WriteLine(result);
+
+            // MinOperations
+            // string s = "0100"; // 1
+            // string s = "10" ;  // 0
+            // string s = "1111" ;// 2
+            // string s = "10010100" ;//3
+            // int result = MinOperations(s);
+            // System.Console.WriteLine(result);
+
+            // MakeEqual
+            // string[] words = ["abc","aabc","bc"];
+            string[] words = ["ab","a"];
+            bool result = MakeEqual(words);
             System.Console.WriteLine(result);
 
         }
 
+        static bool MakeEqual(string[] words) {
+
+            Dictionary<char,int> dict = new Dictionary<char, int>();
+
+            foreach (string word in words) {
+
+                foreach(char ch in word) {
+
+                    if (dict.ContainsKey(ch)) {
+                        dict[ch] = dict[ch] + 1;
+                    }
+                    else {
+                        dict.Add(ch,1);
+                    }
+                }
+            }
+
+            foreach(var kv in dict) {
+                if (kv.Value % words.Length  !=  0)
+                    return false;
+            }
+
+            return true;
+
+        }
+
+        static int MinOperations(string s) {
+
+            char nextExpectedChar = '1';
+            char currentChar = '\0';
+            int index = 1;
+            int result = 0;
+
+            if (s[0] != '0') {
+                nextExpectedChar = '0';
+            }
+
+            while(index < s.Length) {
+
+                currentChar = s[index];
+
+                if(currentChar != nextExpectedChar) {
+                    result++;
+                    currentChar = nextExpectedChar;
+                }
+
+                nextExpectedChar = currentChar == '0' ? '1' : '0';
+                index++;
+            }
+
+            // As alternative string can start from 0 or 1, we will take minimum of two strings
+            // if result is for 0. s.Length - result will be for 1.
+            return Math.Min(s.Length - result ,result);
+
+        }
         static bool IsPathCrossing(string path) {
             HashSet<(int,int)> set = new HashSet<(int,int)>();
             int x,y;
