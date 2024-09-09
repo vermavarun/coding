@@ -80,11 +80,38 @@ namespace Practice
             // System.Console.WriteLine(result);
 
             // MakeEqual
-            // string[] words = ["abc","aabc","bc"];
-            string[] words = ["ab","a"];
-            bool result = MakeEqual(words);
+            // string[] words = ["abc","aabc","bc"]; // true
+            // string[] words = ["ab","a"]; // false
+            // bool result = MakeEqual(words);
+            // System.Console.WriteLine(result);
+
+            // MaxLengthBetweenEqualCharacters
+            // string s = "aa";     // 0
+            // string s = "abca";   // 2
+             string s = "cbzxy";  // -1
+            int result = MaxLengthBetweenEqualCharacters(s);
             System.Console.WriteLine(result);
 
+        }
+
+        static int MaxLengthBetweenEqualCharacters(string s) {
+            Dictionary<char,int> dict = new Dictionary<char, int>();
+
+            int index, result;
+            index = 0;
+            result = -1;
+
+            while(index < s.Length) {
+
+                if(!dict.ContainsKey(s[index])) {
+                    dict[s[index]] = index;
+                }
+                else {
+                    result = Math.Max(index - dict[s[index]] - 1,result);
+                }
+                index++;
+            }
+            return result;
         }
 
         static bool MakeEqual(string[] words) {
@@ -112,7 +139,6 @@ namespace Practice
             return true;
 
         }
-
         static int MinOperations(string s) {
 
             char nextExpectedChar = '1';
@@ -173,7 +199,6 @@ namespace Practice
 
             return false;
         }
-
         static int MaxScore(string s) {
 
             int currentIndex, numOfZerosInLeftPart, numOfOnesInRightPart, score, maxScore;
@@ -206,7 +231,6 @@ namespace Practice
             return maxScore;
 
         }
-
         static int MaxProductDifference(int[] nums) {
 
             int max1, max2, min1, min2, index,currentNumber;
@@ -314,7 +338,6 @@ namespace Practice
 
             return true;
         }
-
         static int FindPivot(int[] nums) {
             // {1, 7, 3, 6, 5, 6}
             // [1,2,3]
@@ -339,7 +362,6 @@ namespace Practice
             return -1;
 
         }
-
         static IList<int> FindDisappearedNumbers(int[] nums) {
 
 
@@ -370,7 +392,6 @@ namespace Practice
 
             return result;
         }
-
         static int MaxNumberOfBalloons(string text) {
             // text = loonbalxballpoon
             string balloon = "balloon";
@@ -416,7 +437,6 @@ namespace Practice
 
             return count.Min();
         }
-
         static bool WordPattern(string pattern, string s) {
 
             // Input: pattern = "abba", s = "dog cat cat fish"
