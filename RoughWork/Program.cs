@@ -88,10 +88,33 @@ namespace Practice
             // MaxLengthBetweenEqualCharacters
             // string s = "aa";     // 0
             // string s = "abca";   // 2
-             string s = "cbzxy";  // -1
-            int result = MaxLengthBetweenEqualCharacters(s);
+            //  string s = "cbzxy";  // -1
+            // int result = MaxLengthBetweenEqualCharacters(s);
+            // System.Console.WriteLine(result);
+
+            // SpecialArray
+            int[] nums = new int[]{3,5}; // 2
+            // int[] nums = new int[]{0,0}; // -1
+            // int[] nums = new int[]{0,4,3,0,4}; // 3
+            int result = SpecialArray(nums);
             System.Console.WriteLine(result);
 
+        }
+
+        static int SpecialArray(int[] nums) {
+
+            int index = 0;
+            int[] count = new int[nums.Length];
+
+            while(index < nums.Length) {
+
+                count[nums[index]] = count[nums[index]] + 1;
+                index++;
+                Console.WriteLine(count);
+            }
+
+            Console.WriteLine(count);
+            return -1;
         }
 
         static int MaxLengthBetweenEqualCharacters(string s) {
