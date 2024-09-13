@@ -26,6 +26,19 @@
     a ^ a = 0
     a ^ b = 1
 
+## PriorityQueue
+
+    // Less value more priority.
+    PriorityQueue<int,int> priorityQueue = new PriorityQueue<int,int>(); // where <int,int> means <element,priority>
+
+    // More value more priority.
+    PriorityQueue<int,int> pq = new PriorityQueue<int,int>(Comparer<int>.Create((x, y) => y - x));
+
+
+
+
+
+
 ## HashSet
 
     HashSet<String> hs = new HashSet<String>();
