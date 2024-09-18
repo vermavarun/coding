@@ -77,7 +77,12 @@
 
 1) Try BruteForce
 2) Try Sorting
-3) Use Stacks if there is increasing or decreasing order.
+3) Use Stacks
+   1) if there is increasing or decreasing order.
+4) Use Dictionary
+   1) if you want to count.
+5) Use HashSet
+   1) if you want to check if already present.
 
 
 <hr/>
@@ -89,3 +94,16 @@
 Used to Calculate the majority element among the given elements that have more than N/ 2 occurrences.
 
 <hr/>
+
+### KMP Algorithm:
+
+TBU
+
+<hr/>
+
+# Sorting
+- Merge Sort
+- Quick Sort
+- Bubble Sort
+- Bucket Sort
+- Insertion Sort
