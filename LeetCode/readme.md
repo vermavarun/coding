@@ -102,8 +102,11 @@ TBU
 <hr/>
 
 # Sorting
+
 - Merge Sort
+- Selection Sort
 - Quick Sort
 - Bubble Sort
 - Bucket Sort
 - Insertion Sort
+- Radix Sort
