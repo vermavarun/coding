@@ -3,7 +3,7 @@ Approach 1:
 Use Sorting and then find first missing number
 
 Approach 2:
-Use HashSet to insert the numbers and then in second iteration check which numberis missing
+Use HashSet to insert the numbers and then in second iteration check which number is missing
 
 Approach 3:
 Use the array itself to store which number is present
@@ -13,7 +13,7 @@ Use the array itself to store which number is present
             num = -1*num
         if eq 0
             num = -1* Len(A+1)
-    3) return first value greater than zero 
+    3) return first value greater than zero
 
 
 */
