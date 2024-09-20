@@ -56,6 +56,9 @@
     Split('@')
     Replace("."."")
 
+    Char to int
+    (int)ch - '0'
+
 ## Stacks
 
     Stack myStack = new Stack();
