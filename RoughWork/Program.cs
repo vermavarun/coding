@@ -111,19 +111,64 @@ namespace Practice
             // ,['.','.','.',   '4','1','9',   '.','.','5']
             // ,['.','.','.',   '.','8','.',   '.','7','9']];
 
-            char[][] board=
-            [['.','.','.',      '.','5','.',        '.','1','.'],
-            ['.','4','.'        ,'3','.','.',       '.','.','.'],
-            ['.','.','.'        ,'.','.','3',       '.','.','1'],
+            // char[][] board=
+            // [['.','.','.',      '.','5','.',        '.','1','.'],
+            // ['.','4','.'        ,'3','.','.',       '.','.','.'],
+            // ['.','.','.'        ,'.','.','3',       '.','.','1'],
 
-            ['8','.','.',       '.','.','.',        '.','2','.'],
-            ['.','.','2',       '.','7','.',        '.','.','.'],
-            ['.','1','5',       '.','.','.',        '.','.','.'],
+            // ['8','.','.',       '.','.','.',        '.','2','.'],
+            // ['.','.','2',       '.','7','.',        '.','.','.'],
+            // ['.','1','5',       '.','.','.',        '.','.','.'],
 
-            ['.','.','.',       '.','.','2',        '.','.','.'],
-            ['.','2','.',       '9','.','.',        '.','.','.'],
-            ['.','.','4',       '.','.','.',        '.','.','.']];
-            IsValidSudoku(board);
+            // ['.','.','.',       '.','.','2',        '.','.','.'],
+            // ['.','2','.',       '9','.','.',        '.','.','.'],
+            // ['.','.','4',       '.','.','.',        '.','.','.']];
+            // IsValidSudoku(board);
+
+            int result = CountCharacters(new string[] { "cat", "bt", "hat", "tree" }, "atach");
+            System.Console.WriteLine(result);
+
+        }
+
+        static int CountCharacters(string[] words, string chars) {
+            Dictionary<char,int> dict = new Dictionary<char,int>();
+            Dictionary<char,int> temp = new Dictionary<char,int>();
+            int result = 0;
+            foreach(char ch in chars) {
+                if(!dict.ContainsKey(ch)) {
+                    dict[ch] = 1;
+                }
+                else {
+                    dict[ch] = dict[ch] + 1;
+                }
+            }
+
+            foreach(string word in words) {
+
+                foreach(char ch in word) {
+                if(!temp.ContainsKey(ch)) {
+                        temp[ch] = 1;
+                    }
+                    else {
+                        temp[ch] = temp[ch] + 1;
+                    }
+                }
+
+                int index = 0;
+                foreach(var kv in temp) {
+                    if (dict.ContainsKey(kv.Key) && dict[kv.Key] >= temp[kv.Key])  {
+                        index++;
+                        continue;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                if (index == temp.Count())
+                    result = result + temp.Count();
+                temp.Clear();
+            }
+            return result;
 
         }
 

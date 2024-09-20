@@ -89,9 +89,14 @@
 
 # Algorithms
 
-### Boyer-Moore Voting Algorithm:
-
+### Boyer-Moore Voting:
 Used to Calculate the majority element among the given elements that have more than N/ 2 occurrences.
+
+### KMP
+TBU
+
+### Rabin Karp
+TBU
 
 <hr/>
 
