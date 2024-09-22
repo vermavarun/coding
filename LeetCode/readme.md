@@ -56,8 +56,9 @@
     Split('@')
     Replace("."."")
 
-    Char to int
+    Char to Int
     (int)ch - '0'
+
 
 ## Stacks
 

@@ -125,10 +125,30 @@ namespace Practice
             // ['.','.','4',       '.','.','.',        '.','.','.']];
             // IsValidSudoku(board);
 
-            int result = CountCharacters(new string[] { "cat", "bt", "hat", "tree" }, "atach");
+            // int result = CountCharacters(new string[] { "cat", "bt", "hat", "tree" }, "atach");
+            // System.Console.WriteLine(result);
+
+            //string result = LargestOddNumber("52");
+            string result = LargestOddNumber("4206");
             System.Console.WriteLine(result);
 
         }
+
+        static string LargestOddNumber(string num) {
+
+            int index = num.Length - 1;
+            int removals = 0;
+            while (index >= 0) {
+                if((num[index] - '0') % 2 == 0 || (num[index] - '0' == 0)) {
+                    removals++;
+                    index--;
+                }
+                else {
+                    break;
+                }
+            }
+            return num.Substring(0,num.Length - removals);
+       }
 
         static int CountCharacters(string[] words, string chars) {
             Dictionary<char,int> dict = new Dictionary<char,int>();
