@@ -79,6 +79,7 @@
 
 ## STEPS TO SOLVE:
 
+0) Write Pseudo Code first
 1) Try BruteForce
 2) Try Sorting
 3) Use Stacks
