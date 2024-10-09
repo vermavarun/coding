@@ -128,59 +128,118 @@ namespace Practice
             // int result = CountCharacters(new string[] { "cat", "bt", "hat", "tree" }, "atach");
             // System.Console.WriteLine(result);
 
-            //string result = LargestOddNumber("52");
-            string result = LargestOddNumber("4206");
-            System.Console.WriteLine(result);
+            // string result = LargestOddNumber("52");
+            // string result = LargestOddNumber("4206");
+            // System.Console.WriteLine(result);
+
+            // int[] nums = new int[] { -1, 0, 1, 2, -1, -4 }; // {-4,-1,-1,0,1,2}       [[-1,-1,2],[-1,0,1]]
+            // int[] nums = new int[] { 0, 0, 0, 0 }; // {0,0,0,0}       [[0,0,0]]
+            // int[] nums = new int[] {-2,0,1,1,2}; // {[-2,0,1,1,2]}       [[-2,0,2],[-2,1,1]]
+            // int[] nums = new int[] {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0}     // {[-5,-4,-4,-4,-2,-2,-2,0,0,0,1,1,3,4,4]}       [[-5,1,4],[-4,0,4],[-4,1,3],[-2,-2,4],[-2,1,1],[0,0,0]]
+            var result = ThreeSum(nums);
+            foreach (var item in result)
+            {
+                System.Console.WriteLine(string.Join(",", item));
+            }
 
         }
 
-        static string LargestOddNumber(string num) {
+        static IList<IList<int>> ThreeSum(int[] nums)
+        {
+
+            IList<IList<int>> result = new List<IList<int>>();                                              // List to store the result
+            int  left, right;                                                                               // Pointers to find the other two elements
+            Array.Sort(nums);                                                                               // Sort the array
+
+            for(int i=0; i< nums.Length; i++) {                                                             // Iterate through the array
+                if(i > 0 && nums[i] == nums[i-1])                                                           // Skip the duplicate elements. num1
+                    continue;
+                left = i+1;                                                                                 // Initialize the left pointer
+                right = nums.Length - 1;                                                                    // Initialize the right pointer
+
+                while(left< right) {                                                                        // Iterate through the array
+                    if( (nums[i] + nums[left] + nums[right]) > 0) {                                         // If the sum of the three elements is greater than 0, decrement the right pointer
+                        right--;
+                    }
+                    else if( (nums[i] + nums[left] + nums[right]) < 0) {                                    // If the sum of the three elements is less than 0, increment the left pointer
+                        left++;
+                    }
+                    else {                                                                                  // If the sum of the three elements is equal to 0, add the elements to the result
+                        result.Add(new List<int>{nums[i],nums[left],nums[right]});
+                        left++;                                                                             // Increment the left pointer
+
+                        while(nums[left] == nums[left-1] && left < right) {                                 // Skip the duplicate elements. left num. No need to skip right num as it will be decremented next iteration
+                            left++;
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        static string LargestOddNumber(string num)
+        {
 
             int index = num.Length - 1;
             int removals = 0;
-            while (index >= 0) {
-                if((num[index] - '0') % 2 == 0 || (num[index] - '0' == 0)) {
+            while (index >= 0)
+            {
+                if ((num[index] - '0') % 2 == 0 || (num[index] - '0' == 0))
+                {
                     removals++;
                     index--;
                 }
-                else {
+                else
+                {
                     break;
                 }
             }
-            return num.Substring(0,num.Length - removals);
-       }
+            return num.Substring(0, num.Length - removals);
+        }
 
-        static int CountCharacters(string[] words, string chars) {
-            Dictionary<char,int> dict = new Dictionary<char,int>();
-            Dictionary<char,int> temp = new Dictionary<char,int>();
+        static int CountCharacters(string[] words, string chars)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+            Dictionary<char, int> temp = new Dictionary<char, int>();
             int result = 0;
-            foreach(char ch in chars) {
-                if(!dict.ContainsKey(ch)) {
+            foreach (char ch in chars)
+            {
+                if (!dict.ContainsKey(ch))
+                {
                     dict[ch] = 1;
                 }
-                else {
+                else
+                {
                     dict[ch] = dict[ch] + 1;
                 }
             }
 
-            foreach(string word in words) {
+            foreach (string word in words)
+            {
 
-                foreach(char ch in word) {
-                if(!temp.ContainsKey(ch)) {
+                foreach (char ch in word)
+                {
+                    if (!temp.ContainsKey(ch))
+                    {
                         temp[ch] = 1;
                     }
-                    else {
+                    else
+                    {
                         temp[ch] = temp[ch] + 1;
                     }
                 }
 
                 int index = 0;
-                foreach(var kv in temp) {
-                    if (dict.ContainsKey(kv.Key) && dict[kv.Key] >= temp[kv.Key])  {
+                foreach (var kv in temp)
+                {
+                    if (dict.ContainsKey(kv.Key) && dict[kv.Key] >= temp[kv.Key])
+                    {
                         index++;
                         continue;
                     }
-                    else {
+                    else
+                    {
                         break;
                     }
                 }
