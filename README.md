@@ -11,3 +11,6 @@ Aim is to have one stop shop for all coding problems
 - Tree
 - Graph
 - Priority Queue
+
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish)
