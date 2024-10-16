@@ -3,12 +3,13 @@
 ## Two Pointer
 - condition `while(indexS < s.Length && indexT < t.Length) `
 
+## Sliding Window
+- condition `while(right < s.Length)`
 
 ## Reverse array Iterate
 - condition should be && for short circuit like `while (index >= 0 && s[index] != ' ' )`
 
 ## Declaration
-
 
     Stack
     // Use when there is increasing decreasing order
