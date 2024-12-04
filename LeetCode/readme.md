@@ -35,11 +35,6 @@
     // More value more priority.
     PriorityQueue<int,int> pq = new PriorityQueue<int,int>(Comparer<int>.Create((x, y) => y - x));
 
-
-
-
-
-
 ## HashSet
 
     HashSet<String> hs = new HashSet<String>();
@@ -67,6 +62,7 @@
     myStack.Push("Hello");
     Peek()
     Pop()
+    Count() == 0 // to check if empty
 
 ## Arrays:
 
