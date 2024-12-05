@@ -55,6 +55,10 @@
     Char to Int
     (int)ch - '0'
 
+    Small to Capital
+    char a = 'a';
+    char bigA = (char) (((int)a - '0') + 16);
+
 
 ## Stacks
 
