@@ -35,6 +35,19 @@
     // More value more priority.
     PriorityQueue<int,int> pq = new PriorityQueue<int,int>(Comparer<int>.Create((x, y) => y - x));
 
+    pq.Enqueue(1, 1);
+    pq.Dequeue();
+    pq.Peek();
+
+## Queue
+
+        Queue<int> queue = new Queue<int>();
+        queue.Enqueue(1);
+        queue.Dequeue();
+        queue.Peek();
+        queue.Count;  // To check if empty
+
+
 ## HashSet
 
     HashSet<String> hs = new HashSet<String>();
