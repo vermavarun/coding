@@ -6,6 +6,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+
 namespace Practice
 {
 
@@ -142,6 +143,15 @@ namespace Practice
             //     System.Console.WriteLine(string.Join(",", item));
             // }
 
+            MinStack obj = new MinStack();
+            obj.Push(-2);
+            obj.Push(0);
+            obj.Push(-3);
+            int param_4 = obj.GetMin();
+
+            obj.Pop();
+            obj.Top();
+            int param_5 = obj.GetMin();
         }
 
         static IList<IList<int>> ThreeSum(int[] nums)
