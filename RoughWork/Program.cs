@@ -143,7 +143,7 @@ namespace Practice
             //     System.Console.WriteLine(string.Join(",", item));
             // }
 
-            MinStack obj = new MinStack();
+            MinStackII obj = new MinStackII();
             obj.Push(-2);
             obj.Push(0);
             obj.Push(-3);

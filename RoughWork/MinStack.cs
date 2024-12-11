@@ -13,7 +13,8 @@ public class MinStack {
             min = val;
         } else {
             stack.Push(val - min);
-            if (val < min) min = val;
+            if (val < min)
+                min = val;
         }
     }
 
@@ -22,7 +23,8 @@ public class MinStack {
 
         long pop = stack.Pop();
 
-        if (pop < 0) min -= pop;
+        if (pop < 0)
+            min = min - pop;
     }
 
     public int Top() {
