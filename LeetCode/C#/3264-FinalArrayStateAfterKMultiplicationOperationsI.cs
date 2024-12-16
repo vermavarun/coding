@@ -27,3 +27,6 @@ public class Solution {
         return nums;                                            // Return the final state of the array
     }
 }
+
+// Better Approach: Using Priority Queue
+// TODO
