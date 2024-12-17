@@ -47,6 +47,14 @@
         queue.Peek();
         queue.Count;  // To check if empty
 
+## LinkedList
+
+        Fast and Slow Pointer
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
 
 ## HashSet
 
