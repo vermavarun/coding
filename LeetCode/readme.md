@@ -142,3 +142,9 @@ TBU
 - Bucket Sort
 - Insertion Sort
 - Radix Sort
+
+
+
+Appendix
+- [LeetCode](https://leetcode.com/)
+- [Animated Solutions](https://www.hellointerview.com/learn/code)
