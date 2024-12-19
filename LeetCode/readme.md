@@ -144,7 +144,8 @@ TBU
 - Radix Sort
 
 
+<hr/>
 
-Appendix
+# Appendix
 - [LeetCode](https://leetcode.com/)
 - [Animated Solutions](https://www.hellointerview.com/learn/code)
