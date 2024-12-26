@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/reshape-data-melt/submissions/1488842410/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+# https://leetcode.com/problems/reshape-data-melt/solutions/6189074/simplest-solution-python-please-upvote-b-5xgw/
 import pandas as pd
 '''
 Using the pandas library, create a function that takes a DataFrame of quarterly sales data and reshapes it into a long format.
