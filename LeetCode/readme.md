@@ -98,6 +98,12 @@
 
     int [] numbers = {1, 2, 3, 4, 5};
 
+## Trees:
+   ### Traversal Techniques:
+      1) Inorder - (Left, Root, Right)
+      2) Preorder - (Root, Left, Right)
+      3) Postorder - (Left, Right, Root)
+      4) Level Order - (Level by Level)
 
 ## STEPS TO SOLVE:
 
