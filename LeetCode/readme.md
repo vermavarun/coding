@@ -149,6 +149,89 @@ TBU
 - Insertion Sort
 - Radix Sort
 
+<hr/>
+
+# Techniques
+
+- Sliding Window
+- Two Pointer
+- Fast and Slow Pointer
+- Reverse Iterate
+- Backtracking
+- Divide and Conquer
+- Dynamic Programming
+- Greedy Algorithm
+- Recursion
+- Iterative
+- Binary Search
+- BFS
+- DFS
+- Bit Manipulation
+- Difference Array Technique
+- Prefix Sum Technique
+- Union Find
+- Topological Sort
+- Floyd Warshall
+- Dijkstra
+- Bellman Ford
+- A* Algorithm
+- Prim's Algorithm
+- Kruskal's Algorithm
+- Tarjan's Algorithm
+- Kosaraju's Algorithm
+- Ford Fulkerson Algorithm
+- Edmonds Karp Algorithm
+- Hopcroft Karp Algorithm
+- Dinic's Algorithm
+- Hungarian Algorithm
+- Gale Shapley Algorithm
+- Manacher's Algorithm
+- KMP Algorithm
+- Rabin Karp Algorithm
+- Z Algorithm
+- Suffix Array
+- Suffix Tree
+- Segment Tree
+- Fenwick Tree
+- AVL Tree
+- Red Black Tree
+- B Tree
+- B+ Tree
+- Trie
+- Splay Tree
+- Skip List
+- Bloom Filter
+- Min Heap
+- Max Heap
+- Priority Queue
+- LRU Cache
+- LFU Cache
+- Circular Queue
+- Deque
+- Stack
+- Queue
+- Linked List
+- Doubly Linked List
+- Circular Linked List
+- Array
+- Matrix
+- Graph
+- Directed Graph
+- Undirected Graph
+- Weighted Graph
+- Unweighted Graph
+- Tree
+- Binary Tree
+- Binary Search Tree
+- Balanced Binary Tree
+- Complete Binary Tree
+- Full Binary Tree
+- Perfect Binary Tree
+- N-ary Tree
+- Ternary Tree
+- Trie Tree
+
+
 
 <hr/>
 
