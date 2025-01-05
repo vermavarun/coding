@@ -74,11 +74,21 @@
     Replace("."."")
 
     Char to Int
-    (int)ch - '0'
+    (int)ch - 0
 
     Small to Capital
     char a = 'a';
     char bigA = (char) (((int)a - '0') + 16);
+
+    'a' -> 0
+    'b' -> 1
+    (int)ch - 'a'
+
+    0 -> 'a'
+    1 -> 'b'
+    (char)('a' + 0)
+
+
 
 
 ## Stacks
