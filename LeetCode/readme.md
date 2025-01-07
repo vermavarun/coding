@@ -240,6 +240,7 @@ TBU
 - N-ary Tree
 - Ternary Tree
 - Trie Tree
+- A* Search
 
 
 
