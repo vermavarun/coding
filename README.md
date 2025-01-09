@@ -15,4 +15,4 @@ Aim is to have one stop shop for all coding problems
 - Strings
 
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish)
+![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)

@@ -1,4 +1,5 @@
-![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish)
+![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
+
 
 ## Two Pointer
 - condition `while(indexS < s.Length && indexT < t.Length) `
