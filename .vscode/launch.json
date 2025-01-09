@@ -10,8 +10,8 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            //"program": "${workspaceFolder}/RoughWork/bin/Debug/net8.0/RoughWork.dll",
-            "program": "${workspaceFolder}/Trie/Operations/bin/Debug/net8.0/Operations.dll",
+            "program": "${workspaceFolder}/RoughWork/bin/Debug/net8.0/RoughWork.dll",
+            //"program": "${workspaceFolder}/Trie/Operations/bin/Debug/net8.0/Operations.dll",
             "args": [],
             "cwd": "${workspaceFolder}/RoughWork",
             //"cwd": "${workspaceFolder}/Trie/Operations",

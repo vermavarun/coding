@@ -12,6 +12,12 @@ namespace Practice
 
     class Practice
     {
+        public class Trie {
+            public Trie[] Child = new Trie[26];
+            public bool WordEnd = false;
+            public int Count;
+
+        }
         public static void Main(string[] args)
         {
             // GroupAnagrams
@@ -143,15 +149,54 @@ namespace Practice
             //     System.Console.WriteLine(string.Join(",", item));
             // }
 
-            MinStackII obj = new MinStackII();
-            obj.Push(-2);
-            obj.Push(0);
-            obj.Push(-3);
-            int param_4 = obj.GetMin();
+            // MinStackII obj = new MinStackII();
+            // obj.Push(-2);
+            // obj.Push(0);
+            // obj.Push(-3);
+            // int param_4 = obj.GetMin();
 
-            obj.Pop();
-            obj.Top();
-            int param_5 = obj.GetMin();
+            // obj.Pop();
+            // obj.Top();
+            // int param_5 = obj.GetMin();
+
+            //var result = PrefixCount(new string[] { "dog", "cat", "bat", "rat", "cat" }, "ca");
+            var result = PrefixCount(new string[] { "pay","attention","practice","attend" }, "at");
+            System.Console.WriteLine(result);  // 2
+        }
+
+        public static int PrefixCount(string[] words, string pref) {
+            Trie root = new Trie();
+            int result = 0;
+            foreach(string word in words) {
+                InsertWordInTrie(root, word);
+            }
+            result = SearchPrefix(root, pref);
+            return result;
+        }
+
+        public static void InsertWordInTrie(Trie root, string word) {
+            Trie curr;
+            curr = root;
+            foreach (char ch in word) {
+                if(curr.Child[ch - 'a'] == null) {
+                    curr.Child[ch - 'a'] = new Trie();
+                }
+                curr = curr.Child[ch - 'a'];
+                curr.Count++;
+            }
+            curr.WordEnd = true;
+        }
+
+        public static int SearchPrefix(Trie root, string pref) {
+            Trie curr;
+            curr = root;
+            foreach(char ch in pref) {
+                if(curr.Child[ch - 'a'] == null) {
+                    return 0;
+                }
+                curr = curr.Child[ch - 'a'];
+            }
+            return curr.Count;
         }
 
         static IList<IList<int>> ThreeSum(int[] nums)
