@@ -8,6 +8,7 @@
             "args": [
                 "build",
                 "${workspaceFolder}/RoughWork/RoughWork.csproj",
+                //"${workspaceFolder}/Trie/Operations/Operations.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -20,6 +21,7 @@
             "args": [
                 "publish",
                 "${workspaceFolder}/RoughWork/RoughWork.csproj",
+                //"${workspaceFolder}/Trie/Operations/Operations.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -34,6 +36,7 @@
                 "run",
                 "--project",
                 "${workspaceFolder}/RoughWork/RoughWork.csproj"
+                //"${workspaceFolder}/Trie/Operations/Operations.csproj",
             ],
             "problemMatcher": "$msCompile"
         }
