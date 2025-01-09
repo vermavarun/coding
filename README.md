@@ -1,6 +1,6 @@
 # Coding
 Coding problems including implementation of Data Structures.
-Aim is to have one stop shop for all coding problems 
+Aim is to have one stop shop for all coding problems
 
 
 
@@ -11,6 +11,8 @@ Aim is to have one stop shop for all coding problems
 - Tree
 - Graph
 - Priority Queue
+- Trie
+- Strings
 
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish)
