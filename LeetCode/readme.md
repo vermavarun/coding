@@ -161,6 +161,54 @@ TBU
 
 <hr/>
 
+# Data Structures
+- Array
+- Linked List
+- Stack
+- Queue
+- Deque
+- Priority Queue
+- Heap
+- Hash Table
+- Set
+- Map
+- Trie
+- Graph
+- Tree
+- Binary Tree
+- Binary Search Tree
+- AVL Tree
+- Red Black Tree
+- B Tree
+- B+ Tree
+- Segment Tree
+- Fenwick Tree
+- Suffix Tree
+- Suffix Array
+- Skip List
+- Bloom Filter
+- LRU Cache
+- LFU Cache
+- Union Find
+- Disjoint Set
+- Min Heap
+- Max Heap
+- Circular Queue
+- Doubly Linked List
+- Circular Linked List
+- Difference Array
+- Prefix Sum Array
+- Sparse Table
+- Cartesian Tree
+- Splay Tree
+- Interval Tree
+- KD Tree
+- Quad Tree
+- Octree
+- Fenwick Tree
+
+<hr/>
+
 # Techniques
 
 - Sliding Window
@@ -242,8 +290,6 @@ TBU
 - Trie Tree
 - A* Search
 - Morris Traversal
-
-
 
 <hr/>
 
