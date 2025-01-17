@@ -22,7 +22,7 @@
 
 ## Bitwise
 
-    XOR
+    XOR -> if both same then 0. If different then 1.
 
     a ^ 0 = a
     a ^ a = 0
