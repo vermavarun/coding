@@ -111,7 +111,7 @@
 
     Array.Sort(numbers);
     Array.Reverse(numbers);
-    Arrays.fill(dp,-1); // To fill the array with -1
+    Arrays.Fill(dp,-1); // To fill the array with -1
 
 ## Trees:
    ### Traversal Techniques:
