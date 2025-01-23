@@ -109,6 +109,10 @@
 
     int [] numbers = {1, 2, 3, 4, 5};
 
+    Array.Sort(numbers);
+    Array.Reverse(numbers);
+    Arrays.fill(dp,-1); // To fill the array with -1
+
 ## Trees:
    ### Traversal Techniques:
       1) Inorder - (Left, Root, Right)
