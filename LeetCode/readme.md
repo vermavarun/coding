@@ -109,6 +109,8 @@
 
     int [] numbers = {1, 2, 3, 4, 5};
 
+    int[,] dp = new int[100001,2];
+
     Array.Sort(numbers);
     Array.Reverse(numbers);
     Arrays.Fill(dp,-1); // To fill the array with -1
