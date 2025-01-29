@@ -168,6 +168,7 @@ TBU
 - Bucket Sort
 - Insertion Sort
 - Radix Sort
+- Lazy Sort
 
 <hr/>
 
