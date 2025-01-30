@@ -1,51 +1,36 @@
-// Simple Detailed Solution
-public class Solution
-{
-    public int Search(int[] nums, int target)
-    {
+/*
+Approach: Binary Search
+1) Initialize the left and right pointers
+2) Iterate through the array
+3) Calculate the mid
+4) If the mid element is equal to the target, return the mid
+5) If the mid element is less than the target, increment the left pointer
+6) If the mid element is greater than the target, decrement the right pointer
+7) Return -1
+Time complexity: O(log n)
+Space complexity: O(1)
+*/
+public class Solution {
+    public int Search(int[] nums, int target) {
+        int left = 0;                   // Initialize the left pointer
+        int right = nums.Length - 1;    // Initialize the right pointer
+        int mid = (right+left)/2;       // Calculate the mid
 
-        int left = 0, right = nums.Length - 1, mid = (left + right) / 2;
-        int targetIndex = -1;
+        while(left<=right) {            // Iterate through the array  
+            mid = (right+left)/2;       // Calculate the mid
 
-        while (true)
-        {
-
-            if (target == nums[left])
-            {
-                targetIndex = left;
-                break;
+            if(nums[mid] == target) {   // If the mid element is equal to the target, return the mid
+                return mid;             // Return the mid
             }
 
-            if (target == nums[right])
-            {
-                targetIndex = right;
-                break;
+            if(nums[mid] < target) {    // If the mid element is less than the target, increment the left pointer
+                left = mid + 1;         // Increment the left pointer
             }
-
-            if (target == nums[mid])
-            {
-                targetIndex = mid;
-                break;
+            else {
+                right = mid - 1 ;       // If the mid element is greater than the target, decrement the right pointer
             }
-
-            if (right == left || mid == 0)
-                break;
-
-            if (target > nums[mid])
-            {
-                left = mid + 1;
-            }
-            else if (target < nums[mid])
-            {
-                right = mid - 1;
-            }
-
-            mid = (left + right) / 2;
-
-
         }
 
-        return targetIndex;
-
+        return -1;                      // Return -1 if the target is not found
     }
 }
