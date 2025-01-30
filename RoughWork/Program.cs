@@ -160,8 +160,35 @@ namespace Practice
             // int param_5 = obj.GetMin();
 
             //var result = PrefixCount(new string[] { "dog", "cat", "bat", "rat", "cat" }, "ca");
-            var result = PrefixCount(new string[] { "pay","attention","practice","attend" }, "at");
-            System.Console.WriteLine(result);  // 2
+            // var result = PrefixCount(new string[] { "pay","attention","practice","attend" }, "at");
+            // System.Console.WriteLine(result);  // 2
+
+            // var result = SearchInsert(new int[] { 1,3,5,6 }, 2); // 1
+            // System.Console.WriteLine(result);
+
+        }
+
+        public static int SearchInsert(int[] nums, int target) {
+            int left = 0;
+            int right = nums.Length - 1 ;
+            int mid = (right+left)/2;
+
+            while(left<=right) {
+                mid =(right+left)/2;
+
+                if(nums[mid] == target) {
+                    return mid;
+                }
+
+                if (nums[mid] > target) {
+                    right = mid - 1;
+                }
+                else {
+                    left = mid + 1;
+                }
+            }
+
+            return left;
         }
 
         public static int PrefixCount(string[] words, string pref) {
