@@ -1,6 +1,11 @@
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
 
 
+## Binary Search
+- condition `while(left <= right)`
+- `mid = left + (right - left) / 2`
+  
+
 ## Two Pointer
 - condition `while(indexS < s.Length && indexT < t.Length) `
 
