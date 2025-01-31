@@ -312,3 +312,4 @@ TBU
 # Appendix
 - [LeetCode](https://leetcode.com/)
 - [Animated Solutions](https://www.hellointerview.com/learn/code)
+- [Constraints]<img width="1272" alt="image" src="https://github.com/user-attachments/assets/3acbf39a-0198-4ac8-977d-436ec3552cd4" />
