@@ -4,7 +4,7 @@
 ## Binary Search
 - condition `while(left <= right)`
 - `mid = left + (right - left) / 2`
-  
+
 
 ## Two Pointer
 - condition `while(indexS < s.Length && indexT < t.Length) `
@@ -93,6 +93,8 @@
     0 -> 'a'
     1 -> 'b'
     (char)('a' + 0)
+
+    Char.IsDigit(ch) // To check if digit
 
 
 
