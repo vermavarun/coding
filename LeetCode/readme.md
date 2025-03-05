@@ -36,9 +36,11 @@
 ## PriorityQueue
 
     // Less value more priority.
+    // Min Heap
     PriorityQueue<int,int> priorityQueue = new PriorityQueue<int,int>(); // where <int,int> means <element,priority>
 
     // More value more priority.
+    // Max Heap
     PriorityQueue<int,int> pq = new PriorityQueue<int,int>(Comparer<int>.Create((x, y) => y - x));
 
     pq.Enqueue(1, 1);
