@@ -142,6 +142,8 @@
    1) if you want to count.
 5) Use HashSet
    1) if you want to check if already present.
+6) Trees
+   1) In order traversal of BST gives sorted list.
 
 
 <hr/>
