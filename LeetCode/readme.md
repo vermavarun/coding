@@ -257,6 +257,7 @@ TBU
 - A* Algorithm
 - Prim's Algorithm
 - Kruskal's Algorithm
+- Kahn's Algorithm
 - Tarjan's Algorithm
 - Kosaraju's Algorithm
 - Ford Fulkerson Algorithm
