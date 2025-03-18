@@ -134,7 +134,7 @@
 ## STEPS TO SOLVE:
 
 0) Write Pseudo Code first
-1) Try BruteForce
+1) Try Brute Force
 2) Try Sorting
 3) Use Stacks
    1) if there is increasing or decreasing order.
@@ -184,21 +184,21 @@ TBU
 <hr/>
 
 # Data Structures
-- Array
-- Linked List
-- Stack
-- Queue
+- [x] Array
+- [x] Linked List
+- [x] Stack
+- [x] Queue
 - Deque
-- Priority Queue
-- Heap
-- Hash Table
-- Set
-- Map
-- Trie
+- [x] Priority Queue
+- [x] Heap
+- [x] Hash Table
+- [x] Set
+- [x] Map / Dictionary
+- [x] Trie
 - Graph
-- Tree
-- Binary Tree
-- Binary Search Tree
+- [x] Tree
+- [x] Binary Tree
+- [x] Binary Search Tree
 - AVL Tree
 - Red Black Tree
 - B Tree
@@ -213,13 +213,13 @@ TBU
 - LFU Cache
 - Union Find
 - Disjoint Set
-- Min Heap
-- Max Heap
+- [x] Min Heap
+- [x] Max Heap
 - Circular Queue
 - Doubly Linked List
 - Circular Linked List
 - Difference Array
-- Prefix Sum Array
+- [x] Prefix Sum Array
 - Sparse Table
 - Cartesian Tree
 - Splay Tree
@@ -233,22 +233,22 @@ TBU
 
 # Techniques
 
-- Sliding Window
-- Two Pointer
-- Fast and Slow Pointer
-- Reverse Iterate
+- [x] Sliding Window
+- [x] Two Pointer
+- [x] Fast and Slow Pointer
+- [x] Reverse Iterate
 - Backtracking
 - Divide and Conquer
-- Dynamic Programming
+- [x] Dynamic Programming
 - Greedy Algorithm
-- Recursion
+- [x] Recursion
 - Iterative
 - Binary Search
 - BFS
-- DFS
+- [x] DFS
 - Bit Manipulation
 - Difference Array Technique
-- Prefix Sum Technique
+- [x] Prefix Sum Technique
 - Union Find
 - Topological Sort
 - Floyd Warshall
@@ -282,28 +282,28 @@ TBU
 - Splay Tree
 - Skip List
 - Bloom Filter
-- Min Heap
-- Max Heap
+- [x] Min Heap
+- [x] Max Heap
 - Priority Queue
 - LRU Cache
 - LFU Cache
 - Circular Queue
 - Deque
-- Stack
-- Queue
-- Linked List
+- [x] Stack
+- [x] Queue
+- [x] Linked List
 - Doubly Linked List
 - Circular Linked List
-- Array
-- Matrix
+- [x] Array
+- [x] Matrix
 - Graph
 - Directed Graph
 - Undirected Graph
 - Weighted Graph
 - Unweighted Graph
-- Tree
-- Binary Tree
-- Binary Search Tree
+- [x] Tree
+- [x] Binary Tree
+- [x] Binary Search Tree
 - Balanced Binary Tree
 - Complete Binary Tree
 - Full Binary Tree
