@@ -1,10 +1,10 @@
 name: Build-Coding-Solution
 
-on: 
+on:
   push:
     paths-ignore:
       - '**.md'
-      - 'LeetCode-Solutions/**'
+      - 'LeetCode/**'
 
 jobs:
   Build-Coding-Solution:
