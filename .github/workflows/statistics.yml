@@ -1,0 +1,49 @@
+name: Statistics
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'LeetCode/**'
+
+jobs:
+    Statistics:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+
+        - name: Count number of files and update JSON file
+          working-directory: LeetCode
+          run: |
+                echo "{
+                \"C#\": $(find . -name '*.cs' | wc -l),
+                \"JavaScript\": $(find . -name '*.js' | wc -l),
+                \"Go\": $(find . -name '*.go' | wc -l),
+                \"SQL\": $(find . -name '*.sql' | wc -l),
+                \"Java\": $(find . -name '*.java' | wc -l),
+                \"Python\": $(find . -name '*.py' | wc -l)
+                }" > ../statistics.json
+
+        - name: Replace values in README.md
+          run: |
+                cs=$(jq -r '.["C#"]' statistics.json | sed 's/[&/]/\\&/g')
+                js=$(jq -r '.JavaScript' statistics.json | sed 's/[&/]/\\&/g')
+                go=$(jq -r '.Go' statistics.json | sed 's/[&/]/\\&/g')
+                sql=$(jq -r '.SQL' statistics.json | sed 's/[&/]/\\&/g')
+                java=$(jq -r '.Java' statistics.json | sed 's/[&/]/\\&/g')
+                py=$(jq -r '.Python' statistics.json | sed 's/[&/]/\\&/g')
+
+                sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" README.md
+                sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" README.md
+                sed -i "s|<td id=\"go\">[0-9]*</td>|<td id=\"go\">$go</td>|g" README.md
+                sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" README.md
+                sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" README.md
+                sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" README.md
+
+        - name: Commit and push changes
+          run: |
+                git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git config --global user.name "github-actions[bot]"
+                git add README.md
+                git commit -m "Update README.md with statistics" || echo "No changes to commit"
+                git push

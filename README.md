@@ -15,4 +15,41 @@ Aim is to have one stop shop for all coding problems
 - Strings
 
 
+
+<table id="stats" style="width:100%;border:1px solid red">
+    <caption style="color:lightgreen;font-weight:bold;font-size:24px">LeetCode Statistics</caption>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th>Problems Solved</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>C#</td>
+            <td id="cs">0</td>
+        </tr>
+        <tr>
+            <td>Go</td>
+            <td id="go">0</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td id="java">0</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td id="js">0</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td id="py">0</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td id="sql">0</td>
+        </tr>
+    </tbody>
+</table>
+
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
