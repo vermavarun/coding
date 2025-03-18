@@ -35,7 +35,7 @@ Aim is to have one stop shop for all coding problems
         </tr>
         <tr>
             <td>Java</td>
-            <td id="java">1</td>
+            <td id="java">2</td>
         </tr>
         <tr>
             <td>JavaScript</td>
