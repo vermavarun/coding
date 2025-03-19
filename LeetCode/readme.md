@@ -131,6 +131,14 @@
       3) Postorder - (Left, Right, Root)
       4) Level Order - (Level by Level)
 
+## Graphs:
+   ### Traversal Techniques:
+      1) BFS
+         1) Used for shortest path
+      2) DFS
+         1) For undirected: To detect cycle check if visited node is already visited and is not parent.
+         2) For directed: To detect cycle check if visited node is already visited and is in the stack.
+
 ## STEPS TO SOLVE:
 
 0) Write Pseudo Code first
