@@ -98,8 +98,8 @@
 
     Char.IsDigit(ch) // To check if digit
 
-
-
+    Convert.ToString(n, 2) // To convert int to binary
+    
 
 ## Stacks
 
