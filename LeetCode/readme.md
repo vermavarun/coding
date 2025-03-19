@@ -99,7 +99,7 @@
     Char.IsDigit(ch) // To check if digit
 
     Convert.ToString(n, 2) // To convert int to binary
-    
+    Convert.ToInt32("1101", 2) // To convert binary to int
 
 ## Stacks
 
