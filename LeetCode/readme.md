@@ -137,7 +137,7 @@
          1) Used for shortest path
       2) DFS
          1) For undirected: To detect cycle check if visited node is already visited and is not parent.
-         2) For directed: To detect cycle check if visited node is already visited and is in the stack.
+         2) For directed: To detect cycle check if visited node is already visited and is in the stack (current recursion).
 
 ## STEPS TO SOLVE:
 
