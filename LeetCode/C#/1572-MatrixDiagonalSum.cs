@@ -1,5 +1,5 @@
 /*
-Solution:
+Solution: https://leetcode.com/problems/matrix-diagonal-sum/solutions/6559182/simplest-solution-c-time-on-space1-pleas-twxx/
 Approach: Iteration
 1. Initialize a variable sum to 0.
 2. Iterate through the matrix mat.
