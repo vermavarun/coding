@@ -147,13 +147,13 @@
          1) For undirected: To detect cycle check if visited node is already visited and is not parent.
          2) For directed: To detect cycle check if visited node is already visited and is in the stack (current recursion).
    ### Representation:
-      3) Adjacency List
-      4) Adjacency Matrix
+      1) Adjacency List
+      2) Adjacency Matrix
    ### Sorting:
-      5) Topological Sort: Used for Directed Acyclic Graphs (DAG) only. Multiple answers possible.
-      6) Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
-      7) Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
-      8) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      1) Topological Sort: Used for Directed Acyclic Graphs (DAG) only. Multiple answers possible.
+      2) Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible. It uses BFS.
+      3) Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      4) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
 </details>
 
 ## STEPS TO SOLVE:
