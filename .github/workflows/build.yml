@@ -8,8 +8,10 @@ on:
 
 jobs:
   Build-Coding-Solution:
-
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: DataStructures
     strategy:
       matrix:
         dotnet-version: ['6.0.x' ]
