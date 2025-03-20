@@ -125,32 +125,50 @@
     Arrays.Fill(dp,-1); // To fill the array with -1
 
 ## Trees:
+<details>
+ <summary>Click to expand</summary>
+
    ### Traversal Techniques:
       1) Inorder - (Left, Root, Right)
       2) Preorder - (Root, Left, Right)
       3) Postorder - (Left, Right, Root)
       4) Level Order - (Level by Level)
+</details>
 
 ## Graphs:
+
+<details>
+ <summary>Click to expand</summary>
+
    ### Traversal Techniques:
       1) BFS
          1) Used for shortest path
       2) DFS
          1) For undirected: To detect cycle check if visited node is already visited and is not parent.
          2) For directed: To detect cycle check if visited node is already visited and is in the stack (current recursion).
+   ### Representation:
+      3) Adjacency List
+      4) Adjacency Matrix
+   ### Sorting:
+      5) Topological Sort: Used for Directed Acyclic Graphs (DAG) only. Multiple answers possible.
+      6) Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      7) Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      8) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+</details>
 
 ## STEPS TO SOLVE:
 
-0) Write Pseudo Code first
-1) Try Brute Force
-2) Try Sorting
-3) Use Stacks
+1) Identity the problem. Clear the doubts.
+2) Write Pseudo Code first
+3) Try Brute Force
+4) Try Sorting
+5) Use Stacks
    1) if there is increasing or decreasing order.
-4) Use Dictionary
+6) Use Dictionary
    1) if you want to count.
-5) Use HashSet
+7) Use HashSet
    1) if you want to check if already present.
-6) Trees
+8) Trees
    1) In order traversal of BST gives sorted list.
 
 
