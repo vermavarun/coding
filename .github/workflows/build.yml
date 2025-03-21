@@ -1,10 +1,11 @@
 name: Build-Coding-Solution
 
 on:
-  push:
-    paths-ignore:
-      - '**.md'
-      - 'LeetCode/**'
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
+  #     - 'LeetCode/**'
 
 jobs:
   Build-Coding-Solution:

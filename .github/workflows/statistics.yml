@@ -40,12 +40,12 @@ jobs:
                 sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" README.md
                 sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" README.md
 
-                sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" ./LeetCode/README.md
-                sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" ./LeetCode/README.md
-                sed -i "s|<td id=\"go\">[0-9]*</td>|<td id=\"go\">$go</td>|g" ./LeetCode/README.md
-                sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" ./LeetCode/README.md
-                sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" ./LeetCode/README.md
-                sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"go\">[0-9]*</td>|<td id=\"go\">$go</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" ./LeetCode/readme.md
 
         - name: Commit and push changes
           run: |
