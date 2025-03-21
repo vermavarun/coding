@@ -1,11 +1,13 @@
-<table>
+<table border="0">
     <tr>
         <td>
+
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
+
 </td>
 <td valign="middle">
 <table id="stats">
-    <caption>LeetCode Statistics</caption>
+    <caption><center>LeetCode Statistics</center></caption>
     <thead>
         <tr>
             <th>Language</th>
