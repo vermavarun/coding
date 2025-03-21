@@ -40,17 +40,17 @@ jobs:
                 sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" README.md
                 sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" README.md
 
-                sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" LeetCode/README.md
-                sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" LeetCode/README.md
-                sed -i "s|<td id=\"go\">[0-9]*</td>|<td id=\"go\">$go</td>|g" LeetCode/README.md
-                sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" LeetCode/README.md
-                sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" LeetCode/README.md
-                sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" LeetCode/README.md
+                sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"go\">[0-9]*</td>|<td id=\"go\">$go</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" ./LeetCode/README.md
+                sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" ./LeetCode/README.md
 
         - name: Commit and push changes
           run: |
                 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
                 git config --global user.name "github-actions[bot]"
-                git add README.md LeetCode/README.md
+                git add README.md ./LeetCode/README.md
                 git commit -m "Update README.md with statistics" || echo "No changes to commit"
                 git push
