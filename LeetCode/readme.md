@@ -176,6 +176,9 @@
 
 # Algorithms
 
+### Kahn's Algorithm
+Used to find the topological sort of a Directed Acyclic Graph (DAG). It uses BFS. It is used when there is a single answer possible. It is used when there is a single source.
+
 ### Knacksack
 TBU
 
