@@ -1,7 +1,11 @@
+<table>
+    <tr>
+        <td>
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
-
-<table id="stats" style="width:100%;border:1px solid red">
-    <caption style="color:lightgreen;font-weight:bold;font-size:24px">LeetCode Statistics</caption>
+</td>
+<td valign="middle">
+<table id="stats">
+    <caption>LeetCode Statistics</caption>
     <thead>
         <tr>
             <th>Language</th>
@@ -34,6 +38,9 @@
             <td id="sql">10</td>
         </tr>
     </tbody>
+</table>
+</td>
+</tr>
 </table>
 
 ## Binary Search
