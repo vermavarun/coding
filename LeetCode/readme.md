@@ -2,9 +2,13 @@
 
 
 ## Binary Search
+<details>
+ <summary>Click to expand</summary>
+
 - condition `while(left <= right)`
 - `mid = left + (right - left) / 2`
 
+</details>
 
 ## Two Pointer
 - condition `while(indexS < s.Length && indexT < t.Length) `
@@ -154,6 +158,13 @@
       2) Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible. It uses BFS.
       3) Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
       4) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+   ### Miscellaneous:
+      1) InDegree: Number of incoming edges to a node.
+      2) OutDegree: Number of outgoing edges from a node.
+      3) Strongly Connected Components (SCC) - Kosaraju's Algorithm
+      4) Articulation Points - Tarjan's Algorithm
+      5) Bridges - Tarjan's Algorithm
+
 </details>
 
 ## STEPS TO SOLVE:
@@ -178,6 +189,18 @@
 
 ### Kahn's Algorithm
 Used to find the topological sort of a Directed Acyclic Graph (DAG). It uses BFS. It is used when there is a single answer possible. It is used when there is a single source.
+Pseudo Code:
+```
+1) Calculate the in-degree of each node.
+2) Add all the nodes with in-degree 0 to the queue.
+3) While the queue is not empty:
+    a) Pop the element from the queue.
+    b) Add it to the result.
+    c) For all the adjacent nodes of the popped element, reduce the in-degree by 1.
+    d) If the in-degree becomes 0, add it to the queue.
+4) If the result size is not equal to the number of nodes, then there is a cycle.
+```
+
 
 ### Knacksack
 TBU
