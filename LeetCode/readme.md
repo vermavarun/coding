@@ -317,10 +317,11 @@ TBU
 
 </details>
 
+# Data Structures
+
 <details>
     <summary>Click to expand</summary>
 
-# Data Structures
 - [x] Array
 - [x] Linked List
 - [x] Stack
