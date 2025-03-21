@@ -1,5 +1,40 @@
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
 
+<table id="stats" style="width:100%;border:1px solid red">
+    <caption style="color:lightgreen;font-weight:bold;font-size:24px">LeetCode Statistics</caption>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th>Problems Solved</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>C#</td>
+            <td id="cs">146</td>
+        </tr>
+        <tr>
+            <td>Go</td>
+            <td id="go">2</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td id="java">2</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td id="js">11</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td id="py">18</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td id="sql">10</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Binary Search
 <details>
