@@ -11,25 +11,33 @@
 </details>
 
 ## Two Pointer
+<details>
+ <summary>Click to expand</summary>
+
 - condition `while(indexS < s.Length && indexT < t.Length) `
 
+</details>
+
 ## Sliding Window
+<details>
+ <summary>Click to expand</summary>
+
 - condition `while(right < s.Length)`
 
+</details>
+
+
 ## Reverse array Iterate
+<details>
+ <summary>Click to expand</summary>
+
 - condition should be && for short circuit like `while (index >= 0 && s[index] != ' ' )`
 
-## Declaration
-
-    Stack
-    // Use when there is increasing decreasing order
-    Stack<char> pstack = new Stack<char>();
-
-    pstack.Push(c);
-    pstack.Count()
-    pstack.Peek()
+</details>
 
 ## Bitwise
+<details>
+    <summary>Click to expand</summary>
 
     XOR -> if both same then 0. If different then 1.
 
@@ -37,7 +45,12 @@
     a ^ a = 0
     a ^ b = 1
 
+</details>
+
 ## PriorityQueue
+
+<details>
+    <summary>Click to expand</summary>
 
     // Less value more priority.
     // Min Heap
@@ -51,7 +64,12 @@
     pq.Dequeue();
     pq.Peek();
 
+</details>
+
 ## Queue
+
+<details>
+    <summary>Click to expand</summary>
 
         Queue<int> queue = new Queue<int>();
         queue.Enqueue(1);
@@ -59,16 +77,26 @@
         queue.Peek();
         queue.Count;  // To check if empty
 
+</details>
+
+
 ## LinkedList
+
+<details>
+    <summary>Click to expand</summary>
 
         Fast and Slow Pointer
         while(fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
-
+</details>
 
 ## HashSet
+
+<details>
+
+    <summary>Click to expand</summary>
 
     HashSet<String> hs = new HashSet<String>();
     hs.Add();
@@ -80,7 +108,12 @@
     hs1.UnionWith(hs2) //  This method is used to modify the current HashSet object to contain all elements that are present in itself, the specified collection, or both.
     hs1.IntersectWith(hs2) // This method is used to modify the current HashSet object to contain only elements that are present in that object and in the specified collection.
 
+</details>
+
 ## String
+
+<details>
+    <summary>Click to expand</summary>
 
     Split('@')
     Replace("."."")
@@ -105,7 +138,19 @@
     Convert.ToString(n, 2) // To convert int to binary
     Convert.ToInt32("1101", 2) // To convert binary to int
 
+</details>
+
 ## Stacks
+
+<details>
+    <summary>Click to expand</summary>
+
+    // Use when there is increasing decreasing order
+    Stack<char> pstack = new Stack<char>();
+
+    pstack.Push(c);
+    pstack.Count()
+    pstack.Peek()
 
     Stack myStack = new Stack();
     myStack.Push("Hello");
@@ -113,7 +158,12 @@
     Pop()
     Count() == 0 // to check if empty
 
+</details>
+
 ## Arrays:
+
+<details>
+    <summary>Click to expand</summary>
 
     int[] age = new int[5];
     age[0] = 12;
@@ -127,6 +177,8 @@
     Array.Sort(numbers);
     Array.Reverse(numbers);
     Arrays.Fill(dp,-1); // To fill the array with -1
+
+</details>
 
 ## Trees:
 <details>
@@ -169,6 +221,9 @@
 
 ## STEPS TO SOLVE:
 
+<details>
+    <summary>Click to expand</summary>
+
 1) Identity the problem. Clear the doubts.
 2) Write Pseudo Code first
 3) Try Brute Force
@@ -182,12 +237,16 @@
 8) Trees
    1) In order traversal of BST gives sorted list.
 
+</details>
 
 <hr/>
 
 # Algorithms
 
 ### Kahn's Algorithm
+<details>
+    <summary>Click to expand</summary>
+
 Used to find the topological sort of a Directed Acyclic Graph (DAG). It uses BFS. It is used when there is a single answer possible. It is used when there is a single source.
 Pseudo Code:
 ```
@@ -201,28 +260,51 @@ Pseudo Code:
 4) If the result size is not equal to the number of nodes, then there is a cycle.
 ```
 
+</details>
 
 ### Knacksack
+<details>
+    <summary>Click to expand</summary>
+
 TBU
+
+</details>
 
 ### Boyer-Moore Voting:
+<details>
+    <summary>Click to expand</summary>
+
 Used to Calculate the majority element among the given elements that have more than N/ 2 occurrences.
 
+</details>
+
 ### KMP
+<details>
+    <summary>Click to expand</summary>
 TBU
+
+</details>
 
 ### Rabin Karp
+<details>
+    <summary>Click to expand</summary>
 TBU
 
-<hr/>
+</details>
+
 
 ### KMP Algorithm:
-
+<details>
+    <summary>Click to expand</summary>
 TBU
+
+</details>
 
 <hr/>
 
 # Sorting
+<details>
+    <summary>Click to expand</summary>
 
 - Merge Sort
 - Selection Sort
@@ -233,7 +315,10 @@ TBU
 - Radix Sort
 - Lazy Sort
 
-<hr/>
+</details>
+
+<details>
+    <summary>Click to expand</summary>
 
 # Data Structures
 - [x] Array
@@ -281,9 +366,13 @@ TBU
 - Octree
 - Fenwick Tree
 
-<hr/>
+</details>
+
 
 # Techniques
+
+<details>
+    <summary>Click to expand</summary>
 
 - [x] Sliding Window
 - [x] Two Pointer
@@ -366,7 +455,8 @@ TBU
 - A* Search
 - Morris Traversal
 
-<hr/>
+</details>
+
 
 # Appendix
 - [LeetCode](https://leetcode.com/)
