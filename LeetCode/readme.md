@@ -225,11 +225,18 @@
 
     int [] numbers = {1, 2, 3, 4, 5};
 
-    int[,] dp = new int[100001,2];
-
     Array.Sort(numbers);
     Array.Reverse(numbers);
     Arrays.Fill(dp,-1); // To fill the array with -1
+
+    Multi Dimensional Array
+
+    int[,] matrix = new int[2,3];
+    matrix[0,0] = 1;
+    int[][] matrix = new int[2][] { new int[] {1,2,3}, new int[] {4,5,6} };
+    Array.Sort(matrix, (a, b) => a[0] - b[0]); // To sort the matrix based on first element of each row in ascending order.
+    Array.Sort(matrix, (a, b) => a[1] - b[1]); // To sort the matrix based on second element of each row in ascending order.
+    Array.Sort(matrix, (a, b) => b[0] - a[0]); // To sort the matrix based on first element of each row in descending order.
 
 </details>
 
