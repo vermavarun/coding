@@ -79,6 +79,15 @@
 
 </details>
 
+## Intervals
+<details>
+ <summary>Click to expand</summary>
+
+ - Try if you can sort the intervals first.
+
+</details>
+
+
 ## Bitwise
 <details>
     <summary>Click to expand</summary>
