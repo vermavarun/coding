@@ -240,26 +240,46 @@
 <details>
  <summary>Click to expand</summary>
 
+   ### Types:
+      1) Directed
+      2) Undirected
+      3) Weighted
+      4) Unweighted
+   ### Code:
+      1) Adjacency List
+
+            List<List<int>> graph = new List<List<int>>();
+            for(int i = 0; i < n; i++) {
+                graph.Add(new List<int>());
+            }
+            graph[0].Add(1);
+
+      2) Adjacency Matrix
+         1) int[,] graph = new int[n,n];
+         2) graph[0,1] = 1;
+         3) graph[1,0] = 1;
+         4) graph[0,1] = 1;
+
    ### Traversal Techniques:
-      1) BFS
+      3) BFS
          1) Used for shortest path
-      2) DFS
+      4) DFS
          1) For undirected: To detect cycle check if visited node is already visited and is not parent.
          2) For directed: To detect cycle check if visited node is already visited and is in the stack (current recursion).
    ### Representation:
-      1) Adjacency List
-      2) Adjacency Matrix
+      5) Adjacency List
+      6) Adjacency Matrix
    ### Sorting:
-      1) Topological Sort: Used for Directed Acyclic Graphs (DAG) only. Multiple answers possible.
-      2) Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible. It uses BFS.
-      3) Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
-      4) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      7)  Topological Sort: Used for Directed Acyclic Graphs (DAG) only. Multiple answers possible.
+      8)  Kahn's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible. It uses BFS.
+      9)  Tarjan's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
+      10) Kosaraju's Algorithm: Used for Directed Acyclic Graphs (DAG) only. Single answer possible.
    ### Miscellaneous:
-      1) InDegree: Number of incoming edges to a node.
-      2) OutDegree: Number of outgoing edges from a node.
-      3) Strongly Connected Components (SCC) - Kosaraju's Algorithm
-      4) Articulation Points - Tarjan's Algorithm
-      5) Bridges - Tarjan's Algorithm
+      11) InDegree: Number of incoming edges to a node.
+      12) OutDegree: Number of outgoing edges from a node.
+      13) Strongly Connected Components (SCC) - Kosaraju's Algorithm
+      14) Articulation Points - Tarjan's Algorithm
+      15) Bridges - Tarjan's Algorithm
 
 </details>
 
@@ -301,7 +321,7 @@ Pseudo Code:
     b) Add it to the result.
     c) For all the adjacent nodes of the popped element, reduce the in-degree by 1.
     d) If the in-degree becomes 0, add it to the queue.
-4) If the result size is not equal to the number of nodes, then there is a cycle.
+4) If the result size is not equal to the number of nodes, then there is a cycle. If you have visited all the nodes, then return the result. if not, that means there is a cycle.
 ```
 
 </details>
