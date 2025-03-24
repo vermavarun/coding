@@ -56,3 +56,8 @@ public class Solution {
         return order.Count == numCourses ? order.ToArray() : new int [0];               // If the number of nodes visited is equal to the number of courses, return true else return false.
     }
 }
+
+/*
+Approach: DFS
+TODO
+*/
