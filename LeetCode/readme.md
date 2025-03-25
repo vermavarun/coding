@@ -297,6 +297,8 @@
       14) Articulation Points - Tarjan's Algorithm
       15) Bridges - Tarjan's Algorithm
       16) Bipartite Graph - It means that the graph can be colored using two colors such that no two adjacent nodes have the same color. It can be solved using BFS or DFS.
+          1)  if odd cycle is present then it is not bipartite.
+          2)  if even cycle is present then it is bipartite.
       17) Eulerian Path - A path that visits every edge exactly once.
 
 
