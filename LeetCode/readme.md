@@ -1,9 +1,8 @@
+
 <table border="0">
     <tr>
         <td>
-
 ![LeetCode Stats](https://leetcard.jacoblin.cool/varunve?theme=dark&font=Stylish&border=0&radius=20)
-
 </td>
 <td valign="middle">
 <table id="stats">
@@ -44,113 +43,77 @@
 </td>
 </tr>
 </table>
-
 ## Binary Search
 <details>
  <summary>Click to expand</summary>
-
 - condition `while(left <= right)`
 - `mid = left + (right - left) / 2`
-
 </details>
-
 ## Two Pointer
 <details>
  <summary>Click to expand</summary>
-
 - condition `while(indexS < s.Length && indexT < t.Length) `
-
 </details>
-
 ## Sliding Window
 <details>
  <summary>Click to expand</summary>
-
 - condition `while(right < s.Length)`
-
 </details>
-
 
 ## Reverse array Iterate
 <details>
  <summary>Click to expand</summary>
-
 - condition should be && for short circuit like `while (index >= 0 && s[index] != ' ' )`
-
 </details>
-
 ## Intervals
 <details>
  <summary>Click to expand</summary>
-
  - Try if you can sort the intervals first.
-
 </details>
-
 
 ## Bitwise
 <details>
     <summary>Click to expand</summary>
-
     XOR -> if both same then 0. If different then 1.
-
     a ^ 0 = a
     a ^ a = 0
     a ^ b = 1
-
 </details>
-
 ## PriorityQueue
-
 <details>
     <summary>Click to expand</summary>
-
     // Less value more priority.
     // Min Heap
     PriorityQueue<int,int> priorityQueue = new PriorityQueue<int,int>(); // where <int,int> means <element,priority>
-
     // More value more priority.
     // Max Heap
     PriorityQueue<int,int> pq = new PriorityQueue<int,int>(Comparer<int>.Create((x, y) => y - x));
-
     pq.Enqueue(1, 1);
     pq.Dequeue();
     pq.Peek();
-
 </details>
-
 ## Queue
-
 <details>
     <summary>Click to expand</summary>
-
         Queue<int> queue = new Queue<int>();
         queue.Enqueue(1);
         queue.Dequeue();
         queue.Peek();
         queue.Count;  // To check if empty
-
 </details>
 
-
 ## LinkedList
-
 <details>
     <summary>Click to expand</summary>
-
         Fast and Slow Pointer
         while(fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
 </details>
-
 ## HashSet
-
 <details>
-
     <summary>Click to expand</summary>
-
     HashSet<String> hs = new HashSet<String>();
     hs.Add();
     hs.Remove();
@@ -160,102 +123,71 @@
     hs1.ExceptWith(hs2); // This method is used to remove all elements in the specified collection from the current HashSet object.
     hs1.UnionWith(hs2) //  This method is used to modify the current HashSet object to contain all elements that are present in itself, the specified collection, or both.
     hs1.IntersectWith(hs2) // This method is used to modify the current HashSet object to contain only elements that are present in that object and in the specified collection.
-
 </details>
-
 ## String
-
 <details>
     <summary>Click to expand</summary>
-
     Split('@')
     Replace("."."")
-
     Char to Int
     (int)ch - 0
-
     Small to Capital
     char a = 'a';
     char bigA = (char) (((int)a - '0') + 16);
-
     'a' -> 0
     'b' -> 1
     (int)ch - 'a'
-
     0 -> 'a'
     1 -> 'b'
     (char)('a' + 0)
-
     Char.IsDigit(ch) // To check if digit
-
     Convert.ToString(n, 2) // To convert int to binary
     Convert.ToInt32("1101", 2) // To convert binary to int
-
 </details>
-
 ## Stacks
-
 <details>
     <summary>Click to expand</summary>
-
     // Use when there is increasing decreasing order
     Stack<char> pstack = new Stack<char>();
-
     pstack.Push(c);
     pstack.Count()
     pstack.Peek()
-
     Stack myStack = new Stack();
     myStack.Push("Hello");
     Peek()
     Pop()
     Count() == 0 // to check if empty
-
 </details>
-
 ## Arrays:
-
 <details>
     <summary>Click to expand</summary>
-
     int[] age = new int[5];
     age[0] = 12;
-
     or
-
     int [] numbers = {1, 2, 3, 4, 5};
-
     Array.Sort(numbers);
     Array.Reverse(numbers);
     Arrays.Fill(dp,-1); // To fill the array with -1
-
     Multi Dimensional Array
-
     int[,] matrix = new int[2,3];
     matrix[0,0] = 1;
     int[][] matrix = new int[2][] { new int[] {1,2,3}, new int[] {4,5,6} };
     Array.Sort(matrix, (a, b) => a[0] - b[0]); // To sort the matrix based on first element of each row in ascending order.
     Array.Sort(matrix, (a, b) => a[1] - b[1]); // To sort the matrix based on second element of each row in ascending order.
     Array.Sort(matrix, (a, b) => b[0] - a[0]); // To sort the matrix based on first element of each row in descending order.
-
 </details>
-
 ## Trees:
 <details>
  <summary>Click to expand</summary>
-
    ### Traversal Techniques:
       1) Inorder - (Left, Root, Right)
       2) Preorder - (Root, Left, Right)
       3) Postorder - (Left, Right, Root)
       4) Level Order - (Level by Level)
 </details>
-
 ## Graphs:
-
 <details>
  <summary>Click to expand</summary>
-
    ### Types:
       1) Directed
       2) Undirected
@@ -263,19 +195,16 @@
       4) Unweighted
    ### Code:
       1) Adjacency List
-
             List<List<int>> graph = new List<List<int>>();
             for(int i = 0; i < n; i++) {
                 graph.Add(new List<int>());
             }
             graph[0].Add(1);
-
       2) Adjacency Matrix
          1) int[,] graph = new int[n,n];
          2) graph[0,1] = 1;
          3) graph[1,0] = 1;
          4) graph[0,1] = 1;
-
    ### Traversal Techniques:
       3) BFS
          1) Used for shortest path
@@ -300,15 +229,12 @@
           1)  if odd cycle is present then it is not bipartite.
           2)  if even cycle is present then it is bipartite.
       17) Eulerian Path - A path that visits every edge exactly once.
-
+      18) Disjoint Set - Used to find if two nodes are connected or not. It is used to find the cycle in the graph. It is used to find the connected components in the graph.
 
 </details>
-
 ## STEPS TO SOLVE:
-
 <details>
     <summary>Click to expand</summary>
-
 1) Identity the problem. Clear the doubts.
 2) Write Pseudo Code first
 3) Try Brute Force
@@ -321,17 +247,12 @@
    1) if you want to check if already present.
 8) Trees
    1) In order traversal of BST gives sorted list.
-
 </details>
-
 <hr/>
-
 # Algorithms
-
 ### Kahn's Algorithm
 <details>
     <summary>Click to expand</summary>
-
 Used to find the topological sort of a Directed Acyclic Graph (DAG). It uses BFS. It is used when there is a single answer possible. It is used when there is a single source.
 Pseudo Code:
 ```
@@ -344,53 +265,37 @@ Pseudo Code:
     d) If the in-degree becomes 0, add it to the queue.
 4) If the result size is not equal to the number of nodes, then there is a cycle. If you have visited all the nodes, then return the result. if not, that means there is a cycle.
 ```
-
 </details>
-
 ### Knacksack
 <details>
     <summary>Click to expand</summary>
-
 TBU
-
 </details>
-
 ### Boyer-Moore Voting:
 <details>
     <summary>Click to expand</summary>
-
 Used to Calculate the majority element among the given elements that have more than N/ 2 occurrences.
-
 </details>
-
 ### KMP
 <details>
     <summary>Click to expand</summary>
 TBU
-
 </details>
-
 ### Rabin Karp
 <details>
     <summary>Click to expand</summary>
 TBU
-
 </details>
-
 
 ### KMP Algorithm:
 <details>
     <summary>Click to expand</summary>
 TBU
-
 </details>
-
 <hr/>
-
 # Sorting
 <details>
     <summary>Click to expand</summary>
-
 - Merge Sort
 - Selection Sort
 - Quick Sort
@@ -399,14 +304,10 @@ TBU
 - Insertion Sort
 - Radix Sort
 - Lazy Sort
-
 </details>
-
 # Data Structures
-
 <details>
     <summary>Click to expand</summary>
-
 - [x] Array
 - [x] Linked List
 - [x] Stack
@@ -451,15 +352,11 @@ TBU
 - Quad Tree
 - Octree
 - Fenwick Tree
-
 </details>
 
-
 # Techniques
-
 <details>
     <summary>Click to expand</summary>
-
 - [x] Sliding Window
 - [x] Two Pointer
 - [x] Fast and Slow Pointer
@@ -540,9 +437,7 @@ TBU
 - Trie Tree
 - A* Search
 - Morris Traversal
-
 </details>
-
 
 # Appendix
 - [LeetCode](https://leetcode.com/)
