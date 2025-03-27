@@ -15,7 +15,6 @@ Aim is to have one stop shop for all coding problems
 - Strings
 
 
-
 <table id="stats" style="width:100%;border:1px solid red">
     <caption style="color:lightgreen;font-weight:bold;font-size:24px">LeetCode Statistics</caption>
     <thead>
