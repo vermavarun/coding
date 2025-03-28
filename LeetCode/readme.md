@@ -300,6 +300,12 @@
           1)  if odd cycle is present then it is not bipartite.
           2)  if even cycle is present then it is bipartite.
       17) Eulerian Path - A path that visits every edge exactly once.
+      18) Disjoint Set - Used to find if two nodes are connected or not. It is used to find the cycle in the graph.
+            1) Union: To merge two sets.
+            2) Find: To find the parent of the set.
+            3) Path Compression: To reduce the height of the tree.
+            4) Union by Rank: To merge the smaller tree to the bigger tree.
+            5) It has two operations: Union and Find.
 
 
 </details>
