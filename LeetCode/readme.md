@@ -306,6 +306,7 @@
             3) Path Compression: To reduce the height of the tree.
             4) Union by Rank: To merge the smaller tree to the bigger tree.
             5) It has two operations: Union and Find.
+            6) To detect cycle in the graph. If parent of both nodes is same then there is a cycle else union them.
 
 
 </details>
