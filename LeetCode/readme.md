@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">18</td>
+            <td id="py">19</td>
         </tr>
         <tr>
             <td>SQL</td>

@@ -40,7 +40,7 @@ Aim is to have one stop shop for all coding problems
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">18</td>
+            <td id="py">19</td>
         </tr>
         <tr>
             <td>SQL</td>
