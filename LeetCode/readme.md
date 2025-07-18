@@ -45,6 +45,10 @@
 </tr>
 </table>
 
+# Tags
+
+Sliding-Window, Hash-Table
+
 ## Binary Search
 <details>
  <summary>Click to expand</summary>
