@@ -166,24 +166,89 @@ namespace Practice
             // var result = SearchInsert(new int[] { 1,3,5,6 }, 2); // 1
             // System.Console.WriteLine(result);
 
+            var result = MinWindow("ADOBECODEBANC", "ABC"); // "BANC"
+            Console.WriteLine(result);
+
         }
 
-        public static int SearchInsert(int[] nums, int target) {
+        public static string MinWindow(string s, string t) {
+
+            if (t.Length == 0 || s.Length == 0 || t.Length > s.Length)
+                return string.Empty;
+
+            Dictionary<char,int> dict = new Dictionary<char,int>();
+
+            int l = 0;
+            int r = 0;
+            int minL = 0;
+            int need = t.Length;
+            int minWindowSize = int.MaxValue;
+
+            // Count chars in t
+            foreach(char c in t) {
+                if (!dict.ContainsKey(c)) {
+                    dict.Add(c,1);
+                }
+                else {
+                    dict[c]++;
+                }
+            }
+
+            // start sliding
+            while(r < s.Length) {
+
+                if (dict.ContainsKey(s[r]) && s[r] > 0) {
+                    dict[s[r]]--;
+                    need--;
+                }
+                else if (dict.ContainsKey(s[r]) && s[r] <= 0) {
+                    dict[s[r]]--;
+                }
+                else if (!dict.ContainsKey(s[r])) {
+                    dict.Add(s[r],-1);
+                }
+
+                // If no more chars are required
+                while(need == 0) {
+                    minL = Math.Max(minL, l);
+                    minWindowSize = Math.Min(minWindowSize, r - l + 1);
+
+                    char ch = s[l];
+                    if (dict.ContainsKey(ch)) {
+                        dict[ch]++;
+                        if (dict[ch] > 0)
+                            need++;
+
+                    }
+                    l++;
+                }
+                r++;
+            }
+
+        return s.Substring(minL,minWindowSize);
+
+    }
+        public static int SearchInsert(int[] nums, int target)
+        {
             int left = 0;
-            int right = nums.Length - 1 ;
-            int mid = (right+left)/2;
+            int right = nums.Length - 1;
+            int mid = (right + left) / 2;
 
-            while(left<=right) {
-                mid =(right+left)/2;
+            while (left <= right)
+            {
+                mid = (right + left) / 2;
 
-                if(nums[mid] == target) {
+                if (nums[mid] == target)
+                {
                     return mid;
                 }
 
-                if (nums[mid] > target) {
+                if (nums[mid] > target)
+                {
                     right = mid - 1;
                 }
-                else {
+                else
+                {
                     left = mid + 1;
                 }
             }

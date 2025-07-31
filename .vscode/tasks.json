@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/RoughWork/RoughWork.csproj",
+                "${workspaceFolder}/DataStructures/RoughWork/RoughWork.csproj",
                 //"${workspaceFolder}/Trie/Operations/Operations.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
@@ -20,7 +20,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/RoughWork/RoughWork.csproj",
+                "${workspaceFolder}/DataStructures/RoughWork/RoughWork.csproj",
                 //"${workspaceFolder}/Trie/Operations/Operations.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
@@ -35,7 +35,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/RoughWork/RoughWork.csproj"
+                "${workspaceFolder}/DataStructures/RoughWork/RoughWork.csproj"
                 //"${workspaceFolder}/Trie/Operations/Operations.csproj",
             ],
             "problemMatcher": "$msCompile"
