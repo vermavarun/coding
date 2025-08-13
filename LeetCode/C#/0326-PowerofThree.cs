@@ -1,4 +1,5 @@
 /*
+Video: https://www.youtube.com/watch?v=11lCatB_H_A
 Solution: https://leetcode.com/problems/power-of-three/solutions/7074870/simplest-solution-c-time-olog3-n-space1-ficms/
 Approach: Iterative Division
 Tags: Math, Iteration
