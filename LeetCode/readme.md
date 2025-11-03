@@ -17,31 +17,31 @@
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs"></td>
+            <td id="cs">183</td>
         </tr>
         <tr>
             <td>Go</td>
-            <td id="go"></td>
+            <td id="go">2</td>
         </tr>
         <tr>
             <td>Java</td>
-            <td id="java"></td>
+            <td id="java">2</td>
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js"></td>
+            <td id="js">11</td>
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py"></td>
+            <td id="py">19</td>
         </tr>
         <tr>
             <td>SQL</td>
-            <td id="sql"></td>
+            <td id="sql">10</td>
         </tr>
         <tr>
             <td>Bash</td>
-            <td id="sh"></td>
+            <td id="sh">1</td>
         </tr>
     </tbody>
 </table>
