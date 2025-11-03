@@ -24,31 +24,31 @@ Aim is to have one stop shop for all coding problems
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs">183</td>
+            <td id="cs"></td>
         </tr>
         <tr>
             <td>Go</td>
-            <td id="go">2</td>
+            <td id="go"></td>
         </tr>
         <tr>
             <td>Java</td>
-            <td id="java">2</td>
+            <td id="java"></td>
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js">11</td>
+            <td id="js"></td>
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">19</td>
+            <td id="py"></td>
         </tr>
         <tr>
             <td>SQL</td>
-            <td id="sql">10</td>
+            <td id="sql"></td>
         </tr>
         <tr>
             <td>Bash</td>
-            <td id="sh">10</td>
+            <td id="sh"></td>
         </tr>
     </tbody>
 </table>
