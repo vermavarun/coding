@@ -39,6 +39,10 @@
             <td>SQL</td>
             <td id="sql">10</td>
         </tr>
+        <tr>
+            <td>Bash</td>
+            <td id="sh">10</td>
+        </tr>
     </tbody>
 </table>
 </td>

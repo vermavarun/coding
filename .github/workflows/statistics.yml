@@ -22,6 +22,7 @@ jobs:
                 \"SQL\": $(find . -name '*.sql' | wc -l),
                 \"Java\": $(find . -name '*.java' | wc -l),
                 \"Python\": $(find . -name '*.py' | wc -l)
+                \"Bash\": $(find . -name '*.sh' | wc -l)
                 }" > ../statistics.json
 
         - name: Replace values in README.md
@@ -32,6 +33,7 @@ jobs:
                 sql=$(jq -r '.SQL' statistics.json | sed 's/[&/]/\\&/g')
                 java=$(jq -r '.Java' statistics.json | sed 's/[&/]/\\&/g')
                 py=$(jq -r '.Python' statistics.json | sed 's/[&/]/\\&/g')
+                sh=$(jq -r '.Bash' statistics.json | sed 's/[&/]/\\&/g')
 
                 sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" README.md
                 sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" README.md
@@ -39,6 +41,7 @@ jobs:
                 sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" README.md
                 sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" README.md
                 sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" README.md
+                sed -i "s|<td id=\"sh\">[0-9]*</td>|<td id=\"sh\">$sh</td>|g" README.md
 
                 sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" ./LeetCode/readme.md
                 sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" ./LeetCode/readme.md
@@ -46,6 +49,7 @@ jobs:
                 sed -i "s|<td id=\"sql\">[0-9]*</td>|<td id=\"sql\">$sql</td>|g" ./LeetCode/readme.md
                 sed -i "s|<td id=\"java\">[0-9]*</td>|<td id=\"java\">$java</td>|g" ./LeetCode/readme.md
                 sed -i "s|<td id=\"py\">[0-9]*</td>|<td id=\"py\">$py</td>|g" ./LeetCode/readme.md
+                sed -i "s|<td id=\"sh\">[0-9]*</td>|<td id=\"sh\">$sh</td>|g" ./LeetCode/readme.md
 
         - name: Commit and push changes
           run: |

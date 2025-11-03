@@ -46,6 +46,10 @@ Aim is to have one stop shop for all coding problems
             <td>SQL</td>
             <td id="sql">10</td>
         </tr>
+        <tr>
+            <td>Bash</td>
+            <td id="sh">10</td>
+        </tr>
     </tbody>
 </table>
 
