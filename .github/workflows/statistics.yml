@@ -33,7 +33,7 @@ jobs:
                 sql=$(jq -r '.SQL' statistics.json | sed 's/[&/]/\\&/g')
                 java=$(jq -r '.Java' statistics.json | sed 's/[&/]/\\&/g')
                 py=$(jq -r '.Python' statistics.json | sed 's/[&/]/\\&/g')
-                sh=$(jq -r '.Bash' statistics.json | sed 's/[&/]/\\&/g')
+                sh=$(jq -r '.SH' statistics.json | sed 's/[&/]/\\&/g')
 
                 sed -i "s|<td id=\"cs\">[0-9]*</td>|<td id=\"cs\">$cs</td>|g" README.md
                 sed -i "s|<td id=\"js\">[0-9]*</td>|<td id=\"js\">$js</td>|g" README.md
