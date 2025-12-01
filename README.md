@@ -36,7 +36,7 @@ Aim is to have one stop shop for all coding problems
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js">14</td>
+            <td id="js">15</td>
         </tr>
         <tr>
             <td>Python</td>
