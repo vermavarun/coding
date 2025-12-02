@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js">16</td>
+            <td id="js">17</td>
         </tr>
         <tr>
             <td>Python</td>
