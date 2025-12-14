@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Test - LeetCode Solutions</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+        .success { color: #10b981; }
+        .error { color: #ef4444; }
+        .info { color: #60a5fa; }
+        pre {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1e293b;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 LeetCode Solutions - Local Test</h1>
+
+    <div class="step">
+        <h2>✅ Files Generated</h2>
+        <p>Check that these files exist in <code>docs/</code>:</p>
+        <ul>
+            <li>index.html</li>
+            <li>app.js</li>
+            <li>styles.css</li>
+            <li>solutions.json</li>
+            <li>sitemap.xml</li>
+            <li>robots.txt</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>🚀 Test Locally</h2>
+        <p>Run a local server to test the site:</p>
+        <pre>cd docs
+python3 -m http.server 8000</pre>
+        <p>Then open: <a href="http://localhost:8000">http://localhost:8000</a></p>
+    </div>
+
+    <div class="step">
+        <h2>📊 Stats</h2>
+        <div id="stats">Loading...</div>
+    </div>
+
+    <div class="step">
+        <h2>🔍 Sample Solutions</h2>
+        <div id="samples">Loading...</div>
+    </div>
+
+    <div class="step">
+        <h2>📦 Next Steps</h2>
+        <ol>
+            <li>Review the generated files in <code>docs/</code></li>
+            <li>Test locally using the server command above</li>
+            <li>Read <code>GITHUB_PAGES_SETUP.md</code> for deployment instructions</li>
+            <li>Commit and push to enable GitHub Pages</li>
+            <li>Visit your site at: <a href="https://vermavarun.github.io/coding/">https://vermavarun.github.io/coding/</a></li>
+        </ol>
+    </div>
+
+    <script>
+        fetch('solutions.json')
+            .then(r => r.json())
+            .then(data => {
+                // Display stats
+                document.getElementById('stats').innerHTML = `
+                    <p class="success">✓ Total Solutions: ${data.stats.totalSolutions}</p>
+                    <p class="success">✓ Languages: ${data.stats.languages.join(', ')}</p>
+                    <p class="success">✓ Unique Tags: ${data.stats.tags.length}</p>
+                    <p class="info">Last Updated: ${new Date(data.stats.lastUpdated).toLocaleString()}</p>
+                `;
+
+                // Display sample solutions
+                const samples = data.solutions.slice(0, 5);
+                document.getElementById('samples').innerHTML = samples.map(s => `
+                    <div style="margin: 10px 0; padding: 10px; background: #334155; border-radius: 4px;">
+                        <strong>${s.problemNumber}. ${s.title}</strong> [${s.language}]<br>
+                        <small>${s.approach || 'No approach documented'}</small>
+                    </div>
+                `).join('');
+            })
+            .catch(err => {
+                document.getElementById('stats').innerHTML = `<p class="error">✗ Error loading solutions.json: ${err.message}</p>`;
+                document.getElementById('samples').innerHTML = `<p class="error">Could not load samples</p>`;
+            });
+    </script>
+</body>
+</html>

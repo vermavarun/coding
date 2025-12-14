@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - leetcode-webapp
     paths:
       - 'LeetCode/**'
       - 'scripts/**'
