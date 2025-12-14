@@ -5,6 +5,7 @@ Aim is to have one stop shop for all coding problems
 
 [![Build-Coding-Solution](https://github.com/vermavarun/coding/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/vermavarun/coding/actions/workflows/build.yml)
 [![Statistics](https://github.com/vermavarun/coding/actions/workflows/statistics.yml/badge.svg)](https://github.com/vermavarun/coding/actions/workflows/statistics.yml)
+[![Build and Deploy LeetCode Solutions](https://github.com/vermavarun/coding/actions/workflows/deploy-leetcode-site.yml/badge.svg)](https://github.com/vermavarun/coding/actions/workflows/deploy-leetcode-site.yml)
 - Linked List
 - Tree
 - Graph
