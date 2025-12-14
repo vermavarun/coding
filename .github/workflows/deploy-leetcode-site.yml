@@ -1,0 +1,59 @@
+name: Build and Deploy LeetCode Solutions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'LeetCode/**'
+      - 'scripts/**'
+      - 'docs/**'
+      - '.github/workflows/deploy-leetcode-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate solutions.json
+        run: |
+          node scripts/generate-solutions.js
+
+      - name: Generate sitemap.xml
+        run: |
+          node scripts/generate-sitemap.js
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
