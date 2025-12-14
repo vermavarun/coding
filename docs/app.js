@@ -13,6 +13,48 @@ const LANG_MAP = {
     'Bash': 'bash'
 };
 
+// Theme management
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+}
+
+function setTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    // Update highlight.js theme
+    const lightTheme = document.getElementById('hljs-light');
+    const darkTheme = document.getElementById('hljs-dark');
+
+    if (theme === 'light' || (theme === 'auto' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        lightTheme.disabled = false;
+        darkTheme.disabled = true;
+    } else {
+        lightTheme.disabled = true;
+        darkTheme.disabled = false;
+    }
+
+    // Update theme icon
+    const themeIcon = document.querySelector('.theme-icon');
+    if (themeIcon) {
+        themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+    }
+
+    // Re-highlight code blocks if they exist
+    if (typeof hljs !== 'undefined') {
+        document.querySelectorAll('pre code').forEach(block => {
+            hljs.highlightElement(block);
+        });
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.body.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+}
+
 // Load solutions data
 async function loadSolutions() {
     try {
@@ -167,6 +209,7 @@ function clearFilters() {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
     loadSolutions();
 
     document.getElementById('searchInput').addEventListener('input', filterSolutions);
@@ -175,11 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('difficultyFilter').addEventListener('change', filterSolutions);
     document.getElementById('tagFilter').addEventListener('change', filterSolutions);
     document.getElementById('clearFilters').addEventListener('click', clearFilters);
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
     // Enable search on Enter key
     document.getElementById('searchInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             filterSolutions();
+        }
+    });
+
+    // Watch for system theme changes when using auto theme
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'auto') {
+            setTheme('auto');
         }
     });
 });
