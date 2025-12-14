@@ -150,13 +150,17 @@ function scanDirectory(dir, solutions = []) {
                 const content = fs.readFileSync(fullPath, 'utf-8');
                 const metadata = parseFileContent(content, language);
 
+                // Get relative path and encode for URL (C# -> C%23)
+                const relativePath = path.relative(path.join(__dirname, '..'), fullPath);
+                const encodedPath = relativePath.split(path.sep).map(encodeURIComponent).join('/');
+
                 solutions.push({
                     problemNumber: parsed.problemNumber,
                     title: parsed.title,
                     language: language,
                     filename: item,
-                    path: path.relative(path.join(__dirname, '..'), fullPath),
-                    githubUrl: `https://github.com/vermavarun/coding/blob/main/${path.relative(path.join(__dirname, '..'), fullPath)}`,
+                    path: relativePath,
+                    githubUrl: `https://github.com/vermavarun/coding/blob/main/${encodedPath}`,
                     ...metadata,
                     code: content
                 });
