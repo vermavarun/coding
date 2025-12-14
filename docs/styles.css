@@ -335,6 +335,17 @@ header h1 {
     color: var(--text-primary);
 }
 
+.solution-title h2 a.solution-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.solution-title h2 a.solution-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 .language-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;

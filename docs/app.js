@@ -195,6 +195,8 @@ function addCopyButtons() {
 // Create individual solution card HTML
 function createSolutionCard(solution) {
     const langClass = LANG_MAP[solution.language] || 'plaintext';
+    const langSlug = solution.language.toLowerCase().replace('#', 'sharp').replace(/\s+/g, '-');
+    const solutionUrl = `solutions/${solution.problemNumber}-${langSlug}.html`;
     const tagsHtml = solution.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
     const stepsHtml = solution.steps.length > 0
         ? `<div class="steps"><strong>Algorithm:</strong><ol>${solution.steps.map(step => `<li>${step.replace(/^\d+\)\s*/, '')}</li>`).join('')}</ol></div>`
@@ -204,7 +206,7 @@ function createSolutionCard(solution) {
         <article class="solution-card" id="solution-${solution.problemNumber}-${solution.language.replace('#', 'sharp')}">
             <div class="solution-header">
                 <div class="solution-title">
-                    <h2>${solution.problemNumber}. ${solution.title}</h2>
+                    <h2><a href="${solutionUrl}" class="solution-link">${solution.problemNumber}. ${solution.title}</a></h2>
                     <span class="language-badge">${solution.language}</span>
                 </div>
                 <div class="solution-meta">

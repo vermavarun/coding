@@ -26,11 +26,11 @@ function generateSitemap() {
 
     // Add each solution
     solutions.forEach(solution => {
-        const langSafe = solution.language.replace('#', 'sharp');
-        const anchor = `#solution-${solution.problemNumber}-${langSafe}`;
+        const langSlug = solution.language.toLowerCase().replace('#', 'sharp').replace(/\s+/g, '-');
+        const slug = `${solution.problemNumber}-${langSlug}`;
 
         xml += '  <url>\n';
-        xml += `    <loc>${BASE_URL}/${anchor}</loc>\n`;
+        xml += `    <loc>${BASE_URL}/solutions/${slug}.html</loc>\n`;
         xml += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
         xml += '    <changefreq>weekly</changefreq>\n';
         xml += '    <priority>0.8</priority>\n';

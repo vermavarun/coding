@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2965. Find Missingand Repeated Values - C#</title>
+    <meta name="description" content="Find Missingand Repeated Values solution in C# with 1. Create a hashset to store the unique elements.">
+    <meta name="keywords" content="LeetCode 2965, Find Missingand Repeated Values, C#, ">
+    <meta property="og:title" content="2965. Find Missingand Repeated Values - C#">
+    <meta property="og:description" content="Find Missingand Repeated Values solution in C# with 1. Create a hashset to store the unique elements.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://vermavarun.github.io/coding/solutions/2965-csharp.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-dark" disabled>
+    <style>
+        :root {
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --border: #cbd5e1;
+            --border-light: #e2e8f0;
+            --code-bg: #f1f5f9;
+            --code-border: #cbd5e1;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --success: #22c55e;
+        }
+
+        [data-theme="dark"] {
+            --background: #0f172a;
+            --surface: #1e293b;
+            --text: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --primary: #60a5fa;
+            --primary-hover: #3b82f6;
+            --border: #334155;
+            --border-light: #475569;
+            --code-bg: #1e293b;
+            --code-border: #334155;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --success: #4ade80;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root[data-theme="auto"] {
+                --background: #0f172a;
+                --surface: #1e293b;
+                --text: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --primary: #60a5fa;
+                --primary-hover: #3b82f6;
+                --border: #334155;
+                --border-light: #475569;
+                --code-bg: #1e293b;
+                --code-border: #334155;
+                --shadow: rgba(0, 0, 0, 0.3);
+                --success: #4ade80;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-light);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .solution-header {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .solution-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .problem-number {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--border-light);
+            color: var(--text);
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .solution-content {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h3 {
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-size: 1.25rem;
+        }
+
+        .approach {
+            padding: 1rem;
+            background: var(--code-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .steps {
+            padding: 1rem;
+            background: var(--code-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .steps ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .steps li {
+            margin-bottom: 0.5rem;
+        }
+
+        .complexity {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+            background: var(--code-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .complexity div {
+            flex: 1;
+        }
+
+        .code-section {
+            position: relative;
+        }
+
+        .code-section pre {
+            background: var(--code-bg);
+            border: 1px solid var(--code-border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-section code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: opacity 0.2s ease;
+            z-index: 10;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-link:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .solution-header,
+            .solution-content {
+                padding: 1.5rem;
+            }
+
+            .complexity {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .copy-btn {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">LeetCode Solutions</a>
+            <div class="header-actions">
+                <a href="../index.html" class="btn btn-secondary">← All Solutions</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀️</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="solution-header">
+            <h1 class="solution-title">
+                <span class="problem-number">2965.</span> Find Missingand Repeated Values
+            </h1>
+            <div class="meta">
+                <span class="badge">C#</span>
+            </div>
+            
+        </div>
+
+        <div class="solution-content">
+            <div class="approach"><strong>Approach:</strong> 1. Create a hashset to store the unique elements.</div>
+
+            
+
+            <div class="section">
+                <h3>Complexity Analysis</h3>
+                <div class="complexity">
+                    <div><strong>Time:</strong> O(n)</div>
+                    <div><strong>Space:</strong> O(n)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Solution Code</h3>
+                <div class="code-section">
+                    <button class="copy-btn" id="copyBtn">Copy</button>
+                    <pre><code class="language-csharp">/*
+Approach:
+1. Create a hashset to store the unique elements.
+2. Calculate the sum of all the elements in the grid.
+3. Calculate the sum of the first n natural numbers.
+4. The difference between the sum of the first n natural numbers and the sum of the elements in the grid will give the missing element.
+5. The repeated element is the element that is repeated in the grid.
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+public class Solution {
+    public int[] FindMissingAndRepeatedValues(int[][] grid) {
+        HashSet&lt;int&gt; hs = new HashSet&lt;int&gt;();       // Declare a hashset to store the unique elements.
+        int sum = 0;                                // Declare a variable to store the sum of all the elements in the grid.    
+        int[] result = new int[2];                  // Declare an array to store the missing and repeated elements.
+        int n = grid[0].Length * grid[0].Length;    // Calculate the number of elements in the grid.
+
+        foreach(int[] arr in grid) {                // Iterate through the grid.
+            foreach(int num in arr) {               // Iterate through the elements in the grid.
+                if(!hs.Contains(num)) {             // Check if the element is not present in the hashset.
+                    hs.Add(num);                    // Add the element to the hashset.
+                }
+                else {
+                    result[0] = num;                // Store the repeated element in the result array.
+                }
+                sum+=num;                           // Calculate the sum of all the elements in the grid.
+            }
+        }
+        sum -= result[0];                           // Subtract the repeated element from the sum.
+        result[1] = (n*(n+1)/2) - sum;              // Calculate the missing element.
+        return result;                              // Return the result array.
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="links">
+                
+                <a href="https://github.com/vermavarun/coding/blob/main/LeetCode/C%23/2965-FindMissingandRepeatedValues.cs" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const lightStyle = document.getElementById('hljs-light');
+            const darkStyle = document.getElementById('hljs-dark');
+            const themeToggle = document.getElementById('themeToggle');
+            
+            if (theme === 'dark') {
+                lightStyle.disabled = true;
+                darkStyle.disabled = false;
+                themeToggle.textContent = '🌙';
+            } else if (theme === 'light') {
+                lightStyle.disabled = false;
+                darkStyle.disabled = true;
+                themeToggle.textContent = '☀️';
+            } else {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                lightStyle.disabled = prefersDark;
+                darkStyle.disabled = !prefersDark;
+                themeToggle.textContent = prefersDark ? '🌙' : '☀️';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+
+        // Copy Code
+        function setupCopyButton() {
+            const copyBtn = document.getElementById('copyBtn');
+            const codeBlock = document.querySelector('.code-section code');
+            
+            copyBtn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(codeBlock.textContent);
+                    copyBtn.textContent = '✓ Copied!';
+                    copyBtn.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        copyBtn.textContent = 'Copy';
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            hljs.highlightAll();
+            setupCopyButton();
+            
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        });
+    </script>
+</body>
+</html>
