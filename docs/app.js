@@ -149,6 +149,47 @@ function displaySolutions(solutions) {
     document.querySelectorAll('pre code').forEach(block => {
         hljs.highlightElement(block);
     });
+
+    // Add copy buttons to all code blocks
+    addCopyButtons();
+}
+
+// Add copy buttons to code blocks
+function addCopyButtons() {
+    document.querySelectorAll('.code-section').forEach(section => {
+        const pre = section.querySelector('pre');
+        if (pre && !pre.querySelector('.copy-btn')) {
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-btn';
+            copyBtn.innerHTML = '📋 Copy';
+            copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
+
+            copyBtn.addEventListener('click', async (e) => {
+                e.stopPropagation();
+                const code = pre.querySelector('code').textContent;
+
+                try {
+                    await navigator.clipboard.writeText(code);
+                    copyBtn.innerHTML = '✓ Copied!';
+                    copyBtn.classList.add('copied');
+
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '📋 Copy';
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    copyBtn.innerHTML = '✗ Failed';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '📋 Copy';
+                    }, 2000);
+                }
+            });
+
+            pre.style.position = 'relative';
+            pre.appendChild(copyBtn);
+        }
+    });
 }
 
 // Create individual solution card HTML
