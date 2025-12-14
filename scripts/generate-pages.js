@@ -26,16 +26,21 @@ function escapeHtml(text) {
         .replace(/'/g, '&#039;');
 }
 
-// Generate slug from problem number and language
-function generateSlug(problemNumber, language) {
+// Generate slug from problem number, title, and language
+function generateSlug(problemNumber, title, language) {
+    const titleSlug = title.toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-')          // Replace spaces with hyphens
+        .replace(/-+/g, '-')           // Replace multiple hyphens with single
+        .trim();
     const langSlug = language.toLowerCase().replace('#', 'sharp').replace(/\s+/g, '-');
-    return `${problemNumber}-${langSlug}`;
+    return `${problemNumber}-${titleSlug}-${langSlug}`;
 }
 
 // Create solution HTML page
 function createSolutionPage(solution, template) {
     const langClass = LANG_MAP[solution.language] || 'plaintext';
-    const slug = generateSlug(solution.problemNumber, solution.language);
+    const slug = generateSlug(solution.problemNumber, solution.title, solution.language);
     const tagsHtml = solution.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
     const stepsHtml = solution.steps.length > 0
         ? `<div class="steps"><strong>Algorithm:</strong><ol>${solution.steps.map(step => `<li>${escapeHtml(step.replace(/^\d+\)\s*/, ''))}</li>`).join('')}</ol></div>`
@@ -95,7 +100,7 @@ function generateSolutionPages() {
     console.log(`Generating ${solutions.length} solution pages...`);
 
     solutions.forEach((solution, index) => {
-        const slug = generateSlug(solution.problemNumber, solution.language);
+        const slug = generateSlug(solution.problemNumber, solution.title, solution.language);
         const filename = `${slug}.html`;
         const filepath = path.join(SOLUTIONS_DIR, filename);
 

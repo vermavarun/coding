@@ -3,3 +3,6 @@ obj
 #RoughWork
 desktop.ini
 .DS_Store
+
+# Generated solution pages (created by CI/CD workflow)
+docs/solutions/

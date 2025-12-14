@@ -26,8 +26,13 @@ function generateSitemap() {
 
     // Add each solution
     solutions.forEach(solution => {
+        const titleSlug = solution.title.toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .trim();
         const langSlug = solution.language.toLowerCase().replace('#', 'sharp').replace(/\s+/g, '-');
-        const slug = `${solution.problemNumber}-${langSlug}`;
+        const slug = `${solution.problemNumber}-${titleSlug}-${langSlug}`;
 
         xml += '  <url>\n';
         xml += `    <loc>${BASE_URL}/solutions/${slug}.html</loc>\n`;

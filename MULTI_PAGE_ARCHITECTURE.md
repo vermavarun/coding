@@ -24,8 +24,9 @@ Generates individual HTML pages for each solution:
 - Creates `docs/solutions/` directory
 - Generates 245+ HTML pages (one per solution)
 - Uses `solution-template.html` as the template
-- URL format: `{problemNumber}-{language}.html`
-  - Example: `0001-csharp.html`, `0383-javascript.html`
+- URL format: `{problemNumber}-{title-slug}-{language}.html`
+  - Example: `0001-two-sum-csharp.html`, `0383-ransom-note-javascript.html`
+  - Title is converted to lowercase, spaces to hyphens, special characters removed
 
 ### 2. `scripts/solution-template.html`
 HTML template for individual solution pages:
@@ -39,7 +40,7 @@ HTML template for individual solution pages:
 ### `scripts/generate-sitemap.js`
 - Changed from hash-based URLs to real page URLs
 - Old: `https://vermavarun.github.io/coding/#solution-0001-csharp`
-- New: `https://vermavarun.github.io/coding/solutions/0001-csharp.html`
+- New: `https://vermavarun.github.io/coding/solutions/0001-two-sum-csharp.html`
 
 ### `docs/app.js`
 - Updated `createSolutionCard()` to link titles to individual pages
@@ -61,11 +62,13 @@ HTML template for individual solution pages:
 - Purpose: Browse all solutions with search and filters
 
 ### Individual Solutions
-- URL Pattern: `https://vermavarun.github.io/coding/solutions/{number}-{language}.html`
+- URL Pattern: `https://vermavarun.github.io/coding/solutions/{number}-{title}-{language}.html`
 - Examples:
-  - C#: `solutions/0001-csharp.html`
-  - JavaScript: `solutions/0383-javascript.html`
-  - Python: `solutions/0001-python.html`
+  - C#: `solutions/0001-two-sum-csharp.html`
+  - JavaScript: `solutions/0383-ransom-note-javascript.html`
+  - Python: `solutions/0001-two-sum-python.html`
+
+**Note:** Titles are converted to URL-friendly slugs (lowercase, spaces to hyphens, special characters removed)
 
 ## Features Preserved
 
@@ -79,10 +82,18 @@ All features from the SPA version work on individual pages:
 
 ## Local Testing
 
+**Important:** Solution pages are generated automatically by the GitHub Actions workflow. You don't need to generate them locally.
+
+If you want to test locally:
+
 ```bash
-# Generate all files
+# Generate solutions.json
 node scripts/generate-solutions.js
+
+# Generate individual pages (optional - for local testing only)
 node scripts/generate-pages.js
+
+# Generate sitemap
 node scripts/generate-sitemap.js
 
 # Start local server
@@ -91,8 +102,10 @@ python3 -m http.server 8000
 
 # Visit in browser
 # Homepage: http://localhost:8000/
-# Solution: http://localhost:8000/solutions/0001-csharp.html
+# Solution: http://localhost:8000/solutions/0001-two-sum-csharp.html
 ```
+
+The `docs/solutions/` folder is in `.gitignore` and should not be committed to the repository.
 
 ## Benefits
 
@@ -118,16 +131,17 @@ coding/
 │   ├── styles.css              # Styles (updated)
 │   ├── solutions.json          # Generated solutions data
 │   ├── sitemap.xml             # Generated sitemap (updated URLs)
-│   └── solutions/              # NEW: Individual solution pages
-│       ├── 0001-csharp.html
-│       ├── 0001-java.html
-│       ├── 0001-python.html
+│   └── solutions/              # Generated in CI/CD (not in git)
+│       ├── 0001-two-sum-csharp.html
+│       ├── 0001-two-sum-java.html
+│       ├── 0001-two-sum-python.html
 │       └── ... (245 total)
 ├── scripts/
 │   ├── generate-solutions.js   # Existing: Generate solutions.json
 │   ├── generate-pages.js       # NEW: Generate individual HTML pages
-│   ├── generate-sitemap.js     # Updated: Use real page URLs
+│   ├── generate-sitemap.js     # Updated: Use real page URLs with titles
 │   └── solution-template.html  # NEW: Template for solution pages
+├── .gitignore                  # Updated: Ignore docs/solutions/
 └── .github/
     └── workflows/
         └── deploy-leetcode-site.yml  # Updated: Run generate-pages.js
