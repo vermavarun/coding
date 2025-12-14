@@ -216,7 +216,7 @@ function createSolutionCard(solution) {
                     ${solution.difficulty && solution.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${solution.difficulty.toLowerCase()}">${solution.difficulty}</span>` : ''}
                 </div>
                 <div class="solution-meta">
-                    ${solution.solutionLink ? `<a href="${solution.solutionLink}" target="_blank" rel="noopener" class="btn-link">LeetCode</a>` : ''}
+                    ${solution.solutionLink ? `<a href="${solution.solutionLink}" target="_blank" rel="noopener" class="btn-link">Solution on LeetCode</a>` : ''}
                     <a href="${solution.githubUrl}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
                 </div>
             </div>

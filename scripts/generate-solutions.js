@@ -78,12 +78,9 @@ function parseFileContent(content, language) {
 
     if (commentBlock) {
         // Extract solution link
-        const linkMatch = commentBlock.match(/(?:Solution:|https:\/\/leetcode\.com\/problems\/[^\s\)]+)/i);
+        const linkMatch = commentBlock.match(/Solution:\s*(https:\/\/[^\s]+)/i);
         if (linkMatch) {
-            const urlMatch = linkMatch[0].match(/https:\/\/[^\s\)]+/);
-            if (urlMatch) {
-                metadata.solutionLink = urlMatch[0];
-            }
+            metadata.solutionLink = linkMatch[1];
         }
 
         // Extract approach
