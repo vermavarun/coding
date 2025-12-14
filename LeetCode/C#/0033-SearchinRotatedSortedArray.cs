@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/7042000/simplest-solution-c-time-olog-n-space1-p-5knq/
+Difficulty: Medium
 Approach: Modified Binary Search
 Tags: Array, Binary Search, Divide and Conquer
 1) Use binary search with left and right pointers.

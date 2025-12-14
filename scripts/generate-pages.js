@@ -60,6 +60,7 @@ function createSolutionPage(solution, template) {
     html = html.replace('{{PROBLEM_TITLE}}', escapeHtml(solution.title));
     html = html.replace('{{LANGUAGE}}', solution.language);
     html = html.replace('{{LANGUAGE_BADGE}}', solution.language);
+    html = html.replace('{{DIFFICULTY_BADGE}}', solution.difficulty && solution.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${solution.difficulty.toLowerCase()}">${solution.difficulty}</span>` : '');
     html = html.replace('{{APPROACH}}', solution.approach ? `<div class="approach"><strong>Approach:</strong> ${escapeHtml(solution.approach)}</div>` : '');
     html = html.replace('{{TAGS}}', solution.tags.length > 0 ? `<div class="tags">${tagsHtml}</div>` : '');
     html = html.replace('{{STEPS}}', stepsHtml);

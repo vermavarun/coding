@@ -118,6 +118,12 @@ function parseFileContent(content, language) {
         if (spaceMatch) {
             metadata.spaceComplexity = spaceMatch[1].trim();
         }
+
+        // Extract difficulty
+        const difficultyMatch = commentBlock.match(/Difficulty:\s*(Easy|Medium|Hard)/i);
+        if (difficultyMatch) {
+            metadata.difficulty = difficultyMatch[1].charAt(0).toUpperCase() + difficultyMatch[1].slice(1).toLowerCase();
+        }
     }
 
     return metadata;
@@ -158,6 +164,7 @@ function scanDirectory(dir, solutions = []) {
                     problemNumber: parsed.problemNumber,
                     title: parsed.title,
                     language: language,
+                    difficulty: metadata.difficulty || 'Unknown',
                     filename: item,
                     path: relativePath,
                     githubUrl: `https://github.com/vermavarun/coding/blob/main/${encodedPath}`,

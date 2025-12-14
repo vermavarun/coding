@@ -121,8 +121,8 @@ function filterSolutions() {
         // Language filter
         const matchesLanguage = !selectedLanguage || solution.language === selectedLanguage;
 
-        // Difficulty filter (extract from problem number or tags if available)
-        const matchesDifficulty = !selectedDifficulty; // Placeholder, can enhance later
+        // Difficulty filter
+        const matchesDifficulty = !selectedDifficulty || solution.difficulty === selectedDifficulty;
 
         // Tag filter
         const matchesTag = !selectedTag || solution.tags.includes(selectedTag);
@@ -213,6 +213,7 @@ function createSolutionCard(solution) {
                 <div class="solution-title">
                     <h2><a href="${solutionUrl}" class="solution-link">${solution.problemNumber}. ${solution.title}</a></h2>
                     <span class="language-badge">${solution.language}</span>
+                    ${solution.difficulty && solution.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${solution.difficulty.toLowerCase()}">${solution.difficulty}</span>` : ''}
                 </div>
                 <div class="solution-meta">
                     ${solution.solutionLink ? `<a href="${solution.solutionLink}" target="_blank" rel="noopener" class="btn-link">LeetCode</a>` : ''}
