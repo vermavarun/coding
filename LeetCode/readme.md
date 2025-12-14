@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <td>Bash</td>
-            <td id="sh">1</td>
+            <td id="sh">2</td>
         </tr>
     </tbody>
 </table>
