@@ -106,38 +106,49 @@ header {
     box-shadow: 0 4px 6px var(--shadow);
 }
 
-.header-right {
+.author-section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.author-text {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.author-info-compact {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+.author-name-top {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.portfolio-link-top {
+    color: white;
     text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
     transition: background 0.2s ease;
 }
 
-.author-info-compact:hover {
+.portfolio-link-top:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.author-avatar-compact {
-    width: 32px;
-    height: 32px;
+.author-avatar-top {
+    width: 15%;
+    max-width: 60px;
+    height: auto;
     border-radius: 50%;
     border: 2px solid white;
-}
-
-.author-name-compact {
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
 
 .header-content {
@@ -596,13 +607,20 @@ footer a:hover {
         padding: 0 1rem;
     }
 
-    .header-right {
-        flex-direction: column;
-        gap: 0.5rem;
+    .author-section-top {
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
     }
 
-    .author-name-compact {
-        font-size: 0.8rem;
+    .author-text {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .author-avatar-top {
+        width: 20%;
+        max-width: 50px;
     }
 
     .header-content {
