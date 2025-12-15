@@ -134,14 +134,13 @@ header {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.25rem 0.75rem;
+    margin-top:0.5rem ;
     border-radius: 4px;
-    transition: background 0.2s ease;
+    border-color: yellow;
 }
 
-.portfolio-link-top:hover {
-    background: rgba(255, 255, 255, 0.3);
+.author-avatar-top:hover{
+    border-color: #c82b2b;
 }
 
 .title-inline {
@@ -170,6 +169,9 @@ header {
     height: 50px;
     border-radius: 50%;
     border: 2px solid white;
+    border-color: #0f172a;
+    cursor: pointer;
+
 }
 
 .header-content {
