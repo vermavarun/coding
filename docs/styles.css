@@ -102,7 +102,7 @@ body {
 /* Header */
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 1.5rem 0;
+    padding:    0 0;
     box-shadow: 0 4px 6px var(--shadow);
     position: sticky;
     top: 0;
