@@ -140,7 +140,7 @@ header {
 }
 
 .author-avatar-top:hover{
-    border-color: #c82b2b;
+    border-color: yellowgreen;
 }
 
 .title-inline {
@@ -370,11 +370,13 @@ header h1 {
 .solution-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px var(--shadow);
+    border: 1px solid #228eb8;
 }
 
 .solution-card.highlight {
     border: 2px solid var(--primary-color);
     animation: highlightPulse 2s ease-in-out;
+    border: 1px solid #228eb8;
 }
 
 @keyframes highlightPulse {
