@@ -349,6 +349,50 @@
             background: var(--primary-hover);
         }
 
+        .author-section {
+            background: var(--surface);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            flex-shrink: 0;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-size: 1.25rem;
+        }
+
+        .author-info p {
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .author-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .author-link:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 1rem;
@@ -361,6 +405,17 @@
             .solution-header,
             .solution-content {
                 padding: 1.5rem;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .author-avatar {
+                width: 60px;
+                height: 60px;
             }
 
             .complexity {
@@ -421,6 +476,15 @@
             <div class="links">
                 {{LEETCODE_LINK}}
                 <a href="{{GITHUB_LINK}}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+            </div>
+        </div>
+
+        <div class="author-section">
+            <img src="https://avatars.githubusercontent.com/u/8264476" alt="Varun Verma" class="author-avatar">
+            <div class="author-info">
+                <h3>About the Author</h3>
+                <p>Solutions curated and maintained by Varun Verma</p>
+                <a href="https://vermavarun.github.io" target="_blank" rel="noopener" class="author-link">Visit Portfolio →</a>
             </div>
         </div>
     </main>
