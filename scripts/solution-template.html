@@ -101,6 +101,7 @@
             font-weight: 600;
             color: white;
             margin: 0;
+            cursor: pointer;
         }
 
         .back-link {
@@ -505,7 +506,7 @@
         <div class="container">
             <div class="author-section-top">
                 <div class="author-text">
-                    <h2 class="author-name-top">Varun Verma | 🎯 LeetCode Solutions</h2>
+                     <h2 class="author-name-top" onclick="window.open('/', '_self')" style="cursor: pointer;">Varun Verma | 🎯 LeetCode Solutions</h2>
                 </div>
                 <div class="header-right-section">
                     <a href="https://vermavarun.github.io" target="_blank" rel="noopener" class="portfolio-link-top">
@@ -518,6 +519,7 @@
     </header>
 
     <main class="container" style="margin-top: 2rem;">
+        <a href="../index.html" class="back-link">← All Solutions</a>
         <div class="solution-header">
             <h1 class="solution-title">
                 <span class="problem-number">{{PROBLEM_NUMBER}}.</span> {{PROBLEM_TITLE}}
@@ -555,7 +557,7 @@
                     {{LEETCODE_LINK}}
                     <a href="{{GITHUB_LINK}}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
                 </div>
-                <a href="../index.html" class="back-link">← All Solutions</a>
+
             </div>
         </div>
 
