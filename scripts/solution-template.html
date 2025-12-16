@@ -118,6 +118,22 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
+        .links .back-link {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+        }
+
+        .links .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+        }
+
         .header-right-section {
             display: flex;
             flex-direction: row;
@@ -126,7 +142,13 @@
         }
 
         .portfolio-link-top {
-            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            border-color: yellow;
         }
 
         .author-avatar-top {
@@ -363,6 +385,13 @@
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .links-left {
+            display: flex;
+            gap: 1rem;
         }
 
         .btn-link {
@@ -472,7 +501,6 @@
             <div class="author-section-top">
                 <div class="author-text">
                     <h2 class="author-name-top">Varun Verma | 🎯 LeetCode Solutions</h2>
-                    <a href="../index.html" class="back-link">← All Solutions</a>
                 </div>
                 <div class="header-right-section">
                     <a href="https://vermavarun.github.io" target="_blank" rel="noopener" class="portfolio-link-top">
@@ -518,8 +546,11 @@
             </div>
 
             <div class="links">
-                {{LEETCODE_LINK}}
-                <a href="{{GITHUB_LINK}}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+                <div class="links-left">
+                    {{LEETCODE_LINK}}
+                    <a href="{{GITHUB_LINK}}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+                </div>
+                <a href="../index.html" class="back-link">← All Solutions</a>
             </div>
         </div>
 
