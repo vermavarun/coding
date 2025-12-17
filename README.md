@@ -2,10 +2,21 @@
 Coding problems including implementation of Data Structures.
 Aim is to have one stop shop for all coding problems
 
-
 [![Build-Coding-Solution](https://github.com/vermavarun/coding/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/vermavarun/coding/actions/workflows/build.yml)
 [![Statistics](https://github.com/vermavarun/coding/actions/workflows/statistics.yml/badge.svg)](https://github.com/vermavarun/coding/actions/workflows/statistics.yml)
 [![Build and Deploy LeetCode Solutions](https://github.com/vermavarun/coding/actions/workflows/deploy-leetcode-site.yml/badge.svg)](https://github.com/vermavarun/coding/actions/workflows/deploy-leetcode-site.yml)
+
+## 🌐 Live Website
+Visit the live website: [https://vermavarun.github.io/coding](https://vermavarun.github.io/coding)
+
+## 🚀 CI/CD Pipeline
+All solution pages are automatically generated and deployed via GitHub Actions:
+- **On Push**: Any commit to `main` branch triggers automated build
+- **Generation**: Solutions from `LeetCode/` are parsed and HTML pages created
+- **Grouping**: Multiple language solutions for same problem are grouped with tabbed navigation
+- **Deployment**: Automatically deployed to GitHub Pages
+
+## 📚 Topics Covered
 - Linked List
 - Tree
 - Graph

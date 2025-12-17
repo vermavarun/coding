@@ -38,9 +38,9 @@ jobs:
         run: |
           node scripts/generate-solutions.js
 
-      - name: Generate individual solution pages
+      - name: Generate grouped solution pages
         run: |
-          node scripts/generate-pages.js
+          node scripts/generate-pages-grouped.js
 
       - name: Generate sitemap.xml
         run: |

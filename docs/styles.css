@@ -417,6 +417,13 @@ header h1 {
     text-decoration: underline;
 }
 
+.language-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
 .language-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
