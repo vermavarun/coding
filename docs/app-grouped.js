@@ -280,16 +280,13 @@ function createProblemCard(problem) {
                 ${firstSolution.spaceComplexity ? `<div><strong>Space:</strong> ${firstSolution.spaceComplexity}</div>` : ''}
             </div>
 
-            <details class="code-section">
-                <summary>Preview Code (${problem.solutions.length} ${problem.solutions.length === 1 ? 'language' : 'languages'})</summary>
-                ${problem.solutions.map(sol => {
-                    const lClass = LANG_MAP[sol.language] || 'plaintext';
-                    return `<div style="margin-bottom: 1.5rem;">
-                        <strong style="color: var(--primary-color);">${sol.language}</strong>
-                        <pre><code class="${lClass}">${escapeHtml(sol.code)}</code></pre>
-                    </div>`;
-                }).join('')}
-            </details>
+            ${problem.solutions.map(sol => {
+                const lClass = LANG_MAP[sol.language] || 'plaintext';
+                return `<details class="code-section">
+                    <summary>Preview Code (${sol.language})</summary>
+                    <pre><code class="${lClass}">${escapeHtml(sol.code)}</code></pre>
+                </details>`;
+            }).join('')}
         </article>
     `;
 }
@@ -328,6 +325,31 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') {
             filterSolutions();
         }
+    });
+
+    // Add scroll to top button
+    const scrollBtn = document.createElement('button');
+    scrollBtn.id = 'scrollToTop';
+    scrollBtn.innerHTML = '↑';
+    scrollBtn.title = 'Scroll to top';
+    scrollBtn.style.display = 'none';
+    document.body.appendChild(scrollBtn);
+
+    // Show/hide scroll button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.style.display = 'flex';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Watch for system theme changes when using auto theme
