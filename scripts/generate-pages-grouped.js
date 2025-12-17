@@ -54,7 +54,12 @@ function groupSolutionsByProblem(solutions) {
         grouped[key].solutions.push(solution);
     });
 
-    return Object.values(grouped);
+    // Sort by problem number
+    return Object.values(grouped).sort((a, b) => {
+        const numA = parseInt(a.problemNumber);
+        const numB = parseInt(b.problemNumber);
+        return numA - numB;
+    });
 }
 
 // Create solution HTML page with tabs for multiple languages

@@ -281,8 +281,14 @@ function createProblemCard(problem) {
             </div>
 
             <details class="code-section">
-                <summary>Preview Code (${firstSolution.language})</summary>
-                <pre><code class="${langClass}">${escapeHtml(firstSolution.code)}</code></pre>
+                <summary>Preview Code (${problem.solutions.length} ${problem.solutions.length === 1 ? 'language' : 'languages'})</summary>
+                ${problem.solutions.map(sol => {
+                    const lClass = LANG_MAP[sol.language] || 'plaintext';
+                    return `<div style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--primary-color);">${sol.language}</strong>
+                        <pre><code class="${lClass}">${escapeHtml(sol.code)}</code></pre>
+                    </div>`;
+                }).join('')}
             </details>
         </article>
     `;
