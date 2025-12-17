@@ -4,5 +4,12 @@ obj
 desktop.ini
 .DS_Store
 
-# Generated solution pages (created by CI/CD workflow)
+# Generated files (created by CI/CD workflow)
 docs/solutions/
+docs/solutions.json
+docs/sitemap.xml
+
+# Keep old generators for reference but don't use them
+# scripts/generate-pages.js
+# scripts/solution-template.html
+# docs/app.js
