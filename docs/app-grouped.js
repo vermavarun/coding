@@ -264,8 +264,7 @@ function createProblemCard(problem) {
                     ${problem.difficulty && problem.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${problem.difficulty.toLowerCase()}">${problem.difficulty}</span>` : ''}
                 </div>
                 <div class="solution-meta">
-                    ${firstSolution.solutionLink ? `<a href="${firstSolution.solutionLink}" target="_blank" rel="noopener" class="btn-link">LeetCode</a>` : ''}
-                    <a href="${solutionUrl}" class="btn-link">View Solutions</a>
+                    ${firstSolution.solutionLink ? `<a href="${firstSolution.solutionLink}" target="_blank" rel="noopener" class="btn-link">View Solution</a>` : ''}
                 </div>
             </div>
 
@@ -283,7 +282,10 @@ function createProblemCard(problem) {
             ${problem.solutions.map(sol => {
                 const lClass = LANG_MAP[sol.language] || 'plaintext';
                 return `<details class="code-section">
-                    <summary>Preview Code (${sol.language})</summary>
+                    <summary>
+                        Preview Code (${sol.language})
+                        <a href="${sol.githubUrl}" target="_blank" rel="noopener" class="github-link" onclick="event.stopPropagation()" title="View on GitHub">GitHub</a>
+                    </summary>
                     <pre><code class="${lClass}">${escapeHtml(sol.code)}</code></pre>
                 </details>`;
             }).join('')}
