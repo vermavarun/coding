@@ -1,5 +1,6 @@
 /*
 Approach:
+Tags: Array
 1. Initialize peekFound to false.
 2. Iterate through the array from 0 to n-2.
 3. If the current element is greater than the next element, check if peekFound is false.
