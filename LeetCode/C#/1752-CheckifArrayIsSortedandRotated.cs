@@ -1,31 +1,33 @@
 /*
+Solution:
 Difficulty: Easy
-Approach: Single Pass with Peek Detection
+Approach: Single Pass with rotation point detection
 Tags: Array, Simulation
-1. Initialize peekFound to false.
-2. Iterate through the array from 0 to n-2.
-3. If the current element is greater than the next element, check if peekFound is false.
-4. If peekFound is false, set peekFound to true.
-5. If peekFound is true, return false.
-6. If peekFound is true and the last element is greater than the first element, return false.
-7. Return true.
-Time Complexity: O(n)
-Space Complexity: O(1)
+1) Initialize a flag to track if rotation point has been found.
+2) Iterate through the array comparing adjacent elements.
+3) When current element is greater than next (descending), mark rotation point.
+4) If more than one rotation point found, return false (not rotated sorted).
+5) After iteration, check if rotation point exists and last > first.
+6) If so, return false (violates sorted and rotated property).
+7) Otherwise return true (array is sorted or sorted-and-rotated).
+
+Time Complexity: O(n) where n = nums.length
+Space Complexity: O(1) only using constant extra space
 */
 public class Solution {
     public bool Check(int[] nums) {
-        bool peekFound = false;                             //  Initializing peekFound to false
-        for(int i=0; i<nums.Length-1; i++) {                //  Iterating through the array from 0 to n-2
-            if(nums[i] > nums[i+1]) {                       //  If the current element is greater than the next element
-                if(peekFound == false)                      //  Check if peekFound is false
-                    peekFound = true;                       //  If peekFound is false, set peekFound to true
-                else
-                    return false;                           //  If peekFound is true, return false
+        bool peekFound = false;                                     // Track if rotation point has been found
+        for(int i=0; i<nums.Length-1; i++) {                        // Iterate through array up to second-to-last element
+            if(nums[i] > nums[i+1]) {                               // If current element > next (descending order)
+                if(peekFound == false)                              // If this is the first rotation point
+                    peekFound = true;                               // Mark rotation point as found
+                else                                                // If second rotation point found
+                    return false;                                   // Not a valid sorted-rotated array
             }
         }
-        if(peekFound && nums[nums.Length-1] > nums[0]) {    //  If peekFound is true and the last element is greater than the first element
-            return false;                                   //  Return false
+        if(peekFound && nums[nums.Length-1] > nums[0]) {            // If rotated but last element > first element
+            return false;                                           // Violates sorted property after rotation
         }
-        return true;                                        //  Return true
+        return true;                                                // Array is sorted or properly sorted-and-rotated
     }
 }
