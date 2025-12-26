@@ -1,19 +1,16 @@
 /*
 Solution: https://leetcode.com/problems/house-robber-ii/solutions/6336237/simplest-solution-c-time-on-spacen-pleas-n0ta/
-
-Approach : Dynamic Programming Recursion with Memoization (Top-Down)
+Difficulty: Easy
+Approach: [To be documented]
+Tags: Array, Dynamic Programming, Math, Recursion
 1. Create a dp array of size 101
 2. Call the RobWay method with nums, 0, and n-2
 3. Call the RobWay method with nums, 1, and n-1
 4. Return the maximum of start0 and start1
 5. In the RobWay method:
-    a. Check if i > size, if yes return 0
-    b. Check if dp[i] != -1, if yes return dp[i]
-    c. Calculate the rob amount by adding the current house amount and calling the RobWay method with nums, i+2, and size
-    d. Calculate the skip amount by calling the RobWay method with nums, i+1, and size
-    e. Return the maximum of rob and skip
-Time complexity: O(n)
-Space complexity: O(n)
+
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     int[] dp = new int[101];                            // create a dp array of size 101

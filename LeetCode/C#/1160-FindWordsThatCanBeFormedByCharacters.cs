@@ -1,15 +1,15 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Hash Table, String
 1. Create a dictionary of characters and their count in chars string.
 2. For each word in words, create a dictionary of characters and their count.
 3. Check if the word can be formed from chars string.
-    a. If yes, add the length of the word to result.
 4. Return the result.
 
 Time Complexity: O(n*m) where n is the length of words and m is the length of chars.
 Space Complexity: O(n) where n is the length of chars.
-
 */
 public class Solution {
     public int CountCharacters(string[] words, string chars) {

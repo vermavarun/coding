@@ -1,16 +1,15 @@
 /*
-Approach : Recursion with Memoization
+Solution: 
+Difficulty: Easy
+Approach: [To be documented]
+Tags: Array, Dynamic Programming, Math, Recursion
 1. Create a dp array of size nums.Length and fill it with -1
 2. Call the RobWay method with nums, 0, and dp
 3. In the RobWay method:
-    a. Check if i >= nums.Length, if yes return 0
-    b. Check if dp[i] != -1, if yes return dp[i]
-    c. Calculate the rob amount by adding the current house amount and calling the RobWay method with nums, i+2, and dp
-    d. Calculate the skip amount by calling the RobWay method with nums, i+1, and dp
-    e. Return the maximum of rob and skip
 4. Return the result
-Time complexity: O(n)
-Space complexity: O(n)
+
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int Rob(int[] nums) {

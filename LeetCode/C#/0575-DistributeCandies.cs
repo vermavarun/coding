@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/distribute-candies/solutions/7404538/simplest-solution-c-time-on-spacen-pleas-r1os/
+Difficulty: Medium
 Approach: Hash Table (Dictionary) + Greedy
 Tags: Hash Table, Greedy, Array
 1) Create a dictionary to count unique candy types.

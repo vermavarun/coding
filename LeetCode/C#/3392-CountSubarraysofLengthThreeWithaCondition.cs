@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition/solutions/6691977/simplest-solution-c-time-on-space1-pleas-0ee5/
+Difficulty: Medium
 Approach: Sliding Window
+Tags: Array
 1) We need to find the number of subarrays of length 3 such that the sum of the first and last elements is equal to twice the middle element.
 2) We can use a sliding window of size 3 to check each subarray.
 3) We will maintain three pointers: a, b, and c.
@@ -9,6 +11,7 @@ Approach: Sliding Window
 6) If it is, we will increment the count.
 7) We will move the window by incrementing a, b, and c.
 8) We will return the count at the end.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

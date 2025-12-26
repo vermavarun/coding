@@ -1,3 +1,15 @@
+"""
+Solution: 
+Difficulty: Medium
+Approach: [Algorithm approach to be determined]
+Tags: [Relevant tags]
+1) [Step 1 description]
+2) [Step 2 description]
+3) [Step 3 description]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+"""
 import pandas as pd
 '''
 Using the pandas library, create a function that takes a DataFrame of animals and returns only the rows where the "weight" column is greater than 100, sorted in descending order by weight, and only including the "name" column.

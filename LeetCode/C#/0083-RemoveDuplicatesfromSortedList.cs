@@ -1,13 +1,15 @@
 /*
 Solution: https://leetcode.com/problems/remove-duplicates-from-sorted-list/solutions/6177565/simplest-solution-c-time-on-space1-pleas-y9vp/
+Difficulty: Easy
 Approach:
+Tags: Array, Linked List, Sorting
 1. Traverse the linked list from the head node.
 2. If the current node and the next node have the same value, update the next pointer of the current node to the node next to the next node.
 3. Repeat the process until the current node is the last node of the linked list.
 4. Return the head node.
-
-Time complexity: O(n), where n is the number of nodes in the linked list.
 Space complexity: O(1).
+
+Time Complexity: O(?)
 */
 /**
  * Definition for singly-linked list.

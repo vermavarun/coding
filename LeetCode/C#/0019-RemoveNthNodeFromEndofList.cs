@@ -1,16 +1,18 @@
 /*
-Approach:
-1. Create a dummy node and assign it to the head of the list.
-2. Create two pointers left and right and assign them to the dummy node.
-3. Move the right pointer n times.
-4. Move both the pointers until the right pointer reaches the end of the list.
-5. The left pointer will be at the node before the node to be deleted.
-6. Remove the node by assigning left.next to left.next.next.
-7. Return the dummy node's next.
+Solution:
+Difficulty: Medium
+Approach: Two Pointers (Fast and Slow)
+Tags: Linked List, Two Pointers
+1) Create a dummy node and assign it to the head of the list.
+2) Create two pointers left and right and assign them to the dummy node.
+3) Move the right pointer n times.
+4) Move both the pointers until the right pointer reaches the end of the list.
+5) The left pointer will be at the node before the node to be deleted.
+6) Remove the node by assigning left.next to left.next.next.
+7) Return the dummy node's next.
 
-Time complexity: O(n)
-Space complexity: O(1)
-
+Time Complexity: O(n)
+Space Complexity: O(1)
 */
 /**
  * Definition for singly-linked list.

@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/7027831/simplest-solution-c-time-olog-n-space1-p-0qor/
+Difficulty: Medium
 Approach: Modified Binary Search
 Tags: Array, Binary Search, Divide and Conquer
 1) Use binary search with left and right pointers.
@@ -8,6 +9,7 @@ Tags: Array, Binary Search, Divide and Conquer
 4) Otherwise, minimum is at mid or in the left half.
 5) Continue until left equals right, which points to the minimum.
 6) Return the element at the converged position.
+Space Complexity: O(1)
 
 Time Complexity: O(log n)
 Space Complexity: O(1)

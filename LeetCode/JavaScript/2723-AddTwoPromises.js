@@ -1,5 +1,6 @@
 /*
 Solution: Add Two Promises
+Difficulty: Medium
 Approach: Async/Await to Resolve Promises and Sum Values
 Tags: JavaScript, Promises, Async/Await
 1) Use async function to handle promises asynchronously.
@@ -7,6 +8,8 @@ Tags: JavaScript, Promises, Async/Await
 3) Await the resolution of the second promise to get its value.
 4) Return the sum of both resolved values.
 5) Alternative: Use Promise.all() to resolve both promises simultaneously.
+Time Complexity: O(1) - depends on promise resolution time
+Space Complexity: O(1)
 
 Time Complexity: O(1) - depends on promise resolution time
 Space Complexity: O(1)

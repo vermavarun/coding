@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, String
 1. Create a bag array of size words.Length.
 2. Create a HashSet of vowels.
 3. Iterate through the words array and check if the first and last character of the word is a vowel.

@@ -1,3 +1,8 @@
+-- Difficulty: Medium
+-- Tags: Algorithm
+-- 1) [Step 1]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 -- Approach: Select the tweet_id from the table where the length of the content is greater than 15
 -- 1. We need to select the tweet_id from the tweets table where the length of the content is greater than 15.
 -- 2. We can achieve this by using the select statement to select the tweet_id from the tweets table.

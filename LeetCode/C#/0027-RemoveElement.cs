@@ -1,6 +1,8 @@
 /*
-
-Approach:
+Solution:
+Difficulty: Easy
+Approach: Two Pointers (swap with end)
+Tags: Array, Two Pointers
 1) Initialize left and right pointers to 0 and nums.Length - 1 respectively.
 2) Iterate through the array until the left pointer is less than the right pointer.
 3) If the value at the right pointer is equal to the target value, decrement the right pointer.
@@ -9,8 +11,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
-
 */
 public class Solution {
     public int RemoveElement(int[] nums, int val) {

@@ -1,15 +1,17 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Brute Force
+Tags: Array, String
 1. Create a list of strings to store the result
 2. Iterate through the words array
 3. Iterate through the words array again
 4. Check if the word is not the same as the current word and the current word is a substring of the word
 5. If the condition is true, add the current word to the result list and break the inner loop
 6. Return the result list
-
-Note: Use KMP, trie, Rabin-Karp, or other string matching algorithms for better performance
 Time complexity: O(n^2)
-Space complexity: O(n)
+
+Space Complexity: O(?)
 */
 public class Solution {
     public IList<string> StringMatching(string[] words) {

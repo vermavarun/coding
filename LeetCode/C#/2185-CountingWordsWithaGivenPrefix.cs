@@ -1,12 +1,15 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Brute Force
+Tags: Array, String
 1. Initialize the result to 0.
 2. Iterate through the words array.
 3. For each word in the array, check if it starts with the given prefix.
 4. If it does, increment the result.
 5. Return the result.
-Time complexity: O(n)
 Space complexity: O(1)
+
 */
 public class Solution {
     public int PrefixCount(string[] words, string pref) {

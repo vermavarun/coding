@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Hash Table, String
 1. Create a dictionary to store the count of each character in the string.
 2. Iterate through the string and update the count of each character in the dictionary.
 3. Iterate through the string again and check if the count of the character is 1.
@@ -9,7 +11,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
 */
 public class Solution {
     public int FirstUniqChar(string s) {

@@ -1,3 +1,15 @@
+/*
+Solution: 
+Difficulty: Easy
+Approach: [Algorithm approach to be determined]
+Tags: [Relevant tags]
+1) [Step 1 description]
+2) [Step 2 description]
+3) [Step 3 description]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+*/
 public class Solution {
     public int LastStoneWeight(int[] stones) {
             PriorityQueue<int, int> pq = new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x));

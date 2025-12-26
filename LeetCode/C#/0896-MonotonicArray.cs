@@ -1,13 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Check if the array is increasing monotonic or decreasing monotonic.
 2. If the array is increasing monotonic or decreasing monotonic, return true.
 3. If the array is neither increasing monotonic nor decreasing monotonic, return false.
-
-Time complexity: O(n)
 Space complexity: O(1)
 
-
+Time Complexity: O(?)
 */
 public class Solution {
     public bool IsMonotonic(int[] nums) {

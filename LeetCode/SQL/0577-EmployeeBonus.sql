@@ -1,3 +1,8 @@
+-- Difficulty: Medium
+-- Tags: Algorithm
+-- 1) [Step 1]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 -- Approach: Left Join
 -- 1. We need to find the employee name and bonus from the employee and bonus tables.
 -- 2. We can achieve this by left joining the employee table with the bonus table on empId.

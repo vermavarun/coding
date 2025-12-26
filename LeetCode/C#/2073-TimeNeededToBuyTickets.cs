@@ -1,12 +1,13 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. We will keep on buying tickets from the first shop till we have enough tickets from the kth shop.
-Simulation Technique is used here.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 
 public class Solution {

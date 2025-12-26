@@ -1,13 +1,14 @@
 /*
 Solution: https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/solutions/7016748/simplest-solution-c-time-on-space1-pleas-in2n/
+Difficulty: Medium
 Approach: Iteration
-Video: https://www.youtube.com/watch?v=0Q4cqxmR0qc
 Tags: Array, Greedy, Iteration, Dictionary, Hash Table
 1) Iterate through the array and maintain a sum of positive unique numbers.
 2) Use an array to track seen numbers (from 0 to 100).
 3) If a number is negative or zero, keep track of the maximum negative number.
 4) If the sum of positive numbers is zero, return the maximum negative number.
 5) Otherwise, return the sum of positive unique numbers.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

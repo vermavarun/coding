@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Binary Tree
 1) Create a list to store the inorder traversal items.
 2) Call the InOrderTraversal method to traverse the tree in inorder fashion.
 3) Return the kth smallest element from the list.
@@ -8,9 +11,8 @@ Approach:
 6) Add the current node value to the list.
 7) Traverse the right subtree.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

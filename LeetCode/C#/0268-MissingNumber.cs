@@ -1,12 +1,15 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Xor
+Tags: Array
 1. We know that the numbers are from 0 to n. So, we can xor all the numbers from 0 to n and all the numbers in the array.
 2. The result will be the missing number.
 3. The reason is that the xor of the same number is 0. So, the missing number will be left out.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 public class Solution {
     public int MissingNumber(int[] nums) {

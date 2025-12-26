@@ -1,10 +1,12 @@
 /*
 Solution: https://leetcode.com/problems/set-matrix-zeroes/solutions/6768863/simplest-solution-c-time-omn-space1-plea-wpzy/
-Approach: Iterative
-1. Check if the first row and first column need to be set to zero.
-2. Use the first row and first column to mark which rows and columns need to be set to zero.
-3. Set the elements in the marked rows and columns to zero.
-4. Finally, set the first row and first column to zero if they were marked.
+Difficulty: Medium
+Approach: In-place marking using first row and column
+Tags: Array, Hash Table, Matrix
+1) Check if the first row and first column need to be set to zero.
+2) Use the first row and first column to mark which rows and columns need to be set to zero.
+3) Set the elements in the marked rows and columns to zero.
+4) Finally, set the first row and first column to zero if they were marked.
 
 Time Complexity: O(m*n)
 Space Complexity: O(1)

@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/count-partitions-with-even-sum-difference/solutions/7394579/simplest-solution-c-time-on-space1-pleas-7joj/
+Difficulty: Medium
 Approach: Prefix Sum with Two Pointers Technique
 Tags: Array, Prefix Sum, Math
 1) Calculate the total sum of all elements (initial right sum).
@@ -8,6 +9,7 @@ Tags: Array, Prefix Sum, Math
 4) Update right sum by removing current element.
 5) Calculate the absolute difference between left and right sums.
 6) If the difference is even, increment the count.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

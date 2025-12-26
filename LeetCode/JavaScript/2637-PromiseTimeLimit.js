@@ -1,15 +1,13 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String
 1) We can create a function that returns a function that resolves a promise after a certain amount of time.
 2) We can use the setTimeout function to achieve this.
 3) We can use the async and await keywords to make the function asynchronous.
 4) We can use the Promise constructor to create a promise that resolves after a certain amount of time.
-
-Time complexity:
 - O(1)
-
-Space complexity:
 - O(1)
 
 */

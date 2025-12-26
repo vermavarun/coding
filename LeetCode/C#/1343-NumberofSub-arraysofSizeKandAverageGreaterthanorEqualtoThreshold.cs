@@ -1,16 +1,18 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. We will initialize i, j, c, res, and sum to 0.
 2. We will calculate the sum of the first k elements and check if the average is greater than or equal to the threshold.
 3. We will increment the result if the average is greater than or equal to the threshold.
 4. We will iterate through the array and calculate the sum of the next k elements.
 5. We will check if the average is greater than or equal to the threshold and increment the result accordingly.
 6. We will return the result.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 public class Solution {
     public int NumOfSubarrays(int[] arr, int k, int threshold) {

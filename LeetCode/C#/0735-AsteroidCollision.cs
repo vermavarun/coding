@@ -1,18 +1,11 @@
 /*
-
+Solution: 
+Difficulty: Easy
 Approach:
-- Use a stack to keep track of the asteroids
-- If the asteroid is positive, push it to the stack
-- If the asteroid is negative, check if the stack is empty or the top of the stack is negative
-    - If the stack is empty or the top of the stack is negative, push the asteroid to the stack
-    - If the top of the stack is positive and the asteroid is negative, check if the top of the stack is smaller than the asteroid
-        - If the top of the stack is smaller than the asteroid, pop the top of the stack
-        - If the top of the stack is equal to the asteroid, pop the top of the stack
-- Reverse the stack and return the result
+Tags: Array, Stack
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int[] AsteroidCollision(int[] asteroids) {

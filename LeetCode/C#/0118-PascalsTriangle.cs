@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1) Initialize the row and triangle lists
 2) Add the first row to the triangle list
 3) Iterate through the rows
@@ -10,10 +12,8 @@ Approach:
 7) Add 1 to the row list
 8) Add the row list to the triangle list
 9) Return the triangle list
-
 Time complexity: O(n^2)
 Space complexity: O(n^2)
-
 
 */
 

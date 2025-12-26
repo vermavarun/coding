@@ -1,11 +1,11 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Return a function that takes a value x as input.
 2. Iterate through the functions in reverse order and apply each function on x.
 3. Return the final value.
-
-Time complexity: O(n)
 Space complexity: O(1)
 
 */

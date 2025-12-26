@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/course-schedule/solutions/6572782/simplest-solution-c-time-ove-spaceve-ple-qdgk/
+Difficulty: Easy
 Approach: Kahn's Algorithm
+Tags: Array, Queue, Depth-First Search
 1. Create a graph with number of courses as nodes and prerequisites as edges.
 2. Create an indegree array to store the indegree of each node.
 3. Create a queue to store the nodes with 0 indegree.
@@ -10,8 +12,8 @@ Approach: Kahn's Algorithm
 7. Repeat the process until the queue is empty.
 8. If the number of nodes visited is equal to the number of courses, return true else return false.
 
-Time complexity: O(V+E) where V is the number of courses and E is the number of prerequisites.
-Space complexity: O(V+E) where V is the number of courses and E is the number of prerequisites.
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public bool CanFinish(int numCourses, int[][] prerequisites) {

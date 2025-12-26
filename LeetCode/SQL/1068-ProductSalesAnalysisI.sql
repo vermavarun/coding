@@ -1,3 +1,8 @@
+-- Difficulty: Medium
+-- Tags: Algorithm
+-- 1) [Step 1]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 -- Approach: Join the tables on product_id
 -- 1. We need to join the sales and product tables on the basis of the product_id column.
 -- 2. We can achieve this by using the left join keyword to join the two tables.

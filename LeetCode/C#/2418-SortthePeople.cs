@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/sort-the-people/solutions/6888177/simplest-solution-c-time-on-log-n-spacen-qcoc/
+Difficulty: Medium
 Approach: Using Dictionary and Sorting
+Tags: Array, Hash Table, String, Sorting
 1. Create a dictionary to map heights to names.
 2. Sort the heights in descending order.
 3. Iterate through the sorted heights and build the result list using the dictionary.

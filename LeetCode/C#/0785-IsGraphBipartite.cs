@@ -1,3 +1,14 @@
+/*
+Solution: 
+Difficulty: Easy
+Approach: [To be documented]
+Tags: Array
+1) [Step 1]
+2) [Step 2]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+*/
 
 /*
 Solution: https://leetcode.com/problems/is-graph-bipartite/submissions/1587185288/

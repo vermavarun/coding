@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1) Initialize the lastRow and currentRow lists
 2) Add 1 to the currentRow list
 3) Iterate through the rows
@@ -10,10 +12,9 @@ Approach:
 7) Add 1 to the currentRow list
 8) Set the lastRow to the currentRow
 9) Return the currentRow
-
 Time complexity: O(n^2)
-Space complexity: O(n)
 
+Space Complexity: O(?)
 */
 
 

@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Binary Tree, Binary Search, Recursion
 1. If the value of p and q is less than the value of the root, then the lowest common ancestor will be in the left subtree.
 2. If the value of p and q is greater than the value of the root, then the lowest common ancestor will be in the right subtree.
 3. Else, the root is the lowest common ancestor.
@@ -8,9 +11,8 @@ Approach:
 6. Else, return the root.
 7. If the root is null or p or q is null, return null.
 
-Time complexity is O(h) where h is the height of the tree.
-Space complexity is O(h) where h is the height of the tree.
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

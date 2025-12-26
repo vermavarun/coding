@@ -1,13 +1,15 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String
 1. Start from the end of the string and check if the number is odd or even.
 2. If the number is even or 0, remove it from the string.
 3. If the number is odd, return the string.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 public class Solution {
     public string LargestOddNumber(string num) {

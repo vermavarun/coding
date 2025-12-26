@@ -1,5 +1,6 @@
 /*
 Solution: Check If All 1's Are at Least K Places Away
+Difficulty: Medium
 Approach: Track Distance Between Consecutive 1's
 Tags: Array, Greedy
 1) Initialize the last position of 1 to -(k+1) to handle the first 1 correctly.
@@ -8,6 +9,7 @@ Tags: Array, Greedy
 4) If the distance between consecutive 1's is less than k, return false.
 5) Update the last position of 1 and continue.
 6) If all 1's are at least k places apart, return true.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

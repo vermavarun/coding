@@ -1,15 +1,12 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Algorithm
 1) We can create a function that returns a promise that resolves after a certain amount of time.
 2) We can use the setTimeout function to achieve this.
-
-Time complexity:
 - O(1)
-
-Space complexity:
 - O(1)
-
 
 */
 

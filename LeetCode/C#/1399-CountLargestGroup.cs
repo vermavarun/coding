@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/count-largest-group/submissions/1615589789/?envType=daily-question&envId=2025-04-23
+Difficulty: Medium
 Approach: Using Dictionary
+Tags: Hash Table, Math
 1) We will use a Dictionary to store the number of groups with the same sum of digits.
 2) For each number from 1 to n, we will calculate the sum of its digits.
 3) We will check if the sum of digits is already in the Dictionary.
@@ -9,9 +11,9 @@ Approach: Using Dictionary
 6) After processing all the numbers, we will find the largest group size.
 7) We will iterate through the Dictionary and count the number of groups with the largest size.
 8) Finally, we will return the count of groups with the largest size.
+
 Time Complexity: O(n * log(n))
 Space Complexity: O(n)
-
 */
 public class Solution {
     public int CountLargestGroup(int n) {

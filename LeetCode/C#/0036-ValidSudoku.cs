@@ -1,15 +1,16 @@
 /*
+Solution:
+Difficulty: Medium
+Approach: Hash Set Validation
+Tags: Array, Hash Table, Matrix
+1) Check if the rows are valid.
+2) Check if the columns are valid.
+3) Check if the boxes are valid.
+4) If all the above conditions are satisfied, return true.
+5) Otherwise, return false.
 
-Approach:
-1. Check if the rows are valid.
-2. Check if the columns are valid.
-3. Check if the boxes are valid.
-4. If all the above conditions are satisfied, return true.
-5. Otherwise, return false.
-
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(n)
+Space Complexity: O(n)
 */
 public class Solution
 {

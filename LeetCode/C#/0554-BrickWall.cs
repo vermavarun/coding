@@ -1,6 +1,8 @@
 /*
-
 Solution:
+Difficulty: Medium
+Approach: [To be documented]
+Tags: Array, Hash Table, Math
 1. We need to find the least number of bricks that can be cut to make a straight line.
 2. We need to find the maximum number of bricks that can be cut at the same place.
 3. We can ignore the last brick as we cannot cut it.
@@ -12,7 +14,6 @@ Solution:
 
 Time Complexity: O(n) where n is the number of bricks in the wall.
 Space Complexity: O(n) where n is the number of bricks in the wall.
-
 */
 
 public class Solution {

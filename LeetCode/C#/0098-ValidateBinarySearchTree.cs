@@ -1,14 +1,16 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: Recursive
+Tags: Binary Tree, Binary Search, Recursion
 1. Check if the root is null, return true
 2. Check if the root value is greater than the left value and less than the right value
 3. Recursively check the left and right nodes
 4. If all the nodes satisfy the above conditions, return true
 5. Otherwise, return false
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Linked List
 1. We will use Floyd's Tortoise and Hare algorithm to detect the cycle.
 2. We will initialize two pointers slow and fast to head.
 3. We will iterate through the linked list until fast is not null and fast.next is not null.
@@ -7,10 +10,10 @@ Approach:
 5. If cycle is found, we will iterate through the linked list until slow is not equal to fast.
 6. If slow is equal to fast, we will return slow.
 7. If cycle is not found, we will return null.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 /**
  * Definition for singly-linked list.

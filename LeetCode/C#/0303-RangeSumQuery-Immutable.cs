@@ -1,14 +1,15 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. We will store the input array in a private variable _nums.
 2. We will then implement the SumRange method that will return the sum of the elements from left to right.
 3. We will iterate from left to right and add the elements to the sum.
 4. We will return the sum.
-
-Time complexity: O(n)
 Space complexity: O(1)
 
+Time Complexity: O(?)
 */
 public class NumArray {
     private int[] _nums;                                    // private variable to store the input array

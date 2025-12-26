@@ -1,14 +1,14 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: Recursive
+Tags: Binary Tree, Recursion
 1. Call the Invert method with the root
 2. Return the root
 3. Invert method:
-    a. Check if the root is null
-    b. Call the Invert method with the left child of the root
-    c. Call the Invert method with the right child of the root
-    d. Swap the left and right child of the root
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

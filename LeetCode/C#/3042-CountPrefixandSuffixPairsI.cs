@@ -1,11 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Brute Force
+Tags: Array, String
 1. For each word in the array, check if it is prefix and suffix of any other word in the array.
 2. If it is, increment the result.
 3. Return the result.
-
 Time complexity: O(n^2)
 Space complexity: O(1)
+
 */
 public class Solution {
     public int CountPrefixSuffixPairs(string[] words) {

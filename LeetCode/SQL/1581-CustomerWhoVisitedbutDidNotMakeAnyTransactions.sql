@@ -1,3 +1,8 @@
+-- Difficulty: Medium
+-- Tags: Algorithm
+-- 1) [Step 1]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 -- Approach: Left Join
 -- 1. We need to join the visits and transactions tables on the basis of the visit_id column.
 -- 2. We can achieve this by using the left join keyword to join the two tables.

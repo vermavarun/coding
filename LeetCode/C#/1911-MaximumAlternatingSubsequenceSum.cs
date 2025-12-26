@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Recursion with memoization
+Tags: Array, Dynamic Programming, Math, Recursion
 1. We can either take the current element or skip it.
 2. If we take the current element, we need to check if we have taken the previous element or not.
 3. If we have taken the previous element, then we need to skip the current element.
@@ -14,8 +17,8 @@ Approach: Recursion with memoization
 12. We can keep track of the maximum sum we can get starting from the 0th element and whether we have taken the previous element or not.
 13. We can return the maximum sum starting from the 0th element and whether we have taken the previous element or not.
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     long[,] dp = new long[100001,2];                                // 2D array to store the maximum sum we can get starting from the ith element and whether we have taken the previous element or not.

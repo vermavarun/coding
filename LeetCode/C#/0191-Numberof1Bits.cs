@@ -1,12 +1,14 @@
 /*
 Solution: https://leetcode.com/problems/number-of-1-bits/solutions/6556147/simplest-solution-c-time-o1-space1-pleas-nilu/
+Difficulty: Easy
 Approach: String conversion
+Tags: String
 1. Convert the given number to binary string.
 2. Count the number of 1's in the binary string.
 3. Return the count.
-
 Time complexity: O(1)
 Space complexity: O(1)
+
 */
 public class Solution {
     public int HammingWeight(int n) {

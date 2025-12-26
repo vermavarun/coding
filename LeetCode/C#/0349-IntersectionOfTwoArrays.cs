@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Create a HashSet to store the elements of the first array.
 2. Create a List to store the common elements of the two arrays.
 3. Iterate through the first array and add all the elements to the HashSet.
@@ -10,7 +12,6 @@ Approach:
 
 Time Complexity: O(n + m), where n is the length of the first array and m is the length of the second array.
 Space Complexity: O(n), where n is the length of the first array.
-
 */
 public class Solution {
     public int[] Intersection(int[] nums1, int[] nums2) {

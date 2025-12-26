@@ -1,11 +1,14 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: Recursion
+Tags: Binary Tree, Recursion
 1. If both the nodes are null, then they are same, so return true.
 2. If both the nodes are not null and their values are same, then check for left and right subtrees.
 3. If any of the above conditions are not met, then return false.
 
-Time complexity: O(n), where n is the number of nodes in the tree.
-Space complexity: O(n), where n is the number of nodes in the tree. The space complexity is O(n) because the maximum depth of the recursion is the height of the tree, which is O(n) in the worst case and O(logn) in the best case.
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

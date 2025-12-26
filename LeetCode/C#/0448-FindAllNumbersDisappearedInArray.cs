@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Create a new array of size n and fill it with 1 to n.
 2. Traverse the given array and mark the index of the element as -1 in the new array.
 3. Traverse the new array and add the index of the element which is not marked as -1 to the result list.
@@ -7,8 +10,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
-
 */
 public class Solution {
     public IList<int> FindDisappearedNumbers(int[] nums) {

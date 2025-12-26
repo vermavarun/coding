@@ -1,3 +1,8 @@
+-- Difficulty: Medium
+-- Tags: Database
+-- 1) [Step 1]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 -- Approach: Join the two tables on the basis of id
 -- 1. We need to join the Employees and EmployeeUNI tables on the basis of the id column.
 -- 2. We can achieve this by using the join keyword to join the two tables.

@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: DFS
+Tags: Array, Recursion, Depth-First Search, Breadth-First Search
 1. Start from the first cell of the grid.
 2. If the cell is 1, call the DFS function.
 3. In the DFS function, check if the cell is out of bounds or the cell is water.
@@ -8,6 +11,8 @@ Approach: DFS
 6. Call the DFS function recursively with the adjacent cells.
 7. Increment the number of islands.
 8. Return the number of islands.
+Space Complexity: O(1)
+
 Time Complexity: O(rows*columns)
 Space Complexity: O(1)
 */

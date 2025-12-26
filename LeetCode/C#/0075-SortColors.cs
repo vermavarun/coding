@@ -1,12 +1,12 @@
 /*
 Solution: https://leetcode.com/problems/sort-colors/solutions/6869499/simplest-solution-c-time-on-space1-pleas-83hk/
+Difficulty: Easy
 Approach: Two Pointers
+Tags: Array, Sorting
 1. Initialize three pointers: `start` at the beginning, `mid` at the beginning, and `end` at the last index of the array.
 2. Iterate through the array using the `mid` pointer:
-   - If `nums[mid]` is 0, swap it with `nums[start]`, increment both `start` and `mid`.
-   - If `nums[mid]` is 1, just increment `mid`.
-   - If `nums[mid]` is 2, swap it with `nums[end]` and decrement `end`.
-   - Continue this process until `mid` exceeds `end`.
+Space Complexity: O(1), as we are sorting the array in place without using any additional data structures.
+
 Time Complexity: O(n), where n is the length of the input array.
 Space Complexity: O(1), as we are sorting the array in place without using any additional data structures.
 */

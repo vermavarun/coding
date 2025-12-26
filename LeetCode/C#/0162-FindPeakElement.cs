@@ -1,14 +1,17 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Binary Search
+Tags: Array, Two Pointers
 1. We can use binary search to find the peak element.
 2. We can compare the mid element with the next element.
 3. If the mid element is less than the next element, then the peak element will be on the right side of the mid element.
 4. If the mid element is greater than the next element, then the peak element will be on the left side of the mid element.
 5. We can keep on reducing the search space by moving the left and right pointers accordingly.
 6. We can return the left pointer as the peak element.
-
-Time complexity: O(log n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 public class Solution {
     public int FindPeakElement(int[] nums) {

@@ -1,9 +1,13 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. If the array is valid, then the XOR of all the elements in the array should be 0.
 2. So, we can iterate through the array and XOR all the elements.
 3. If the result is 0, then the array is valid.
 4. Else, the array is invalid.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

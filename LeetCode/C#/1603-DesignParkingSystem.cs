@@ -1,12 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
-- Create three variables to store the number of big, medium, and small cars.
-- Create a constructor to initialize the number of big, medium, and small cars.
-- Create a method to add a car to the parking lot.
-- Check the car type and decrement the number of cars accordingly.
-- Return true if the car is added successfully, otherwise return false.
-
+Tags: Algorithm
 Time complexity: O(1)
 Space complexity: O(1)
 

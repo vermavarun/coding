@@ -1,13 +1,15 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String, Math
 1. Traverse the string and check if there are 3 consecutive same digits.
 2. If yes, return the maximum digit.
 3. If no, return empty string.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 public class Solution {
     public string LargestGoodInteger(string num) {

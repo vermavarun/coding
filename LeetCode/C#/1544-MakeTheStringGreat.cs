@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Stack, String
 1. Create a stack to store the characters.
 2. Iterate through the string.
 3. If the stack is empty, push the current character to the stack.
@@ -8,8 +11,8 @@ Approach:
 6. If the current character is not equal to the peeked character in uppercase, push the current character to the stack.
 7. After iterating through the string, pop all the characters from the stack and return the string.
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public string MakeGood(string s) {

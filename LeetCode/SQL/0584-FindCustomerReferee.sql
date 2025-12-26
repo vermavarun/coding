@@ -1,3 +1,11 @@
+-- Solution: 
+-- Difficulty: Medium
+-- Approach: [To be documented]
+-- Tags: Algorithm
+-- 1) [Step 1]
+-- 2) [Step 2]
+-- Time Complexity: O(?)
+-- Space Complexity: O(?)
 /*
 https://leetcode.com/problems/find-customer-referee/solutions/6189169/simplest-solution-sql-please-upvote-by-v-3s7j/
 
