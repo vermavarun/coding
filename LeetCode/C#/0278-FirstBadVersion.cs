@@ -1,5 +1,6 @@
-    /*
+/*
     Solution: https://leetcode.com/problems/first-bad-version/solutions/7380676/simplest-solution-c-time-olog-n-space1-p-lck4/
+Difficulty: Medium
     Approach: Binary Search to Find First Occurrence
     Tags: Binary Search, Interactive Problem
     1) Use binary search with left starting at 1 and right at n.
@@ -7,10 +8,11 @@
     3) If mid version is bad, the first bad version is at mid or before it.
     4) If mid version is good, the first bad version must be after mid.
     5) Continue until left equals right, which points to the first bad version.
+    Space Complexity: O(1)
 
     Time Complexity: O(log n)
     Space Complexity: O(1)
-    */
+*/
 
     /* The isBadVersion API is defined in the parent class VersionControl.
         bool IsBadVersion(int version); */

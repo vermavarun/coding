@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/kth-distinct-string-in-an-array/solutions/6886598/simplest-solution-c-time-on-spacen-pleas-kfpg/
+Difficulty: Medium
 Approach: Using Dictionary
+Tags: Array, Hash Table, String
 1. Create a dictionary to count occurrences of each string in the array.
 2. Iterate through the array and populate the dictionary with counts.
 3. Iterate through the array again, checking the counts in the dictionary.

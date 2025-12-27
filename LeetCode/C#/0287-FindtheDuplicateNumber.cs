@@ -1,15 +1,17 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Floyd's Tortoise and Hare (Cycle Detection)
+Tags: Array
 1. Create two pointers slow and fast and assign them to 0.
 2. Move the slow pointer by one step and the fast pointer by two steps.
 3. If the slow and fast pointers meet, break the loop.
 4. Move the slow pointer to 0.
 5. Move both the slow and fast pointers by one step until they meet.
 6. Return the slow pointer.
-
-Time complexity: O(n)
 Space complexity: O(1)
 
+Time Complexity: O(?)
 */
 public class Solution {
     public int FindDuplicate(int[] nums) {

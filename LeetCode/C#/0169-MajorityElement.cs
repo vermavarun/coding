@@ -1,3 +1,16 @@
+/*
+Solution:
+Difficulty: Easy
+Approach: Dictionary (Hash Map) for frequency counting
+Tags: Array, Hash Table, Divide and Conquer, Sorting, Counting
+1) Create a dictionary to store frequency of each element.
+2) Iterate through array and increment count for each element.
+3) Track element with maximum frequency during iteration.
+4) Return the element that appears more than n/2 times.
+
+Time Complexity: O(n) where n = nums.length
+Space Complexity: O(n) for the dictionary
+*/
 // Approach 1: Using Dictionary to store the frequency of each element in the array. Then, iterate over the dictionary to find the element with the maximum frequency.
 public class Solution {
     public int MajorityElement(int[] nums) {

@@ -1,16 +1,17 @@
 /*
+Solution:
+Difficulty: Medium
+Approach: Two Pointers
+Tags: Array, Two Pointers, Greedy
+1) Initialize the area, left and right pointers.
+2) Iterate through the array.
+3) Calculate the area using the formula: area = Math.Max( (right - left) * (Math.Min(height[right],height[left])) ,area).
+4) If the height of the left pointer is less than the height of the right pointer, increment the left pointer.
+5) If the height of the left pointer is greater than the height of the right pointer, decrement the right pointer.
+6) Return the area.
 
-Approach:
-1) Initialize the area, left and right pointers
-2) Iterate through the array
-3) Calculate the area using the formula: area = Math.Max( (right - left) * (Math.Min(height[right],height[left])) ,area)
-4) If the height of the left pointer is less than the height of the right pointer, increment the left pointer
-5) If the height of the left pointer is greater than the height of the right pointer, decrement the right pointer
-6) Return the area
-
-Time complexity: O(n)
-Space complexity: O(1)
-
+Time Complexity: O(n)
+Space Complexity: O(1)
 */
 public class Solution {
     public int MaxArea(int[] height) {

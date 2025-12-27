@@ -1,11 +1,13 @@
 /*
 Solution: https://leetcode.com/problems/power-of-four/solutions/7087932/simplest-solution-c-time-olog4-n-space1-x6b5f/
+Difficulty: Medium
 Approach: Divide by 4 until n becomes 1 or not divisible
 Tags: Math, Iteration
 1) If n is less than or equal to 0, it cannot be a power of four.
 2) While n is greater than 1, check if n is divisible by 4.
 3) If divisible, divide n by 4; otherwise, return false.
 4) If n is reduced to 1, it is a power of four.
+Space Complexity: O(1)
 
 Time Complexity: O(log₄ n)
 Space Complexity: O(1)

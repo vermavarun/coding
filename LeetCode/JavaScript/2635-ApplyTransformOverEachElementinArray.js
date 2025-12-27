@@ -1,15 +1,10 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
-- We can create a function that takes an array and a function as arguments.
-- We can iterate over the array and apply the function to each element.
-- We can return the new array.
-
-Time complexity:
-- O(n)
-
-Space complexity:
-- O(n)
+Tags: Array
+1) [Step 1]
+2) [Step 2]
 
 */
 /**

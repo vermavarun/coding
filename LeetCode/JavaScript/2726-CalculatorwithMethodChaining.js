@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/calculator-with-method-chaining/solutions/7386749/simplest-solution-javascript-time-o1-spa-bik5/
+Difficulty: Medium
 Approach: Class-based Calculator with Fluent Interface Pattern
 Tags: JavaScript, OOP, Method Chaining, Class Design
 1) Create a Calculator class that stores the current value.
@@ -7,6 +8,8 @@ Tags: JavaScript, OOP, Method Chaining, Class Design
 3) Each method returns the instance to enable method chaining.
 4) Include error handling for division by zero.
 5) Provide getResult() method to retrieve the final computed value.
+Time Complexity: O(1) for each operation
+Space Complexity: O(1)
 
 Time Complexity: O(1) for each operation
 Space Complexity: O(1)

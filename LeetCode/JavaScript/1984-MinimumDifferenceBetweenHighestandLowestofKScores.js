@@ -1,8 +1,14 @@
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
+/*
+Solution: 
+Difficulty: Medium
+Approach: [To be documented]
+Tags: Array, Math
+1) [Step 1]
+2) [Step 2]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+*/
 var minimumDifference = function(nums, k) {
     nums.sort((a, b) => a - b);                                // Sort the array
      let i = 0;                                                // Initialize the window

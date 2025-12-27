@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Recursion
+Tags: Binary Tree, Recursion
 1. If the subRoot is null, then return true.
 2. If the root is null, then return false.
 3. If the root and subRoot are same, then return true.
@@ -7,9 +10,8 @@ Approach: Recursion
 5. If any of the above conditions are met, then return true.
 6. Else, return false.
 
-Time complexity: O(n*m), where n is the number of nodes in the root tree and m is the number of nodes in the subRoot tree.
-Space complexity: O(n), where n is the number of nodes in the root tree. The space complexity is O(n) because the maximum depth of the recursion is the height of the tree, which is O(n) in the worst case and O(logn) in the best case.
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

@@ -1,9 +1,13 @@
 /*
 Solution: https://leetcode.com/problems/three-consecutive-odds/post-solution/?submissionId=1630962333
+Difficulty: Medium
 Approach: Iterate array
+Tags: Array
 1. Check if the current element and the next two elements are odd.
 2. If they are, return true.
 3. If no such triplet is found, return false.
+Space Complexity: O(1)
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */

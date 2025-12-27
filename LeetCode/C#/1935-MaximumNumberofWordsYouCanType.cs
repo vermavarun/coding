@@ -1,5 +1,6 @@
 /*
 Solution: Count Words That Can Be Typed
+Difficulty: Medium
 Approach: Track broken letters and check each word
 Tags: String, Array, Simulation
 1) Mark all broken letters in a boolean array.
@@ -7,6 +8,7 @@ Tags: String, Array, Simulation
 3) For each word, check if it contains any broken letter.
 4) If a word can be typed (no broken letter), increment the result.
 5) Return the total count of typeable words.
+Space Complexity: O(1) - fixed size array for 26 letters
 
 Time Complexity: O(n + m) where n = text.Length, m = brokenLetters.Length
 Space Complexity: O(1) - fixed size array for 26 letters

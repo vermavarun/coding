@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Hash Table, String
 1. Create a dictionary to store the longUrl and the corresponding shortUrl.
 2. Create a variable to store the base address.
 3. If the longUrl is not present in the dictionary, then add it to the dictionary.
@@ -9,10 +11,9 @@ Approach:
 6. Extract the number from the shortUrl.
 7. Iterate through the dictionary and find the longUrl corresponding to the number.
 8. Return the longUrl.
-
 Time complexity: O(1)
-Space complexity: O(n)
 
+Space Complexity: O(?)
 */
 public class Codec {
     Dictionary<string,int> dict  = new Dictionary<string,int>();

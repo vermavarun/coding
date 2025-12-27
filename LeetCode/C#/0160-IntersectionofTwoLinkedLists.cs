@@ -1,5 +1,8 @@
 /*
-Approach 1:
+Solution: 
+Difficulty: Medium
+Approach: [To be documented]
+Tags: Array, Linked List
 1. We will use HashSet to store the nodes of the first linked list.
 2. We will iterate through the first linked list and add the nodes to the HashSet.
 3. We will iterate through the second linked list and check if the node is present in the HashSet.
@@ -9,7 +12,6 @@ Approach 1:
 
 Time Complexity: O(n + m) where n is the number of nodes in the first linked list and m is the number of nodes in the second linked list.
 Space Complexity: O(n) where n is the number of nodes in the first linked list.
-
 */
 /**
  * Definition for singly-linked list.

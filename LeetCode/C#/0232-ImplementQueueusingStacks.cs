@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Stack, Queue
 1. We will use two stacks to implement the queue.
 2. We will use one stack to push the elements and another stack to pop the elements.
 3. When we push the elements, we will push them to the push stack.
@@ -14,7 +16,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
 */
 public class MyQueue {
     Stack<int> _sPush;                                      // Stack to push the elements

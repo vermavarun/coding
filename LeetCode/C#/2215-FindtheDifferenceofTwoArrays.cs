@@ -1,20 +1,11 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
-- Create two hashsets to store the unique elements of the two arrays.
-- Create a list to store the difference of the two arrays.
-- Iterate through the first array and add the elements to the first hashset.
-- Iterate through the second array and add the elements to the second hashset.
-- Iterate through the first hashset and check if the element is not present in the second hashset, then add it to the list.
-- Add the list to the result.
-- Create a new list to store the difference of the second array.
-- Iterate through the second hashset and check if the element is not present in the first hashset, then add it to the list.
-- Add the list to the result.
-- Return the result.
+Tags: Array
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public IList<IList<int>> FindDifference(int[] nums1, int[] nums2) {

@@ -1,15 +1,17 @@
-/**
+/*
  * Solution: https://leetcode.com/problems/two-sum/solutions/6550757/simplest-solution-java-time-on-spacen-pl-cxpv/
+Difficulty: Easy
  * Approach: Using HashMap
+Tags: Array, Hash Table
  * 1. Create a HashMap to store the number and its index.
  * 2. Iterate through the array and check if the target - num is present in the HashMap.
  * 3. If it is present, return the index of the target - num and the current index.
  * 4. If it is not present, add the number and its index to the HashMap.
  * 5. If no such pair is found, return result.
- *
+
  * Time Complexity: O(n)
  * Space Complexity: O(n)
- */
+*/
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer> hmap = new HashMap<Integer,Integer>(); // Declare a HashMap

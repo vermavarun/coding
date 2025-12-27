@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/sort-by/solutions/7385305/simplest-solution-javascript-time-on-log-auxs/
+Difficulty: Medium
 Approach: Custom Sorting with Function-Based Comparison
 Tags: JavaScript, Array Sorting, Higher-Order Functions
 1) Use the built-in sort() method with a custom comparator function.

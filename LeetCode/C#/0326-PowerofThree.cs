@@ -1,12 +1,13 @@
 /*
-Video: https://www.youtube.com/watch?v=11lCatB_H_A
 Solution: https://leetcode.com/problems/power-of-three/solutions/7074870/simplest-solution-c-time-olog3-n-space1-ficms/
+Difficulty: Medium
 Approach: Iterative Division
 Tags: Math, Iteration
 1) If n is less than or equal to 0, it cannot be a power of three.
 2) While n is divisible by 3, divide n by 3.
 3) After the loop, if n is reduced to 1, it is a power of three.
 4) Otherwise, it is not a power of three.
+Space Complexity: O(1)
 
 Time Complexity: O(log₃ n)
 Space Complexity: O(1)

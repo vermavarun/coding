@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array
 1. Initialize left to 0 and right to numbers.Length - 1.
 2. Initialize an array res of size 2.
 3. Iterate while left is less than right.
@@ -9,11 +11,9 @@ Approach:
 6. If the sum of numbers[left] and numbers[right] is equal to target, break.
 7. Update res[0] to left + 1 and res[1] to right + 1.
 8. Return res.
-
-Time complexity: O(n)
 Space complexity: O(1)
-where n is the number of elements in the array.
 
+Time Complexity: O(?)
 */
 public class Solution {
     public int[] TwoSum(int[] numbers, int target) {

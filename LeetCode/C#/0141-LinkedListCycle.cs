@@ -1,5 +1,8 @@
 /*
-Approach:
+Solution:
+Difficulty: Easy
+Approach: Floyd's Cycle Detection (Two Pointers)
+Tags: Linked List, Two Pointers, Hash Table
 1) Initialize two pointers, slow and fast, and point them to the head of the linked list.
 2) Traverse the linked list until the fast pointer reaches the end.
 3) Move the slow pointer by one step and the fast pointer by two steps.

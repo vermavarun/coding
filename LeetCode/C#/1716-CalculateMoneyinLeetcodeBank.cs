@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/calculate-money-in-leetcode-bank/solutions/7299967/simplest-solution-c-time-o1-space1-pleas-4dlh/
+Difficulty: Medium
 Approach: Mathematical Pattern Recognition and Arithmetic Sequence
 Tags: Math, Arithmetic Sequence, Pattern Recognition
 1) If n <= 7, use simple arithmetic sequence formula for first week.
@@ -7,6 +8,8 @@ Tags: Math, Arithmetic Sequence, Pattern Recognition
 3) For complete weeks: each week adds 7 more than previous (28, 35, 42...).
 4) For remaining days: start from (1 + q) and form arithmetic sequence.
 5) Sum complete weeks contribution and remaining days contribution.
+Time Complexity: O(1)
+Space Complexity: O(1)
 
 Time Complexity: O(1)
 Space Complexity: O(1)

@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Create a hashset to store the unique elements.
 2. Calculate the sum of all the elements in the grid.
 3. Calculate the sum of the first n natural numbers.

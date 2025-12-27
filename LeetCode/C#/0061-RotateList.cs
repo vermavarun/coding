@@ -1,14 +1,16 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Linked List
 1. Find the length of the list.
 2. Find the new head of the list.
 3. Break the list at the new head.
 4. Connect the end of the list to the original head.
 5. Return the new head.
-
-Time complexity: O(n)
 Space complexity: O(1)
 
+Time Complexity: O(?)
 */
 /**
  * Definition for singly-linked list.

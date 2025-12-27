@@ -1,9 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String
 1. Start from the beginning of the string and check if 'b' is found for the first time.
 2. If 'b' is found for the first time, set the flag to true.
 3. If once 'b' is found, check if all the characters are 'b'. If not, return false.
 4. return true if all 'b's are found after the first 'b'.
+Space Complexity: O(1)
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */

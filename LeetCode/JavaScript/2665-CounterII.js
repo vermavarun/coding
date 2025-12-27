@@ -1,16 +1,12 @@
-/**
-
+/*
+Solution: 
+Difficulty: Medium
 Approach:
-- We can create a function that returns an object with three functions: increment, decrement, and reset.
-- We can use the closure property of JavaScript to achieve this.
-
-Time complexity:
+Tags: Algorithm
+- O(1)
 - O(1)
 
-Space complexity:
-- O(1)
-
- */
+*/
 
 
 /**

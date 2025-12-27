@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Two Pointers, String
 1. Create a diff array of size s.Length
 2. Create a chars array of size s.Length
 3. Create a StringBuilder
@@ -10,8 +13,8 @@ Approach:
 8. Append the new character to the StringBuilder
 9. Return the StringBuilder as string
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public string ShiftingLetters(string s, int[][] shifts) {

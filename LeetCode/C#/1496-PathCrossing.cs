@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String
 1. Create a hashset to store the visited points.
 2. Initially, add the starting point (0,0) to the hashset.
 3. Traverse the path string and for each character, update the x and y coordinates.
@@ -8,9 +10,8 @@ Approach:
 5. Otherwise, add the current point to the hashset.
 6. If the loop completes, return false.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public bool IsPathCrossing(string path) {

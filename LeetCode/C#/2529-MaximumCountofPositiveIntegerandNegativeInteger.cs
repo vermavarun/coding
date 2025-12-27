@@ -1,11 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Linear Search
+Tags: Array, Sorting, Math
 1. Count the positive numbers in the array
 2. Count the negative numbers in the array
 3. Return the maximum of the positive and negative numbers count
-
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 public class Solution {
     public int MaximumCount(int[] nums) {

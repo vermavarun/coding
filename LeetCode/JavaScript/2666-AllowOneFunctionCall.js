@@ -1,11 +1,12 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Algorithm
 1. Initialize a variable alreadyCalled with false.
 2. Return a function which takes any number of arguments.
 3. If alreadyCalled is false, set it to true and call the function with the arguments.
 4. Otherwise, return undefined.
-
 Time complexity: O(1)
 Space complexity: O(1)
 

@@ -1,6 +1,8 @@
 /*
-
 Solution:
+Difficulty: Medium
+Approach: [To be documented]
+Tags: Array, Hash Table
 1. We need to find the number of pairs of interchangeable rectangles.
 2. Two rectangles are interchangeable if they have the same ratio of width to height.
 3. So, we need to find the ratio of width to height for each rectangle and store it in a dictionary.
@@ -10,8 +12,6 @@ Solution:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
-
 */
 public class Solution {
     public long InterchangeableRectangles(int[][] rectangles) {

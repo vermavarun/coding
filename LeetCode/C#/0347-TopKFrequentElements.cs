@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Hash Table, Queue
 1. Create a priority queue to store the numbers based on their frequency.
 2. Create a dictionary to store the frequency of each number.
 3. Iterate through the numbers array and for each number, check if it is already present in the dictionary.
@@ -10,9 +12,8 @@ Approach:
 7. Iterate through the priority queue and dequeue the top k elements.
 8. Return the top k elements as the result.
 
-Time complexity: O(nlogk)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int[] TopKFrequent(int[] nums, int k) {

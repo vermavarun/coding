@@ -1,11 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Linked List
 1. Find the middle of the list using slow and fast pointers.
 2. Reverse the second half of the list.
 3. Merge the two lists.
-
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 /**
  * Definition for singly-linked list.

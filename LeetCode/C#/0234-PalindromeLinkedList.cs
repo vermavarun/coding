@@ -1,13 +1,16 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Linked List
 1. Find the length of the linked list.
 2. Find the mid of the linked list.
 3. Reverse the linked list from mid.
 4. Compare the first half of the linked list with the reversed second half of the linked list.
 5. If they are equal, return true. Else, return false.
-
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 /**
  * Definition for singly-linked list.

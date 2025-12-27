@@ -1,3 +1,6 @@
+# Difficulty: Easy
+# Time Complexity: O(?)
+# Space Complexity: O(?)
 #!/bin/bash
 # Solution: Valid Phone Numbers
 # Approach: Regular Expression Pattern Matching with grep

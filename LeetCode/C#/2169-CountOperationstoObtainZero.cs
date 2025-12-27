@@ -1,5 +1,6 @@
 /*
 Solution: Count Operations to Obtain Zero
+Difficulty: Medium
 Approach: Simulation with Repeated Subtraction
 Tags: Math, Simulation
 1) Initialize a counter to track the number of operations.
@@ -7,6 +8,8 @@ Tags: Math, Simulation
 3) Increment the operation counter after each subtraction.
 4) Continue until one of the numbers becomes zero.
 5) Return the total count of operations performed.
+Time Complexity: O(max(num1, num2)) - worst case when numbers differ by 1
+Space Complexity: O(1)
 
 Time Complexity: O(max(num1, num2)) - worst case when numbers differ by 1
 Space Complexity: O(1)

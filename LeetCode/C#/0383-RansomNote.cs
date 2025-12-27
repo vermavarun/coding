@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/ransom-note/solutions/7404079/simplest-solution-c-time-om-n-spacek-ple-tbes/
+Difficulty: Medium
 Approach: Character Frequency Count with Hash Table
 Tags: Hash Table, String, Counting
 1) Create a dictionary to count character frequencies in magazine.

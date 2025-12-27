@@ -1,12 +1,13 @@
 /*
 Solution: https://leetcode.com/problems/maximum-difference-between-increasing-elements/solutions/6852841/simplest-solution-c-time-on-space1-pleas-j7tq/
+Difficulty: Medium
 Approach: Two Pointers
+Tags: Array, Math
 1) Initialize two pointers: `minPosition` at the start and `maxPosition` at the second element.
 2) Iterate through the array with `maxPosition`:
-   - If the current element at `maxPosition` is greater than the element at `minPosition`, calculate the difference and update `maxDiff` if this difference is greater than the current `maxDiff`.
-   - If the current element at `maxPosition` is not greater, move `minPosition` to `maxPosition`.
 3) Continue until `maxPosition` reaches the end of the array.
 4) Return `maxDiff`.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

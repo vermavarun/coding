@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/fruit-into-baskets/solutions/7043440/simplest-solution-c-time-on-spacen-pleas-9kr1/
+Difficulty: Medium
 Approach: Two Pointers (Sliding Window)
 Tags: Array, Hash Table, Sliding Window, Two Pointers
 1) Use a sliding window approach with left and right pointers.
@@ -8,6 +9,7 @@ Tags: Array, Hash Table, Sliding Window, Two Pointers
 4) If more than 2 fruit types exist, shrink window from left until only 2 types remain.
 5) Track the maximum window size (maximum fruits collected) throughout the process.
 6) Return the maximum number of fruits that can be collected.
+Space Complexity: O(1) - at most 3 fruit types in dictionary
 
 Time Complexity: O(n)
 Space Complexity: O(1) - at most 3 fruit types in dictionary

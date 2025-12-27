@@ -1,16 +1,15 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: Recursive
+Tags: Array, Binary Tree, Recursion
 1. Create a list of integers to store the result
 2. Call the Traverse method with the root and the result list
 3. Return the result list
 4. Traverse method:
-    a. Check if the root is null
-    b. Call the Traverse method with the left child of the root and the result list
-    c. Add the value of the root to the result list
-    d. Call the Traverse method with the right child of the root and the result list
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/fruits-into-baskets-ii/solutions/7047747/simplest-solution-c-time-onm-space1-plea-gfdo/
+Difficulty: Medium
 Approach: Iteration with Greedy Matching
 Tags: Array, Greedy, Simulation
 1) Initialize counter for placed fruits.

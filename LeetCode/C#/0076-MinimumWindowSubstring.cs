@@ -1,7 +1,7 @@
 /*
 Solution: https://leetcode.com/problems/minimum-window-substring/solutions/7027291/simplest-solution-c-time-on-spacen-pleas-3bvj/
+Difficulty: Easy
 Approach: Two Pointers (Sliding Window)
-Video: https://www.youtube.com/watch?v=3Bp3OVD1EGc
 Tags: String, Hash Table, Sliding Window, Two Pointers
 1) Use a dictionary to count characters in target string t.
 2) Use two pointers (left and right) to maintain a sliding window.

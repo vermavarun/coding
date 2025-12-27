@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Math
 1. We will use a HashSet to store the elements.
 2. We will iterate through the array and add the elements to the HashSet.
 3. If the element is already present in the HashSet, we will return true.
@@ -9,7 +11,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
 */
 public class Solution {
     public bool ContainsNearbyDuplicate(int[] nums, int k) {

@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Binary Tree, Recursion
 1. Check if the tree is symmetric or not.
 2. If the tree is null, return true.
 3. Call the helper function IsInverted with left and right nodes of the root.
@@ -12,7 +15,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
 */
 /**
  * Definition for a binary tree node.

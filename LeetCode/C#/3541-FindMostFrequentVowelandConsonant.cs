@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/solutions/7185563/simplest-solution-c-time-on-space1-pleas-0nnb/
+Difficulty: Medium
 Approach: Frequency Counting with Character Classification
 Tags: String, Hash Table, Frequency Count
 1) Initialize counters for maximum vowel and consonant frequencies.
@@ -7,6 +8,7 @@ Tags: String, Hash Table, Frequency Count
 3) Iterate through each character in the string.
 4) Update character frequency and track maximum frequencies for vowels and consonants separately.
 5) Return the sum of maximum vowel frequency and maximum consonant frequency.
+Space Complexity: O(1) - fixed size arrays and vowel list
 
 Time Complexity: O(n)
 Space Complexity: O(1) - fixed size arrays and vowel list

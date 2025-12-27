@@ -1,5 +1,6 @@
 /*
 Solution: Simple Bank System Implementation
+Difficulty: Medium
 Approach: Object-Oriented Design with Balance Management
 Tags: Design, Array, Simulation, OOP
 1) Store account balances in a list for easy access and modification.
@@ -7,6 +8,7 @@ Tags: Design, Array, Simulation, OOP
 3) Implement deposit operation with account validation.
 4) Implement withdrawal operation with account validation and sufficient funds check.
 5) Use helper method to validate account numbers (1-indexed to n).
+Time Complexity: O(1) for all operations
 
 Time Complexity: O(1) for all operations
 Space Complexity: O(n) where n is number of accounts

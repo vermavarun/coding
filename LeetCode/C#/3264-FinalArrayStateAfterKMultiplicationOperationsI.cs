@@ -1,13 +1,16 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Brute Force
+Tags: Array, Queue
 1) Find the minimum element in the array.
 2) Multiply the minimum element by the multiplier.
 3) Repeat the above steps k times.
 4) Return the final state of the array.
+Space Complexity: O(1)
 
 Time Complexity: O(k*n)
 Space Complexity: O(1)
-
 */
 public class Solution {
     public int[] GetFinalState(int[] nums, int k, int multiplier) {

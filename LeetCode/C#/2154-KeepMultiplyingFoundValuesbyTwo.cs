@@ -1,5 +1,6 @@
 /*
 Solution: Keep Multiplying Found Values by Two
+Difficulty: Medium
 Approach: HashSet Lookup with Iterative Multiplication
 Tags: Array, Hash Table, Simulation
 1) Create a HashSet from the array for O(1) lookup operations.

@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Create a hashset to store the unique numbers.
 2. Initialize the current sum, first duplicate number, and missing number.
 3. Iterate through the numbers array and for each number, check if it is already present in the hashset.
@@ -9,9 +11,8 @@ Approach:
 6. Calculate the missing number using the formula (n*(n+1)/2) - current sum.
 7. Return the first duplicate number and the missing number.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int[] FindErrorNums(int[] nums) {

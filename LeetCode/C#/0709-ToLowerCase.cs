@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/to-lower-case/solutions/7400197/simplest-solution-c-time-on-spacen-pleas-4wea/
+Difficulty: Easy
 Approach: Character Manipulation with ASCII Values
 Tags: String, Character Manipulation, ASCII
 1) Use StringBuilder for efficient string construction.

@@ -1,14 +1,16 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Stack, String
 1. Create a stack to store the characters.
 2. Iterate through the string.
 3. If the current character is a star and the stack is not empty, pop the last character from the stack.
 4. If the current character is not a star, push it to the stack.
 5. After iterating through the string, pop all the characters from the stack (also remove the last character from the string when you encounter * by decreasing the length) and return the string.
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public string RemoveStars(string s) {

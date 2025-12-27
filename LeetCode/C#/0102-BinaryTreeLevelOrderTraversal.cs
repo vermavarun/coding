@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Queue, Binary Tree, Breadth-First Search
 1. Initialize the result list
 2. If the root is null, return the result list
 3. Initialize the queue
@@ -14,9 +17,8 @@ Approach:
 12. Add the level list to the result list
 13. Return the result list
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

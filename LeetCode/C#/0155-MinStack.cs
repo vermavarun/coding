@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Stack
 1) Initialize the minimum value and the stack
 2) Push the value to the stack if the stack is empty
 3) If the value is greater than or equal to the minimum value, push the value to the stack
@@ -13,8 +15,8 @@ Approach:
 10) Return the minimum value
 11) Make sure you cast long to int where ever required for C# :)
 Time complexity: O(1)
-Space complexity: O(n)
 
+Space Complexity: O(?)
 */
 public class MinStack
 {

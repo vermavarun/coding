@@ -1,12 +1,16 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, String
 1. Declare a variable result and initialize it to 0.
 2. Iterate through the details array.
 3. For each detail, get the age by converting the characters at index 11 and 12 to integers.
 4. If the age is greater than 60, increment the result.
 5. Return the result.
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 public class Solution {
     public int CountSeniors(string[] details) {

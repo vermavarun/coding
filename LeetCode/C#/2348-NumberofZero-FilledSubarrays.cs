@@ -1,3 +1,14 @@
+/*
+Solution: 
+Difficulty: Medium
+Approach: [To be documented]
+Tags: Array, String, Math
+1) [Step 1]
+2) [Step 2]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+*/
 
 /*
 Solution: https://leetcode.com/problems/number-of-zero-filled-subarrays/solutions/7099676/simplest-solution-c-time-on-space1-pleas-qfik/

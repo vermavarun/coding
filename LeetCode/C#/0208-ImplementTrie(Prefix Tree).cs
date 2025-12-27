@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Binary Tree, String
 1. Create a TrieNode class with 26 children and a boolean variable to check if it is the end of the word.
 2. Create a Trie class with Insert, Search, and StartsWith methods.
 3. In the Insert method, iterate through the word and check if the current character's child is null. If it is null, create a new TrieNode and assign it to the current character's child.

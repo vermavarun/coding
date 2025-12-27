@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String
 1. Use two pointers i and j to iterate through the string.
 2. Initialize i and j to 0.
 3. Iterate through the string until j is less than the length of the string.
@@ -10,8 +12,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
-
 */
 
 public class Solution

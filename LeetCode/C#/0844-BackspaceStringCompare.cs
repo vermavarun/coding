@@ -1,9 +1,13 @@
 /*
 Solution: https://leetcode.com/problems/backspace-string-compare/solutions/6891192/simplest-solution-c-time-onm-space1-plea-y9ba/
+Difficulty: Medium
 Approach: Two Pointer Technique
+Tags: Array, String
 1) Traverse both strings from the end to the beginning.
 2) Use two pointers to skip characters that are followed by a backspace character '#'.
 3) Compare the characters at the pointers after skipping the backspaces.
+Space Complexity: O(1), as we are not using any extra space except for a few variables.
+
 Time Complexity: O(n + m), where n and m are the lengths of the two strings.
 Space Complexity: O(1), as we are not using any extra space except for a few variables.
 */

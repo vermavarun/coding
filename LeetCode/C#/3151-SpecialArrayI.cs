@@ -1,9 +1,14 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Iterate through the array from 1 to n-1.
 2. Check if the current element and the previous element are both even or both odd.
 3. If they are, return false.
 4. If the loop completes, return true.
+Space Complexity: O(1)
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */

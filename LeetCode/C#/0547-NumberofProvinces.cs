@@ -1,13 +1,15 @@
 /*
 Solution: https://leetcode.com/problems/number-of-provinces/solutions/6566544/simplest-solution-c-time-onn-spacen-plea-d53p/
+Difficulty: Medium
 Approach: Depth First Search
+Tags: Array, Depth-First Search, Breadth-First Search
 1. Create a list of visited nodes and initialize all nodes as not visited.
 2. For each node, if it is not visited, call DFS and increment the number of provinces.
 3. In DFS, mark the current node as visited and for all the nodes that are not visited and are connected to the current node, call DFS.
 4. Return the number of provinces.
-
 Time complexity: O(n^2)
-Space complexity: O(n)
+
+Space Complexity: O(?)
 */
 public class Solution {
     List<bool> visited = new List<bool>();                                              // List to store visited nodes

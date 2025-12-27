@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Math
 1. Create a hashset to store the numbers.
 2. Create a variable to store the current initial length.
 3. Create a variable to store the current initial number.
@@ -12,9 +14,8 @@ Approach:
 9. Update the current maximum length.
 10. Return the current maximum length.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int LongestConsecutive(int[] nums) {

@@ -1,13 +1,13 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach: Recursive
+Tags: Binary Tree, Recursion, Depth-First Search
 1. Call the MaxDepth method with the root and the result
 2. CalculateDepth method:
-    a. Check if the root is null
-    b. Call the CalculateDepth method with the left child of the root and the result
-    c. Call the CalculateDepth method with the right child of the root and the result
-    d. Return the maximum of the leftHeight and rightHeight + 1
-Time complexity: O(n)
 Space complexity: O(1)
+
+Time Complexity: O(?)
 */
 /**
  * Definition for a binary tree node.

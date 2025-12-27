@@ -1,9 +1,13 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array
 1. Calculate the total sum of the array.
 2. Iterate through the array and calculate the leftSum and rightSum.
 3. If the leftSum is greater than or equal to the rightSum, increment the result.
 4. Return the result.
+Space Complexity: O(1)
 
 Time Complexity: O(n) where n is the length of the nums array.
 Space Complexity: O(1)

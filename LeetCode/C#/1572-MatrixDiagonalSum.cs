@@ -1,6 +1,8 @@
 /*
 Solution: https://leetcode.com/problems/matrix-diagonal-sum/solutions/6559182/simplest-solution-c-time-on-space1-pleas-twxx/
+Difficulty: Medium
 Approach: Iteration
+Tags: Array
 1. Initialize a variable sum to 0.
 2. Iterate through the matrix mat.
 3. Add the element at the index i and colIndex to sum.
@@ -8,9 +10,9 @@ Approach: Iteration
 5. Repeat steps 3 and 4 until the end of the matrix.
 6. If the length of the matrix is odd, subtract the element at the index lengthOfMatrix/2 and lengthOfMatrix/2 from sum.
 7. Return sum.
-
-Time complexity: O(n), where n is the number of elements in the matrix.
 Space complexity: O(1).
+
+Time Complexity: O(?)
 */
 public class Solution {
     public int DiagonalSum(int[][] mat) {

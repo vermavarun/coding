@@ -1,15 +1,19 @@
 /*
-Approach: Recursive
-1. Create a list of integers to store the result
-2. Call the Traverse method with the root and the result list
-3. Return the result list
-4. Traverse method:
-    a. Check if the root is null
-    b. Add the value of the root to the result list
-    c. Call the Traverse method with the left child of the root and the result list
-    d. Call the Traverse method with the right child of the root and the result list
-Time complexity: O(n)
-Space complexity: O(n)
+Solution:
+Difficulty: Easy
+Approach: Recursive Preorder Traversal
+Tags: Stack, Tree, Depth-First Search, Binary Tree
+1) Create a list of integers to store the result.
+2) Call the Traverse method with the root and the result list.
+3) Return the result list.
+4) Traverse method:
+   a) Check if the root is null.
+   b) Add the value of the root to the result list.
+   c) Call the Traverse method with the left child of the root and the result list.
+   d) Call the Traverse method with the right child of the root and the result list.
+
+Time Complexity: O(n)
+Space Complexity: O(n)
 */
 /**
  * Definition for a binary tree node.

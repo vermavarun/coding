@@ -1,12 +1,14 @@
 /*
 Solution: https://leetcode.com/problems/maximum-69-number/solutions/7088498/simplest-solution-c-time-o1-space1-pleas-psug/
-Tags: Greedy
+Difficulty: Medium
 Approach: Scan from highest digit, change first 6 to 9
-Tags: Math, Greedy, Simulation
+Tags: Greedy
 1) Start from the highest digit (thousands place for 4-digit numbers).
 2) If the current digit is 6, change it to 9 and return the new number.
 3) If not, move to the next lower digit.
 4) If no 6 is found, return the original number.
+Time Complexity: O(1) (since number of digits is constant)
+Space Complexity: O(1)
 
 Time Complexity: O(1) (since number of digits is constant)
 Space Complexity: O(1)

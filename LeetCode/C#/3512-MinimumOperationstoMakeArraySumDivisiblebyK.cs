@@ -1,5 +1,6 @@
 /*
 Solution: Minimum Operations to Make Array Sum Divisible by K
+Difficulty: Medium
 Approach: Calculate Sum Remainder and Determine Operations Needed
 Tags: Array, Math, Modular Arithmetic
 1) Calculate the total sum of all elements in the array.
@@ -7,6 +8,7 @@ Tags: Array, Math, Modular Arithmetic
 3) The remainder represents the minimum operations needed.
 4) If remainder is 0, no operations are needed (sum is already divisible by k).
 5) Otherwise, we need to remove 'remainder' amount to make sum divisible by k.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

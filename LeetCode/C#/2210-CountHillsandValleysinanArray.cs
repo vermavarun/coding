@@ -1,14 +1,16 @@
 /*
-Videos: https://www.youtube.com/watch?v=NK83TS3xi0c
 Solution: https://leetcode.com/problems/count-hills-and-valleys-in-an-array/solutions/7011664/simplest-solution-c-time-on-space1-pleas-vthe/
-Tags: Array, Two-Pointers
+Difficulty: Medium
 Approach: Two Pointers
+Tags: Array, Two-Pointers
 1) Initialize two pointers, i and j, both starting at 0.
 2) Use a while loop to iterate through the array until j reaches the second last element.
 3) Check if the current element at j is a hill or a valley by comparing it with its neighbors.
 4) If it is a hill or a valley, increment the count and update i to j.
 5) Move j to the next element.
 6) Return the count of hills and valleys.
+Space Complexity: O(1)
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */

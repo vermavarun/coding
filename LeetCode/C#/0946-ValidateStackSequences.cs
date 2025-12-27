@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Stack
 1) Initialize the currentItemToBePoppedIndex to 0
 2) Initialize the stack
 3) Iterate through the pushed array
@@ -10,9 +12,8 @@ Approach:
 7) Increment the currentItemToBePoppedIndex
 8) Return true if the stack is empty, else return false
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public bool ValidateStackSequences(int[] pushed, int[] popped) {

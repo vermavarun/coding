@@ -1,3 +1,15 @@
+"""
+Solution: 
+Difficulty: Easy
+Approach: [Algorithm approach to be determined]
+Tags: [Relevant tags]
+1) [Step 1 description]
+2) [Step 2 description]
+3) [Step 3 description]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+"""
 '''
 Approach:
 1. Initialize two pointers, left and right, at the start and end of the string, respectively.

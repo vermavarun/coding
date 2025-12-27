@@ -1,14 +1,18 @@
 /*
+Solution:
+Difficulty: Easy
 Approach: Binary Search
-1) Initialize the left and right pointers
-2) Iterate through the array
-3) Calculate the mid
-4) If the mid element is equal to the target, return the mid
-5) If the mid element is less than the target, increment the left pointer
-6) If the mid element is greater than the target, decrement the right pointer
-7) Return the left pointer
-Time complexity: O(log n)
-Space complexity: O(1)
+Tags: Array, Binary Search
+1) Initialize the left and right pointers.
+2) Iterate through the array.
+3) Calculate the mid.
+4) If the mid element is equal to the target, return the mid.
+5) If the mid element is less than the target, increment the left pointer.
+6) If the mid element is greater than the target, decrement the right pointer.
+7) Return the left pointer.
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
 */
 public class Solution {
     public int SearchInsert(int[] nums, int target) {

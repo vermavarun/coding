@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Hash Table, String, Math
 1. Create a dictionary to store the count of each character in the word "balloon".
 2. Create another dictionary to store the count of each character in the given text.
 3. Create a list to store the count of each character in the given text divided by the count of each character in the word "balloon".
@@ -7,7 +10,6 @@ Approach:
 
 Time Complexity: O(n)
 Space Complexity: O(n)
-
 */
 public class Solution {
     public int MaxNumberOfBalloons(string text) {

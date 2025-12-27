@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Stack, String
 1) Initialize the num1 and num2 to 0
 2) Initialize the stack
 3) Iterate through the tokens
@@ -10,9 +12,8 @@ Approach:
 7) If the token is an operand, push the operand to the stack
 8) Return the top element from the stack
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution
 {

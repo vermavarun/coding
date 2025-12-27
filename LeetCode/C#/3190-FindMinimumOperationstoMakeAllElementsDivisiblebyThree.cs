@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/solutions/7366777/simplest-solution-c-time-on-space1-pleas-rz6e/
+Difficulty: Medium
 Approach: Calculate Remainder and Determine Minimum Operations
 Tags: Array, Math, Greedy
 1) For each number, calculate the remainder when divided by 3.
@@ -8,6 +9,7 @@ Tags: Array, Math, Greedy
 4) If remainder is 2, need 1 operation (add 1 or subtract 2).
 5) Use Math.Min(num % 3, 1) to get 0 or 1 operation count.
 6) Sum all operations needed for all elements.
+Space Complexity: O(1)
 
 Time Complexity: O(n)
 Space Complexity: O(1)

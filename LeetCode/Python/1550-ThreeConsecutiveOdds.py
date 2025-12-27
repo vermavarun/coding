@@ -1,3 +1,15 @@
+"""
+Solution: 
+Difficulty: Medium
+Approach: [Algorithm approach to be determined]
+Tags: [Relevant tags]
+1) [Step 1 description]
+2) [Step 2 description]
+3) [Step 3 description]
+
+Time Complexity: O(?)
+Space Complexity: O(?)
+"""
 '''
 Solution: https://leetcode.com/problems/three-consecutive-odds/submissions/1630979353/?envType=daily-question&envId=2025-05-11
 Approach:

@@ -1,12 +1,16 @@
 /*
+Solution:
+Difficulty: Easy
+Approach: Single Queue Implementation
+Tags: Stack, Design, Queue
+1) Initialize a queue to store stack elements.
+2) For push operation: enqueue element, then rotate all previous elements to back.
+3) This makes the newest element appear at front of queue.
+4) For pop/top: simply dequeue/peek from queue.
+5) For empty: check if queue is empty.
 
-Approach:
-1. We can implement a stack using one queue.
-2. We can use the queue to implement the stack.
-
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(n) for push, O(1) for pop/top
+Space Complexity: O(n) for storing elements
 */
 public class MyStack {
     private Queue<int> _q;                          // Queue to implement stack

@@ -1,15 +1,17 @@
 /*
+Solution:
+Difficulty: Medium
+Approach: Two Pointers after Sorting
+Tags: Array, Two Pointers, Sorting
+1) Sort the array.
+2) Iterate through the array.
+3) For each element, use two pointers to find the other two elements.
+4) If the sum of the three elements is greater than 0, decrement the right pointer.
+5) If the sum of the three elements is less than 0, increment the left pointer.
+6) Skip duplicates to avoid duplicate triplets.
 
-Approach:
-1. Sort the array
-2. Iterate through the array
-3. For each element, use two pointers to find the other two elements
-4. If the sum of the three elements is greater than 0, decrement the right pointer
-5. If the sum of the three elements is less than 0, increment the left pointer
-
-Time complexity: O(n^2)
-Space complexity: O(1)
-
+Time Complexity: O(n^2)
+Space Complexity: O(1)
 */
 public class Solution {
     public IList<IList<int>> ThreeSum(int[] nums) {

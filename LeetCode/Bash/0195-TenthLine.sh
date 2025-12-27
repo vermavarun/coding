@@ -1,3 +1,4 @@
+# Difficulty: Easy
 #!/bin/bash
 # Solution: https://leetcode.com/problems/tenth-line/solutions/7413139/simplest-solution-c-time-on-space1-pleas-p83u/
 # Approach: Line Number Filtering with AWK/SED

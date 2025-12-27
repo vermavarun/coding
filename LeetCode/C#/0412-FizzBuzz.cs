@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/fizz-buzz/solutions/7175850/simplest-solution-c-time-on-spacen-pleas-rk09/
+Difficulty: Medium
 Approach: Iteration with Modulo Operations
 Tags: Array, Math, String Manipulation
 1) Initialize a list to store results for numbers 1 to n.

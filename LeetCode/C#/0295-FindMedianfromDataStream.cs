@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Queue
 1. Create two Priority Queues, one for the left part of the array and the other for the right part of the array.
 2. Add the number to the left part if the number is less than or equal to the top of the left part Priority Queue.
 3. Add the number to the right part if the number is greater than the top of the left part Priority Queue.
@@ -7,10 +10,10 @@ Approach:
 5. Balance the heaps by moving the top of the right part Priority Queue to the left part Priority Queue if the size of the right part Priority Queue is greater than the size of the left part Priority Queue.
 6. If the size of the left part Priority Queue is equal to the size of the right part Priority Queue, return the average of the top of the left part Priority Queue and the top of the right part Priority Queue.
 7. If the size of the left part Priority Queue is greater than the size of the right part Priority Queue, return the top of the left part Priority Queue.
+Time Complexity: O(log n) for AddNum and O(1) for FindMedian
 
 Time Complexity: O(log n) for AddNum and O(1) for FindMedian
 Space Complexity: O(n)
-
 */
 
 public class MedianFinder {

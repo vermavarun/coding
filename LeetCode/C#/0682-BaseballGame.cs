@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Stack, String
 1. Create a stack to store the scores.
 2. Iterate through the operations array.
 3. If the current operation is "C", pop the last score from the stack.
@@ -10,9 +12,8 @@ Approach:
 7. After iterating through all the operations, pop all the scores from the stack and calculate the sum.
 8. Return the sum.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int CalPoints(string[] operations) {

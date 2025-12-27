@@ -1,15 +1,16 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach: Prefix Sum
+Tags: Array, Two Pointers
 1. Calculate the total sum of the array.
 2. Iterate through the array and calculate the sum of the left side and right side of the current index.
 3. If the sum of the left side and right side is equal, return the current index.
 4. If the sum of the left side and right side is not equal, update the sum of the left side and move to the next index.
 5. If no such index is found, return -1.
-
-Time complexity: O(n)
 Space complexity: O(1)
-where n is the number of elements in the array.
 
+Time Complexity: O(?)
 */
 public class Solution {
     public int PivotIndex(int[] nums) {

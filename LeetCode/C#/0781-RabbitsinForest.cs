@@ -1,5 +1,8 @@
 /*
+Solution: 
+Difficulty: Easy
 Approach:
+Tags: Array, Hash Table, Math
 1) We will use a Dictionary to store the number of rabbits that have the same answer.
 2) For each answer, we will check if it is already in the Dictionary.
 3) If it is, we will increment the count of rabbits with that answer.
@@ -9,6 +12,7 @@ Approach:
 7) The number of groups is equal to the number of rabbits with that answer divided by the size of the group (answer + 1).
 8) We will multiply the number of groups by the size of the group to get the total number of rabbits with that answer.
 9) Finally, we will return the total number of rabbits.
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */

@@ -1,6 +1,8 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: String, Math
 1. Initialize maxNumberOfClosingBrackets, currentNumberOfClosingBrackets to 0.
 2. Iterate through the string.
 3. If the current character is ']', increment currentNumberOfClosingBrackets.
@@ -8,12 +10,9 @@ Approach:
 5. Update maxNumberOfClosingBrackets to the maximum of maxNumberOfClosingBrackets and currentNumberOfClosingBrackets.
 6. Return (maxNumberOfClosingBrackets+1)/2.
 7. The reason for adding 1 to maxNumberOfClosingBrackets is that we need to consider the extra closing bracket that will close the brackets.
-
-Time complexity: O(n)
 Space complexity: O(1)
-where n is the length of the string.
 
-
+Time Complexity: O(?)
 */
 public class Solution {
     public int MinSwaps(string s) {

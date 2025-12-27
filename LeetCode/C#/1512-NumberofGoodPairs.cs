@@ -1,14 +1,15 @@
 /*
-
+Solution: 
+Difficulty: Medium
 Approach:
+Tags: Array, Hash Table
 1. Create a dictionary to store the frequency of each number.
 2. Iterate through the array and store the frequency of each number in the dictionary.
 3. Iterate through the dictionary and calculate the number of good pairs for each number.
 4. Return the sum of all the good pairs.
 
-Time complexity: O(n)
-Space complexity: O(n)
-
+Time Complexity: O(?)
+Space Complexity: O(?)
 */
 public class Solution {
     public int NumIdenticalPairs(int[] nums) {

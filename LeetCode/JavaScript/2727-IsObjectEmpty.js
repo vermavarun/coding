@@ -1,5 +1,6 @@
 /*
 Solution: https://leetcode.com/problems/is-object-empty/solutions/7385292/simplest-solution-javascript-time-on-spa-b9iu/
+Difficulty: Medium
 Approach: Check Object Keys Length
 Tags: JavaScript, Object Manipulation, Array
 1) Use Object.keys() to get an array of all enumerable property names.

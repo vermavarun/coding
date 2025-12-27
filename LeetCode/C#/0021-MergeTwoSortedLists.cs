@@ -1,17 +1,19 @@
 /*
-Approach:
-1. Create a dummy node and a node to keep track of the current node.
-2. Traverse through both the lists and compare the values of the nodes.
-3. If the value of the first list is less than the value of the second list, then add the first list node to the current node and move the first list node to the next node.
-4. If the value of the first list is greater than the value of the second list, then add the second list node to the current node and move the second list node to the next node.
-5. Move the current node to the next node.
-6. If the first list is not null, then add the remaining nodes of the first list to the current node.
-7. If the second list is not null, then add the remaining nodes of the second list to the current node.
-8. Return the next node of the dummy node.
+Solution:
+Difficulty: Easy
+Approach: Iterative Merge
+Tags: Linked List, Recursion
+1) Create a dummy node and a node to keep track of the current node.
+2) Traverse through both the lists and compare the values of the nodes.
+3) If the value of the first list is less than the value of the second list, then add the first list node to the current node and move the first list node to the next node.
+4) If the value of the first list is greater than the value of the second list, then add the second list node to the current node and move the second list node to the next node.
+5) Move the current node to the next node.
+6) If the first list is not null, then add the remaining nodes of the first list to the current node.
+7) If the second list is not null, then add the remaining nodes of the second list to the current node.
+8) Return the next node of the dummy node.
 
-Time Complexity: O(n + m) where n is the number of nodes in the first list and m is the number of nodes in the second list.
-Space Complexity: O(1) as we are not using any extra space.
-
+Time Complexity: O(n + m) where n is the number of nodes in the first list and m is the number of nodes in the second list
+Space Complexity: O(1) as we are not using any extra space
 */
 /**
  * Definition for singly-linked list.
