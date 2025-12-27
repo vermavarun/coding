@@ -1,5 +1,5 @@
 /*
-Solution:
+Solution: https://leetcode.com/problems/rearrange-characters-to-make-target-string/solutions/7443174/simplest-solution-c-time-onm-space1-plea-hbym/
 Difficulty: Easy
 Approach: Character Frequency Count
 Tags: String, Hash Table, Counting
