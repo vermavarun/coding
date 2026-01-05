@@ -73,7 +73,9 @@ Solutions are parsed from comments in this format:
 
 ```
 /*
+Title: 1. Two Sum
 Solution: https://leetcode.com/problems/problem-name/
+Difficulty: Easy
 Approach: Your approach description
 Tags: Tag1, Tag2, Tag3
 1) Step 1 description
@@ -85,6 +87,27 @@ Space Complexity: O(1)
 */
 ```
 
+### Comment Format by Language:
+
+- **C#, JavaScript, Java, Go**: Use `/* ... */` block comments
+- **Python**: Use `"""..."""` or `'''...'''` docstrings
+- **SQL**: Use `-- ` line comments (each line starts with `--`)
+- **Bash**: Use `#` line comments (each line starts with `#`)
+
+**Required Fields**:
+- `Title`: Problem number and name (e.g., "1. Two Sum")
+
+**Recommended Fields**:
+- `Solution`: LeetCode problem URL
+- `Difficulty`: Easy, Medium, or Hard
+- `Approach`: Brief description of the solution approach
+- `Tags`: Comma-separated list of relevant topics
+- `1) 2) 3)...`: Step-by-step algorithm explanation
+- `Time Complexity`: Big O notation for time
+- `Space Complexity`: Big O notation for space
+
+📚 **For detailed metadata format guide, see [METADATA_FORMAT.md](METADATA_FORMAT.md)**
+
 ## 🔧 Local Development
 
 To test the build scripts locally:
@@ -92,6 +115,12 @@ To test the build scripts locally:
 ```bash
 # Generate solutions.json
 node scripts/generate-solutions.js
+
+# Generate individual solution pages
+node scripts/generate-pages.js
+
+# Generate grouped solution pages (recommended)
+node scripts/generate-pages-grouped.js
 
 # Generate sitemap.xml
 node scripts/generate-sitemap.js

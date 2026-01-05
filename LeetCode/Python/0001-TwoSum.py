@@ -1,4 +1,5 @@
 '''
+Title: 1. Two Sum
 Solution: https://leetcode.com/problems/two-sum/solutions/5774602/simplest-solution-python-by-varunve-wapi/
 Difficulty: Easy
 Approach: Hash Table for O(n) lookup

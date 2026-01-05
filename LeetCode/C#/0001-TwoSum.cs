@@ -1,5 +1,6 @@
 /*
-Solution: 
+Title: 1. Two Sum
+Solution:
 Difficulty: Easy
 Approach: Hash Table for O(n) lookup
 Tags: Array, Hash Table
