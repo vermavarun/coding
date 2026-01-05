@@ -37,6 +37,7 @@ function parseFilename(filename) {
 // Extract metadata from file content
 function parseFileContent(content, language) {
     const metadata = {
+        title: '',
         approach: '',
         tags: [],
         steps: [],
@@ -77,6 +78,12 @@ function parseFileContent(content, language) {
     }
 
     if (commentBlock) {
+        // Extract title (e.g., "Title: 1. Two Sum")
+        const titleMatch = commentBlock.match(/Title:\s*(.+?)(?:\n|$)/i);
+        if (titleMatch) {
+            metadata.title = titleMatch[1].trim();
+        }
+
         // Extract solution link
         const linkMatch = commentBlock.match(/Solution:\s*(https:\/\/[^\s]+)/i);
         if (linkMatch) {
@@ -157,9 +164,14 @@ function scanDirectory(dir, solutions = []) {
                 const relativePath = path.relative(path.join(__dirname, '..'), fullPath);
                 const encodedPath = relativePath.split(path.sep).map(encodeURIComponent).join('/');
 
+                // Use title from metadata if available, otherwise use filename-derived title
+                const title = metadata.title || parsed.title;
+                // Extract problem number from title metadata if available (e.g., "1. Two Sum" -> "1")
+                const problemNumber = metadata.title ? metadata.title.match(/^(\d+)\./)?.[1] || parsed.problemNumber : parsed.problemNumber;
+
                 solutions.push({
-                    problemNumber: parsed.problemNumber,
-                    title: parsed.title,
+                    problemNumber: problemNumber,
+                    title: title,
                     language: language,
                     difficulty: metadata.difficulty || 'Unknown',
                     filename: item,
