@@ -1,5 +1,7 @@
 /*
- * Solution: https://leetcode.com/problems/two-sum/solutions/6550757/simplest-solution-java-time-on-spacen-pl-cxpv/
+ *
+Title: 1. Two Sum
+Solution: https://leetcode.com/problems/two-sum/solutions/6550757/simplest-solution-java-time-on-spacen-pl-cxpv/
 Difficulty: Easy
  * Approach: Using HashMap
 Tags: Array, Hash Table
