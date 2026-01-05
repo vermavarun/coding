@@ -164,10 +164,21 @@ function scanDirectory(dir, solutions = []) {
                 const relativePath = path.relative(path.join(__dirname, '..'), fullPath);
                 const encodedPath = relativePath.split(path.sep).map(encodeURIComponent).join('/');
 
-                // Use title from metadata if available, otherwise use filename-derived title
-                const title = metadata.title || parsed.title;
-                // Extract problem number from title metadata if available (e.g., "1. Two Sum" -> "1")
-                const problemNumber = metadata.title ? metadata.title.match(/^(\d+)\./)?.[1] || parsed.problemNumber : parsed.problemNumber;
+                // Extract problem number and title
+                let problemNumber = parsed.problemNumber;
+                let title = parsed.title;
+
+                if (metadata.title) {
+                    // Extract problem number from metadata title (e.g., "1. Two Sum" -> "1")
+                    const match = metadata.title.match(/^(\d+)\.\s*(.+)$/);
+                    if (match) {
+                        problemNumber = match[1];
+                        title = match[2].trim(); // Extract just the title part without number
+                    } else {
+                        // If title doesn't have number prefix, use it as is
+                        title = metadata.title;
+                    }
+                }
 
                 solutions.push({
                     problemNumber: problemNumber,
@@ -177,7 +188,12 @@ function scanDirectory(dir, solutions = []) {
                     filename: item,
                     path: relativePath,
                     githubUrl: `https://github.com/vermavarun/coding/blob/main/${encodedPath}`,
-                    ...metadata,
+                    approach: metadata.approach,
+                    tags: metadata.tags,
+                    steps: metadata.steps,
+                    timeComplexity: metadata.timeComplexity,
+                    spaceComplexity: metadata.spaceComplexity,
+                    solutionLink: metadata.solutionLink,
                     code: content
                 });
             }
