@@ -1,24 +1,24 @@
 /*
-Solution: 
+Title: 102. Binary Tree Level Order Traversal
+Solution: https://leetcode.com/problems/binary-tree-level-order-traversal/solutions/6527012/simplest-solution-c-time-on-spacen-pleas-w5cs/
 Difficulty: Medium
-Approach:
-Tags: Array, Queue, Binary Tree, Breadth-First Search
-1. Initialize the result list
-2. If the root is null, return the result list
-3. Initialize the queue
-4. Enqueue the root node
-5. Iterate through the queue
-6. Initialize the level list
-7. Iterate through the queue
-8. Dequeue the current node
-9. Add the current node value to the level list
-10. If the left child is not null, enqueue the left child
-11. If the right child is not null, enqueue the right child
-12. Add the level list to the result list
-13. Return the result list
+Approach: BFS using Queue for level-by-level traversal
+Tags: Tree, Breadth-First Search, Binary Tree
+1) Initialize result list to store all levels.
+2) Handle edge case: if root is null, return empty result.
+3) Create a queue and enqueue the root node.
+4) While queue is not empty, process current level:
+   - Create a list for current level values.
+   - Get count of nodes at current level.
+   - For each node in current level:
+     * Dequeue node and add its value to level list.
+     * Enqueue left child if it exists.
+     * Enqueue right child if it exists.
+5) Add completed level list to result.
+6) Return result containing all levels.
 
-Time Complexity: O(?)
-Space Complexity: O(?)
+Time Complexity: O(n) where n = number of nodes in the tree
+Space Complexity: O(n) for the queue and result list
 */
 /**
  * Definition for a binary tree node.
