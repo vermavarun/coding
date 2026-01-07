@@ -43,7 +43,8 @@ function parseFileContent(content, language) {
         steps: [],
         timeComplexity: '',
         spaceComplexity: '',
-        solutionLink: ''
+        solutionLink: '',
+        tip: ''
     };
 
     // Different comment styles for different languages
@@ -127,6 +128,12 @@ function parseFileContent(content, language) {
         const difficultyMatch = commentBlock.match(/Difficulty:\s*(Easy|Medium|Hard)/i);
         if (difficultyMatch) {
             metadata.difficulty = difficultyMatch[1].charAt(0).toUpperCase() + difficultyMatch[1].slice(1).toLowerCase();
+        }
+
+        // Extract tip
+        const tipMatch = commentBlock.match(/Tip:\s*(.+?)(?:\n\n|\*\/|$)/is);
+        if (tipMatch) {
+            metadata.tip = tipMatch[1].trim();
         }
     }
 
