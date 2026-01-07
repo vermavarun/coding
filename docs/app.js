@@ -232,7 +232,7 @@ function createSolutionCard(solution) {
                 ${solution.spaceComplexity ? `<div><strong>Space:</strong> ${solution.spaceComplexity}</div>` : ''}
             </div>
 
-            ${solution.tip ? `<div class="tip"><strong>💡 Tip:</strong> ${solution.tip}</div>` : ''}
+            ${(solution.tip && solution.tip.trim() !== '') ? `<div class="tip"><strong>💡 Tip:</strong> ${solution.tip}</div>` : ''}
 
             <details class="code-section">
                 <summary>View Code</summary>
