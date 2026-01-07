@@ -201,6 +201,7 @@ function scanDirectory(dir, solutions = []) {
                     timeComplexity: metadata.timeComplexity,
                     spaceComplexity: metadata.spaceComplexity,
                     solutionLink: metadata.solutionLink,
+                    tip: metadata.tip,
                     code: content
                 });
             }
