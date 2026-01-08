@@ -1,73 +1,84 @@
 /*
-Solution: 
-Difficulty: Medium
-Approach: [Algorithm approach to be determined]
-Tags: [Relevant tags]
-1) [Step 1 description]
-2) [Step 2 description]
-3) [Step 3 description]
+Title: 509. Fibonacci Number
+Solution: https://leetcode.com/problems/fibonacci-number/solutions/6318613/simplest-solution-c-time-on-spacen-pleas-w094
+Difficulty: Easy
+Approach: Multiple Solutions - Iterative DP, Pure Recursion, Recursion with Memoization
+Tags: Dynamic Programming, Math, Recursion, Memoization
+1) Approach 1 (Iterative DP): Use bottom-up dynamic programming with array.
+2) Approach 2 (Pure Recursion): Use simple recursion without optimization.
+3) Approach 3 (Memoized Recursion): Use top-down recursion with memoization.
 
-Time Complexity: O(?)
-Space Complexity: O(?)
+Time Complexity: O(n) for Approach 1 & 3, O(2^n) for Approach 2
+Space Complexity: O(n) for array storage (Approach 1 & 3), O(n) recursion stack (Approach 2 & 3)
 */
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Approach 1: Iterative Dynamic Programming (Bottom-Up)
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 public class Solution {
-    int[]  fib = new int[31];
+    int[] fib = new int[31];                                        // Array to store Fibonacci numbers (max n = 30)
     public int Fib(int n) {
 
-        fib[0] = 0;
-        fib[1] = 1;
-        int i  = 0;
+        fib[0] = 0;                                                 // Base case: F(0) = 0
+        fib[1] = 1;                                                 // Base case: F(1) = 1
+        int i = 0;                                                  // Loop counter
 
-        for( i=2 ; i<=n; i++ ) {
-            fib[i] = fib[i-1] + fib[i-2];
+        for (i = 2; i <= n; i++) {                                  // Iterate from 2 to n
+            fib[i] = fib[i - 1] + fib[i - 2];                       // F(n) = F(n-1) + F(n-2)
         }
-        return fib[n];
+        return fib[n];                                              // Return the nth Fibonacci number
     }
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-///Approach 2: Recursion without Memoization
+/// Approach 2: Pure Recursion without Memoization (Exponential Time)
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 public class Solution {
     public int Fib(int n) {
-        if (n == 0)
-            return 0;
-        if (n == 1)
-            return 1;
-        return Fib(n-1) + Fib(n-2);
+        if (n == 0)                                                 // Base case: F(0) = 0
+            return 0;                                               // Return 0 for n = 0
+        if (n == 1)                                                 // Base case: F(1) = 1
+            return 1;                                               // Return 1 for n = 1
+        return Fib(n - 1) + Fib(n - 2);                            // Recursive call: F(n) = F(n-1) + F(n-2)
     }
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-///Approach 3: Recursion with Memoization
+/// Approach 3: Recursion with Memoization (Top-Down DP)
 /*
-1) Initialize an array memo of size n+1 to store the Fibonacci numbers.
-2) Return memo[n] if this value has been computed before.
-3) If not, use recursion to calculate the value, add it to memo, and return it.
-4) The recursion uses memo to store and reuse the previously computed values to reduce the number of recursive calls.
-5) The recursion has a time complexity of O(n) since each number, starting at 2 up to n, is computed once.
-Space complexity is O(n) as well due to the usage of the memo array.
+1) Initialize an array dp of size 31 to store computed Fibonacci numbers.
+2) Use -1 as sentinel value to mark uncomputed states.
+3) Check memo array before computing to avoid redundant calculations.
+4) Store computed values in dp array for future reuse.
+5) Recursively compute F(n-1) + F(n-2) with memoization.
+
+Time Complexity: O(n) - each number computed once
+Space Complexity: O(n) - dp array + recursion stack
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 public class Solution {
 
     public int Fib(int n) {
-        if (n == 0)                             // base case
-            return 0;                           // base case
-        if (n == 1)                             // base case
-            return 1;                           // base case
-        int[] dp = new int[31];                 // dp array to store the values
-        for (int i=0; i<dp.Length;i++) {        // initialize the dp array with -1
-            dp[i] = -1;                         // initialize the dp array with -1
+        if (n == 0)                                                 // Base case: F(0) = 0
+            return 0;                                               // Return 0 for n = 0
+        if (n == 1)                                                 // Base case: F(1) = 1
+            return 1;                                               // Return 1 for n = 1
+        int[] dp = new int[31];                                     // Memoization array (max n = 30)
+        for (int i = 0; i < dp.Length; i++) {                       // Initialize dp array
+            dp[i] = -1;                                             // Mark all positions as uncomputed using -1
         }
-        return Solve(n-1,dp) + Solve(n-2,dp);   // call the recursive function
+        return Solve(n - 1, dp) + Solve(n - 2, dp);                // Compute F(n-1) + F(n-2) with memoization
     }
-    public int Solve(int n, int[] dp) {         // recursive function
-        if (n == 0)                             // base case
-            return 0;                           // base case
-        if (n == 1)                             // base case
-            return 1;                           // base case
-        if(dp[n] != -1) {                       // if the value is already calculated
-            return dp[n];                       // return the value
+
+    public int Solve(int n, int[] dp) {                             // Helper function for memoized recursion
+        if (n == 0)                                                 // Base case: F(0) = 0
+            return 0;                                               // Return 0 for n = 0
+        if (n == 1)                                                 // Base case: F(1) = 1
+            return 1;                                               // Return 1 for n = 1
+        if (dp[n] != -1) {                                          // If value already computed (memoization check)
+            return dp[n];                                           // Return cached value from dp array
         }
-        return Solve(n-1,dp) + Solve(n-2,dp);   // recursive call
+        dp[n] = Solve(n - 1, dp) + Solve(n - 2, dp);               // Compute and store F(n) = F(n-1) + F(n-2)
+        return dp[n];                                               // Return computed and cached value
     }
 }
