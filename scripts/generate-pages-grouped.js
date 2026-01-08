@@ -99,6 +99,7 @@ function createSolutionPage(problemGroup, template) {
                         ${solution.timeComplexity ? `<div><strong>Time:</strong> ${escapeHtml(solution.timeComplexity)}</div>` : '<div><strong>Time:</strong> Not specified</div>'}
                         ${solution.spaceComplexity ? `<div><strong>Space:</strong> ${escapeHtml(solution.spaceComplexity)}</div>` : '<div><strong>Space:</strong> Not specified</div>'}
                     </div>
+                    ${solution.tip ? `<div class="tip"><strong>💡 Tip:</strong> ${escapeHtml(solution.tip)}</div>` : ''}
                 </div>
 
                 <div class="section">

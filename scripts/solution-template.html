@@ -340,6 +340,21 @@
             flex: 1;
         }
 
+        .tip {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .tip strong {
+            color: #f59e0b;
+            margin-right: 0.5rem;
+        }
+
         .code-section {
             position: relative;
         }
@@ -544,6 +559,7 @@
                     {{TIME_COMPLEXITY}}
                     {{SPACE_COMPLEXITY}}
                 </div>
+                {{TIP}}
             </div>
 
             <div class="section">

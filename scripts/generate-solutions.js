@@ -43,7 +43,8 @@ function parseFileContent(content, language) {
         steps: [],
         timeComplexity: '',
         spaceComplexity: '',
-        solutionLink: ''
+        solutionLink: '',
+        tip: ''
     };
 
     // Different comment styles for different languages
@@ -128,6 +129,12 @@ function parseFileContent(content, language) {
         if (difficultyMatch) {
             metadata.difficulty = difficultyMatch[1].charAt(0).toUpperCase() + difficultyMatch[1].slice(1).toLowerCase();
         }
+
+        // Extract tip
+        const tipMatch = commentBlock.match(/Tip:\s*(.+?)(?:\n\n|\*\/|$)/is);
+        if (tipMatch) {
+            metadata.tip = tipMatch[1].trim();
+        }
     }
 
     return metadata;
@@ -194,6 +201,7 @@ function scanDirectory(dir, solutions = []) {
                     timeComplexity: metadata.timeComplexity,
                     spaceComplexity: metadata.spaceComplexity,
                     solutionLink: metadata.solutionLink,
+                    tip: metadata.tip,
                     code: content
                 });
             }

@@ -279,6 +279,8 @@ function createProblemCard(problem) {
                 ${firstSolution.spaceComplexity ? `<div><strong>Space:</strong> ${firstSolution.spaceComplexity}</div>` : ''}
             </div>
 
+            ${(firstSolution.tip && firstSolution.tip.trim() !== '') ? `<div class="tip"><strong>💡 Tip:</strong> ${firstSolution.tip}</div>` : ''}
+
             ${problem.solutions.map(sol => {
                 const lClass = LANG_MAP[sol.language] || 'plaintext';
                 return `<details class="code-section">
