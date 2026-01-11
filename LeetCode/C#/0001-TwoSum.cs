@@ -13,6 +13,8 @@ Tags: Array, Hash Table
 
 Time Complexity: O(n) where n = nums.length
 Space Complexity: O(n) for the hash table
+Tip: The key insight is trading space for time - use a hash table to store complements as you iterate. This avoids the O(n²) nested loop approach and achieves O(n) time complexity with just one pass through the array.
+Similar Problems: 15. 3Sum, 18. 4Sum, 167. Two Sum II - Input Array Is Sorted, 170. Two Sum III - Data structure design
 */
 public class Solution {
     public int[] TwoSum(int[] nums, int target)
