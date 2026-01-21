@@ -44,7 +44,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
         </tr>
         <tr>
             <td>Java</td>
-            <td id="java">2</td>
+            <td id="java">3</td>
         </tr>
         <tr>
             <td>JavaScript</td>
@@ -52,7 +52,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">19</td>
+            <td id="py">20</td>
         </tr>
         <tr>
             <td>SQL</td>
