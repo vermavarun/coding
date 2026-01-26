@@ -1,6 +1,6 @@
 /*
 Title: 881. Boats to Save People
-Solution:
+Solution: https://leetcode.com/problems/boats-to-save-people/solutions/7526039/simplest-solution-c-time-on-log-n-space-ax00j/
 Difficulty: Medium
 Approach: Two Pointers with Greedy Strategy
 Tags: Array, Two Pointers, Greedy, Sorting
