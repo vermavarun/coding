@@ -209,6 +209,7 @@ function scanDirectory(dir, solutions = []) {
                     spaceComplexity: metadata.spaceComplexity,
                     solutionLink: metadata.solutionLink,
                     tip: metadata.tip,
+                    similarProblems: metadata.similarProblems,
                     code: content
                 });
             }
