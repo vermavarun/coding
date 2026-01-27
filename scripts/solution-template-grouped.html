@@ -355,16 +355,36 @@
         }
 
         .similar-problems {
-            background: var(--code-bg);
-            border-left: 4px solid var(--success);
-            padding: 1rem;
-            border-radius: 8px;
             margin-top: 1rem;
         }
 
         .similar-problems strong {
             color: var(--success);
             margin-right: 0.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .similar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .similar-tag {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .similar-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
         }
 
         .code-section {

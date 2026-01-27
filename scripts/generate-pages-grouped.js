@@ -100,7 +100,7 @@ function createSolutionPage(problemGroup, template) {
                         ${solution.spaceComplexity ? `<div><strong>Space:</strong> ${escapeHtml(solution.spaceComplexity)}</div>` : '<div><strong>Space:</strong> Not specified</div>'}
                     </div>
                     ${solution.tip ? `<div class="tip"><strong>💡 Tip:</strong> ${escapeHtml(solution.tip)}</div>` : ''}
-                    ${solution.similarProblems ? `<div class="similar-problems"><strong>🔗 Similar Problems:</strong> ${escapeHtml(solution.similarProblems)}</div>` : ''}
+                    ${solution.similarProblems ? `<div class="similar-problems"><strong>🔗 Similar Problems:</strong><div class="similar-tags">${solution.similarProblems.split(',').map(p => `<span class="similar-tag">${escapeHtml(p.trim())}</span>`).join('')}</div></div>` : ''}
                 </div>
 
                 <div class="section">

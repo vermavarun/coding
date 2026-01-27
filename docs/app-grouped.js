@@ -281,6 +281,8 @@ function createProblemCard(problem) {
 
             ${(firstSolution.tip && firstSolution.tip.trim() !== '') ? `<div class="tip"><strong>💡 Tip:</strong> ${firstSolution.tip}</div>` : ''}
 
+            ${(firstSolution.similarProblems && firstSolution.similarProblems.trim() !== '') ? `<div class="similar-problems"><strong>🔗 Similar Problems:</strong><div class="similar-tags">${firstSolution.similarProblems.split(',').map(p => `<span class="similar-tag">${p.trim()}</span>`).join('')}</div></div>` : ''}
+
             ${problem.solutions.map(sol => {
                 const lClass = LANG_MAP[sol.language] || 'plaintext';
                 return `<details class="code-section">
