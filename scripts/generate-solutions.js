@@ -44,7 +44,8 @@ function parseFileContent(content, language) {
         timeComplexity: '',
         spaceComplexity: '',
         solutionLink: '',
-        tip: ''
+        tip: '',
+        similarProblems: ''
     };
 
     // Different comment styles for different languages
@@ -130,10 +131,16 @@ function parseFileContent(content, language) {
             metadata.difficulty = difficultyMatch[1].charAt(0).toUpperCase() + difficultyMatch[1].slice(1).toLowerCase();
         }
 
-        // Extract tip
-        const tipMatch = commentBlock.match(/Tip:\s*(.+?)(?:\n\n|\*\/|$)/is);
+        // Extract tip (stop before Similar Problems)
+        const tipMatch = commentBlock.match(/Tip:\s*(.+?)(?=Similar Problems:|\n\n|\*\/|$)/is);
         if (tipMatch) {
             metadata.tip = tipMatch[1].trim();
+        }
+
+        // Extract similar problems
+        const similarMatch = commentBlock.match(/Similar Problems:\s*(.+?)(?:\n\n|\*\/|$)/is);
+        if (similarMatch) {
+            metadata.similarProblems = similarMatch[1].trim();
         }
     }
 
