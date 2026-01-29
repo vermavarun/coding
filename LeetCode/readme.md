@@ -400,6 +400,21 @@ TBU
 
 </details>
 
+### Floyd Warshel Algorithm:
+<details>
+    <summary>Click to expand</summary>
+
+It is used to find the shortest path between all pairs of vertices in a weighted graph. It can handle negative weights but not negative cycles.
+
+Pseudo Code:
+```
+1) Initialize the distance matrix with the given weights. If there is no edge between two vertices, set the distance to infinity.
+2) For each vertex k, for each vertex i, for each vertex j:
+    a) If distance[i][j] > distance[i][k] + distance[k][j], then update distance[i][j] = distance[i][k] + distance[k][j].
+3) After all iterations, the distance matrix will contain the shortest distances between all pairs of vertices.
+```
+
+</details>
 <hr/>
 
 # Sorting
