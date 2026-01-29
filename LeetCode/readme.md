@@ -171,33 +171,103 @@ Sliding-Window, Hash-Table
 
 </details>
 
+## Dictionary
+
+<details>
+    <summary>Click to expand</summary>
+
+    Dictionary<int, string> dict = new Dictionary<int, string>();
+    dict.Add(1, "One");
+    dict[2] = "Two";  // Add or update
+    dict.Remove(1);
+    dict.ContainsKey(1);
+    dict.ContainsValue("One");
+    dict.TryGetValue(1, out string value);
+    dict.Count;
+    dict.Clear();
+
+    // Iteration
+    foreach(var kvp in dict) {
+        int key = kvp.Key;
+        string value = kvp.Value;
+    }
+
+    // Get or create pattern
+    if(!dict.ContainsKey(key)) {
+        dict[key] = new List<int>();
+    }
+    dict[key].Add(value);
+
+    // Or use GetValueOrDefault (C# 6+)
+    dict.TryAdd(key, value);  // Adds only if key doesn't exist
+
+</details>
+
 ## String
 
 <details>
     <summary>Click to expand</summary>
 
-    Split('@')
-    Replace("."."")
+    // Creation and manipulation
+    string s = "Hello";
+    s.Length;
+    s[0];  // 'H' (indexer)
+    s.ToCharArray();  // Convert to char[]
+    new string(charArray);  // Create from char[]
 
-    Char to Int
-    (int)ch - 0
+    // StringBuilder for efficient concatenation
+    StringBuilder sb = new StringBuilder();
+    sb.Append("Hello");
+    sb.AppendLine("World");
+    sb.Insert(0, "Start ");
+    sb.Remove(0, 5);
+    sb.Replace("old", "new");
+    string result = sb.ToString();
 
-    Small to Capital
-    char a = 'a';
-    char bigA = (char) (((int)a - '0') + 16);
+    // Common operations
+    s.Split('@');
+    s.Split(new char[] {' ', ','}, StringSplitOptions.RemoveEmptyEntries);
+    s.Replace(".", "");
+    s.Substring(0, 5);  // Extract substring
+    s.Contains("ell");
+    s.StartsWith("He");
+    s.EndsWith("lo");
+    s.IndexOf('e');  // Find first occurrence
+    s.LastIndexOf('l');  // Find last occurrence
+    s.Trim();  // Remove whitespace
+    s.ToLower();
+    s.ToUpper();
+    String.Join(",", array);  // Join array elements
 
-    'a' -> 0
-    'b' -> 1
-    (int)ch - 'a'
+    // Char to Int
+    (int)ch - '0';  // '5' -> 5
 
-    0 -> 'a'
-    1 -> 'b'
-    (char)('a' + 0)
+    // Case conversion
+    char lower = 'a';
+    char upper = (char)(lower - 32);  // 'A'
+    char upper2 = char.ToUpper(lower);
 
-    Char.IsDigit(ch) // To check if digit
+    // Letter to index (0-25)
+    'a' -> 0: (int)(ch - 'a')
+    'A' -> 0: (int)(ch - 'A')
 
-    Convert.ToString(n, 2) // To convert int to binary
-    Convert.ToInt32("1101", 2) // To convert binary to int
+    // Index to letter
+    0 -> 'a': (char)('a' + 0)
+    0 -> 'A': (char)('A' + 0)
+
+    // Character checks
+    Char.IsDigit(ch);
+    Char.IsLetter(ch);
+    Char.IsLetterOrDigit(ch);
+    Char.IsUpper(ch);
+    Char.IsLower(ch);
+    Char.IsWhiteSpace(ch);
+
+    // Conversions
+    Convert.ToString(n, 2);  // int to binary string
+    Convert.ToInt32("1101", 2);  // binary string to int
+    int.Parse("123");  // string to int
+    int.TryParse("123", out int result);  // Safe parsing
 
 </details>
 
@@ -319,23 +389,142 @@ Sliding-Window, Hash-Table
 
 </details>
 
+## Backtracking
+
+<details>
+    <summary>Click to expand</summary>
+
+Technique for finding all (or some) solutions by incrementally building candidates and abandoning them if they fail.
+
+**Template:**
+```csharp
+void Backtrack(List<List<int>> result, List<int> current, int[] nums, int start) {
+    // Base case: solution found
+    result.Add(new List<int>(current));  // Make a copy!
+
+    // Try all choices
+    for(int i = start; i < nums.Length; i++) {
+        // Make choice
+        current.Add(nums[i]);
+
+        // Explore with choice
+        Backtrack(result, current, nums, i + 1);
+
+        // Undo choice (backtrack)
+        current.RemoveAt(current.Count - 1);
+    }
+}
+```
+
+**Common Problems:**
+- Subsets / Power Set
+- Permutations
+- Combinations
+- N-Queens
+- Sudoku Solver
+- Word Search
+- Generate Parentheses
+
+</details>
+
+## Dynamic Programming
+
+<details>
+    <summary>Click to expand</summary>
+
+Optimization technique using overlapping subproblems and optimal substructure.
+
+**Approaches:**
+1. **Top-Down (Memoization)**: Recursion + cache
+2. **Bottom-Up (Tabulation)**: Iterative + DP array
+
+**Template (Top-Down):**
+```csharp
+Dictionary<string, int> memo = new();
+
+int DP(int n) {
+    if(n <= 1) return n;  // Base case
+
+    string key = n.ToString();
+    if(memo.ContainsKey(key)) return memo[key];
+
+    int result = DP(n - 1) + DP(n - 2);  // Recurrence relation
+    memo[key] = result;
+    return result;
+}
+```
+
+**Template (Bottom-Up):**
+```csharp
+int DP(int n) {
+    if(n <= 1) return n;
+
+    int[] dp = new int[n + 1];
+    dp[0] = 0;  // Base case
+    dp[1] = 1;  // Base case
+
+    for(int i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];  // Recurrence relation
+    }
+    return dp[n];
+}
+```
+
+**Common Patterns:**
+- Fibonacci / Climbing Stairs: `dp[i] = dp[i-1] + dp[i-2]`
+- Coin Change: `dp[i] = min(dp[i], dp[i-coin] + 1)`
+- Longest Increasing Subsequence: `dp[i] = max(dp[j] + 1)` where `nums[j] < nums[i]`
+- Edit Distance: `dp[i][j] = min(insert, delete, replace)`
+- Knapsack: `dp[i][w] = max(include, exclude)`
+
+**Common Problems:**
+- Climbing Stairs
+- House Robber
+- Longest Common Subsequence
+- Longest Increasing Subsequence
+- Edit Distance
+- Coin Change
+- Maximum Subarray (Kadane's)
+- Partition Equal Subset Sum
+
+</details>
+
 ## STEPS TO SOLVE:
 
 <details>
     <summary>Click to expand</summary>
 
-1) Identity the problem. Clear the doubts.
-2) Write Pseudo Code first
-3) Try Brute Force
-4) Try Sorting
-5) Use Stacks
-   1) if there is increasing or decreasing order.
-6) Use Dictionary
-   1) if you want to count.
-7) Use HashSet
-   1) if you want to check if already present.
-8) Trees
-   1) In order traversal of BST gives sorted list.
+1) **Understand the problem**: Clarify inputs, outputs, edge cases, and constraints.
+2) **Choose approach**:
+   - Brute Force → Optimize
+   - Can it be sorted?
+   - Is there a pattern (Two Pointer, Sliding Window, etc.)?
+3) **Data Structure Selection**:
+   - Counting → Dictionary
+   - Membership checking → HashSet
+   - Order matters → Stack/Queue
+   - Priority/Min-Max → PriorityQueue (Heap)
+   - Range queries → Prefix Sum
+   - Relationships → Graph/Tree
+4) **Algorithm patterns**:
+   - Search/Path → BFS/DFS
+   - Optimization → DP/Greedy
+   - Multiple solutions → Backtracking
+   - Sorted data → Binary Search
+5) **Write pseudocode** before implementation
+6) **Consider edge cases**: Empty input, single element, duplicates
+7) **Analyze complexity**: Time and Space
+8) **Test with examples**: Include edge cases
+
+**Quick Decision Tree:**
+- Array sorted? → Binary Search
+- Subarray/Substring? → Sliding Window or Prefix Sum
+- All combinations? → Backtracking
+- Optimization? → DP or Greedy
+- Shortest path? → BFS
+- Connected components? → DFS or Union-Find
+- Range queries? → Segment Tree or Fenwick Tree
+- String matching? → KMP or Rabin-Karp
 
 </details>
 
@@ -362,11 +551,46 @@ Pseudo Code:
 
 </details>
 
-### Knacksack
+### Knapsack (0/1 and Unbounded)
 <details>
     <summary>Click to expand</summary>
 
-TBU
+A dynamic programming technique to solve optimization problems where items have weights and values.
+
+**0/1 Knapsack:** Each item can be taken once or not at all.
+```csharp
+int Knapsack(int[] weights, int[] values, int W) {
+    int n = weights.Length;
+    int[,] dp = new int[n + 1, W + 1];
+
+    for(int i = 1; i <= n; i++) {
+        for(int w = 0; w <= W; w++) {
+            if(weights[i-1] <= w) {
+                dp[i,w] = Math.Max(values[i-1] + dp[i-1, w-weights[i-1]], dp[i-1,w]);
+            } else {
+                dp[i,w] = dp[i-1,w];
+            }
+        }
+    }
+    return dp[n,W];
+}
+```
+
+**Unbounded Knapsack:** Each item can be taken multiple times.
+```csharp
+int UnboundedKnapsack(int[] weights, int[] values, int W) {
+    int[] dp = new int[W + 1];
+
+    for(int w = 0; w <= W; w++) {
+        for(int i = 0; i < weights.Length; i++) {
+            if(weights[i] <= w) {
+                dp[w] = Math.Max(dp[w], values[i] + dp[w - weights[i]]);
+            }
+        }
+    }
+    return dp[W];
+}
+```
 
 </details>
 
@@ -374,37 +598,217 @@ TBU
 <details>
     <summary>Click to expand</summary>
 
-Used to Calculate the majority element among the given elements that have more than N/ 2 occurrences.
+Used to find the majority element among the given elements that have more than N/2 occurrences. Time: O(n), Space: O(1).
+
+```csharp
+int FindMajorityElement(int[] nums) {
+    int candidate = 0;
+    int count = 0;
+
+    // Find candidate
+    foreach(int num in nums) {
+        if(count == 0) {
+            candidate = num;
+        }
+        count += (num == candidate) ? 1 : -1;
+    }
+
+    // Verify candidate (if not guaranteed to exist)
+    count = 0;
+    foreach(int num in nums) {
+        if(num == candidate) count++;
+    }
+
+    return count > nums.Length / 2 ? candidate : -1;
+}
+```
 
 </details>
 
-### KMP
+### KMP (Knuth-Morris-Pratt) Algorithm:
 <details>
     <summary>Click to expand</summary>
-TBU
+
+String pattern matching algorithm that avoids re-checking previously matched characters. Time: O(n + m), Space: O(m).
+
+```csharp
+int[] BuildLPS(string pattern) {
+    int[] lps = new int[pattern.Length];
+    int len = 0;
+    int i = 1;
+
+    while(i < pattern.Length) {
+        if(pattern[i] == pattern[len]) {
+            len++;
+            lps[i] = len;
+            i++;
+        } else {
+            if(len != 0) {
+                len = lps[len - 1];
+            } else {
+                lps[i] = 0;
+                i++;
+            }
+        }
+    }
+    return lps;
+}
+
+int KMPSearch(string text, string pattern) {
+    int[] lps = BuildLPS(pattern);
+    int i = 0; // index for text
+    int j = 0; // index for pattern
+
+    while(i < text.Length) {
+        if(pattern[j] == text[i]) {
+            i++;
+            j++;
+        }
+
+        if(j == pattern.Length) {
+            return i - j; // Pattern found at index i-j
+        } else if(i < text.Length && pattern[j] != text[i]) {
+            if(j != 0) {
+                j = lps[j - 1];
+            } else {
+                i++;
+            }
+        }
+    }
+    return -1; // Pattern not found
+}
+```
 
 </details>
 
 ### Rabin Karp
 <details>
     <summary>Click to expand</summary>
-TBU
+
+Rolling hash algorithm for pattern matching. Useful for multiple pattern search. Time: O(n + m) average, O(nm) worst case.
+
+```csharp
+const int PRIME = 101;
+const int BASE = 256;
+
+int RabinKarp(string text, string pattern) {
+    int m = pattern.Length;
+    int n = text.Length;
+    int patternHash = 0;
+    int textHash = 0;
+    int h = 1;
+
+    // Calculate h = pow(BASE, m-1) % PRIME
+    for(int i = 0; i < m - 1; i++) {
+        h = (h * BASE) % PRIME;
+    }
+
+    // Calculate initial hash values
+    for(int i = 0; i < m; i++) {
+        patternHash = (BASE * patternHash + pattern[i]) % PRIME;
+        textHash = (BASE * textHash + text[i]) % PRIME;
+    }
+
+    // Slide the pattern over text
+    for(int i = 0; i <= n - m; i++) {
+        if(patternHash == textHash) {
+            // Check for characters one by one
+            bool match = true;
+            for(int j = 0; j < m; j++) {
+                if(text[i + j] != pattern[j]) {
+                    match = false;
+                    break;
+                }
+            }
+            if(match) return i;
+        }
+
+        // Calculate hash for next window
+        if(i < n - m) {
+            textHash = (BASE * (textHash - text[i] * h) + text[i + m]) % PRIME;
+            if(textHash < 0) textHash += PRIME;
+        }
+    }
+    return -1;
+}
+```
 
 </details>
 
-
-### KMP Algorithm:
+### Dijkstra's Algorithm:
 <details>
     <summary>Click to expand</summary>
-TBU
+
+Finds shortest path from a source vertex to all other vertices in a weighted graph with non-negative weights. Time: O((V + E) log V) with priority queue.
+
+```csharp
+int[] Dijkstra(List<List<(int node, int weight)>> graph, int source) {
+    int n = graph.Count;
+    int[] dist = new int[n];
+    Array.Fill(dist, int.MaxValue);
+    dist[source] = 0;
+
+    PriorityQueue<(int node, int dist), int> pq = new();
+    pq.Enqueue((source, 0), 0);
+
+    while(pq.Count > 0) {
+        var (node, d) = pq.Dequeue();
+
+        if(d > dist[node]) continue;
+
+        foreach(var (neighbor, weight) in graph[node]) {
+            int newDist = dist[node] + weight;
+            if(newDist < dist[neighbor]) {
+                dist[neighbor] = newDist;
+                pq.Enqueue((neighbor, newDist), newDist);
+            }
+        }
+    }
+    return dist;
+}
+```
 
 </details>
 
-### Floyd Warshel Algorithm:
+### Bellman-Ford Algorithm:
 <details>
     <summary>Click to expand</summary>
 
-It is used to find the shortest path between all pairs of vertices in a weighted graph. It can handle negative weights but not negative cycles.
+Finds shortest path from source to all vertices. Can handle negative weights and detect negative cycles. Time: O(VE).
+
+```csharp
+int[] BellmanFord(int n, List<(int from, int to, int weight)> edges, int source) {
+    int[] dist = new int[n];
+    Array.Fill(dist, int.MaxValue);
+    dist[source] = 0;
+
+    // Relax all edges n-1 times
+    for(int i = 0; i < n - 1; i++) {
+        foreach(var (from, to, weight) in edges) {
+            if(dist[from] != int.MaxValue && dist[from] + weight < dist[to]) {
+                dist[to] = dist[from] + weight;
+            }
+        }
+    }
+
+    // Check for negative cycles
+    foreach(var (from, to, weight) in edges) {
+        if(dist[from] != int.MaxValue && dist[from] + weight < dist[to]) {
+            throw new Exception("Graph contains negative cycle");
+        }
+    }
+
+    return dist;
+}
+```
+
+</details>
+
+### Floyd Warshall Algorithm:
+<details>
+    <summary>Click to expand</summary>
+
+Finds shortest path between all pairs of vertices in a weighted graph. Can handle negative weights but not negative cycles. Time: O(V³).
 
 Pseudo Code:
 ```
@@ -414,6 +818,193 @@ Pseudo Code:
 3) After all iterations, the distance matrix will contain the shortest distances between all pairs of vertices.
 ```
 
+```csharp
+int[,] FloydWarshall(int[,] graph) {
+    int n = graph.GetLength(0);
+    int[,] dist = (int[,])graph.Clone();
+
+    for(int k = 0; k < n; k++) {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(dist[i,k] != int.MaxValue && dist[k,j] != int.MaxValue) {
+                    dist[i,j] = Math.Min(dist[i,j], dist[i,k] + dist[k,j]);
+                }
+            }
+        }
+    }
+    return dist;
+}
+```
+
+</details>
+
+### Union Find (Disjoint Set):
+<details>
+    <summary>Click to expand</summary>
+
+Efficient data structure for tracking disjoint sets and checking connectivity. Time: O(α(n)) ≈ O(1) with path compression and union by rank.
+
+```csharp
+class UnionFind {
+    private int[] parent;
+    private int[] rank;
+
+    public UnionFind(int n) {
+        parent = new int[n];
+        rank = new int[n];
+        for(int i = 0; i < n; i++) {
+            parent[i] = i;
+            rank[i] = 0;
+        }
+    }
+
+    public int Find(int x) {
+        if(parent[x] != x) {
+            parent[x] = Find(parent[x]); // Path compression
+        }
+        return parent[x];
+    }
+
+    public bool Union(int x, int y) {
+        int rootX = Find(x);
+        int rootY = Find(y);
+
+        if(rootX == rootY) return false; // Already in same set
+
+        // Union by rank
+        if(rank[rootX] < rank[rootY]) {
+            parent[rootX] = rootY;
+        } else if(rank[rootX] > rank[rootY]) {
+            parent[rootY] = rootX;
+        } else {
+            parent[rootY] = rootX;
+            rank[rootX]++;
+        }
+        return true;
+    }
+
+    public bool Connected(int x, int y) {
+        return Find(x) == Find(y);
+    }
+}
+```
+
+</details>
+
+### Trie (Prefix Tree):
+<details>
+    <summary>Click to expand</summary>
+
+Tree-based data structure for efficient string storage and prefix search. Time: O(m) for insert/search where m is word length.
+
+```csharp
+class TrieNode {
+    public Dictionary<char, TrieNode> Children = new();
+    public bool IsEndOfWord = false;
+}
+
+class Trie {
+    private TrieNode root = new();
+
+    public void Insert(string word) {
+        TrieNode node = root;
+        foreach(char c in word) {
+            if(!node.Children.ContainsKey(c)) {
+                node.Children[c] = new TrieNode();
+            }
+            node = node.Children[c];
+        }
+        node.IsEndOfWord = true;
+    }
+
+    public bool Search(string word) {
+        TrieNode node = SearchPrefix(word);
+        return node != null && node.IsEndOfWord;
+    }
+
+    public bool StartsWith(string prefix) {
+        return SearchPrefix(prefix) != null;
+    }
+
+    private TrieNode SearchPrefix(string prefix) {
+        TrieNode node = root;
+        foreach(char c in prefix) {
+            if(!node.Children.ContainsKey(c)) return null;
+            node = node.Children[c];
+        }
+        return node;
+    }
+}
+```
+
+</details>
+
+### LRU Cache:
+<details>
+    <summary>Click to expand</summary>
+
+Cache with Least Recently Used eviction policy. Time: O(1) for get and put operations.
+
+```csharp
+class LRUCache {
+    private class Node {
+        public int Key, Value;
+        public Node Prev, Next;
+        public Node(int key, int value) {
+            Key = key;
+            Value = value;
+        }
+    }
+
+    private Dictionary<int, Node> cache = new();
+    private Node head = new(0, 0);
+    private Node tail = new(0, 0);
+    private int capacity;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        head.Next = tail;
+        tail.Prev = head;
+    }
+
+    public int Get(int key) {
+        if(!cache.ContainsKey(key)) return -1;
+        Node node = cache[key];
+        Remove(node);
+        Add(node);
+        return node.Value;
+    }
+
+    public void Put(int key, int value) {
+        if(cache.ContainsKey(key)) {
+            Remove(cache[key]);
+        }
+        Node node = new Node(key, value);
+        cache[key] = node;
+        Add(node);
+
+        if(cache.Count > capacity) {
+            Node lru = head.Next;
+            Remove(lru);
+            cache.Remove(lru.Key);
+        }
+    }
+
+    private void Add(Node node) {
+        Node prev = tail.Prev;
+        prev.Next = node;
+        node.Prev = prev;
+        node.Next = tail;
+        tail.Prev = node;
+    }
+
+    private void Remove(Node node) {
+        node.Prev.Next = node.Next;
+        node.Next.Prev = node.Prev;
+    }
+}
+```
+
 </details>
 <hr/>
 
@@ -421,14 +1012,60 @@ Pseudo Code:
 <details>
     <summary>Click to expand</summary>
 
-- Merge Sort
-- Selection Sort
-- Quick Sort
-- Bubble Sort
-- Bucket Sort
-- Insertion Sort
-- Radix Sort
-- Lazy Sort
+### Comparison Sorts:
+- **Merge Sort**: O(n log n) - Stable, divide and conquer
+- **Quick Sort**: O(n log n) average, O(n²) worst - In-place, not stable
+- **Heap Sort**: O(n log n) - In-place, not stable
+- **Insertion Sort**: O(n²) - Good for small/nearly sorted arrays
+- **Selection Sort**: O(n²) - Simple but inefficient
+- **Bubble Sort**: O(n²) - Simple but inefficient
+- **Shell Sort**: O(n log² n) - Improved insertion sort
+
+### Non-Comparison Sorts:
+- **Counting Sort**: O(n + k) - Good when range k is small
+- **Radix Sort**: O(d * (n + k)) - Sorts integers digit by digit
+- **Bucket Sort**: O(n + k) average - Good for uniform distribution
+
+### C# Built-in Sorting:
+```csharp
+// Array
+Array.Sort(arr);  // O(n log n) - IntroSort (QuickSort + HeapSort + InsertionSort)
+Array.Sort(arr, (a, b) => b - a);  // Custom comparator (descending)
+
+// List
+list.Sort();  // O(n log n)
+list.Sort((a, b) => a.CompareTo(b));
+
+// LINQ (creates new collection)
+var sorted = arr.OrderBy(x => x).ToArray();
+var descending = arr.OrderByDescending(x => x).ToList();
+```
+
+### Quick Select (Find Kth element):
+```csharp
+int QuickSelect(int[] nums, int k) {
+    int left = 0, right = nums.Length - 1;
+    while(left <= right) {
+        int pivot = Partition(nums, left, right);
+        if(pivot == k) return nums[k];
+        else if(pivot < k) left = pivot + 1;
+        else right = pivot - 1;
+    }
+    return nums[k];
+}
+
+int Partition(int[] nums, int left, int right) {
+    int pivot = nums[right];
+    int i = left;
+    for(int j = left; j < right; j++) {
+        if(nums[j] <= pivot) {
+            Swap(nums, i++, j);
+        }
+    }
+    Swap(nums, i, right);
+    return i;
+}
+```
 
 </details>
 
