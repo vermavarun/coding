@@ -95,6 +95,114 @@ Sliding-Window, Hash-Table
 
 </details>
 
+## Line Sweep
+<details>
+ <summary>Click to expand</summary>
+
+**Line Sweep** is a technique for solving interval and range problems by processing events in sorted order. Commonly used for:
+- Meeting rooms / Overlapping intervals
+- Skyline problems
+- Range coverage
+- Activity scheduling
+
+**Key Concepts:**
+1. Convert intervals to events (start/end points)
+2. Sort events by time (and by type if needed)
+3. Process events sequentially, maintaining state
+4. Track active intervals using a counter or data structure
+
+**Template (Meeting Rooms II - Min rooms needed):**
+```csharp
+int MinMeetingRooms(int[][] intervals) {
+    List<(int time, int type)> events = new();
+
+    // Create events: +1 for start, -1 for end
+    foreach(var interval in intervals) {
+        events.Add((interval[0], 1));   // Start event
+        events.Add((interval[1], -1));  // End event
+    }
+
+    // Sort by time, if tied, process end before start
+    events.Sort((a, b) => {
+        if(a.time != b.time) return a.time.CompareTo(b.time);
+        return a.type.CompareTo(b.type); // -1 before +1
+    });
+
+    int activeRooms = 0, maxRooms = 0;
+    foreach(var (time, type) in events) {
+        activeRooms += type;
+        maxRooms = Math.Max(maxRooms, activeRooms);
+    }
+    return maxRooms;
+}
+```
+
+**Template (Merge Intervals):**
+```csharp
+int[][] MergeIntervals(int[][] intervals) {
+    if(intervals.Length == 0) return intervals;
+
+    // Sort by start time
+    Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
+
+    List<int[]> merged = new();
+    int[] current = intervals[0];
+
+    for(int i = 1; i < intervals.Length; i++) {
+        if(intervals[i][0] <= current[1]) {
+            // Overlapping - merge
+            current[1] = Math.Max(current[1], intervals[i][1]);
+        } else {
+            // Non-overlapping - add previous and start new
+            merged.Add(current);
+            current = intervals[i];
+        }
+    }
+    merged.Add(current);
+    return merged.ToArray();
+}
+```
+
+**Template (Range Coverage - Min intervals to cover range):**
+```csharp
+int MinIntervalsToCover(int[][] intervals, int target) {
+    Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
+
+    int count = 0, currentEnd = 0, i = 0;
+
+    while(currentEnd < target) {
+        int maxReach = currentEnd;
+
+        // Find the interval that extends furthest from current position
+        while(i < intervals.Length && intervals[i][0] <= currentEnd) {
+            maxReach = Math.Max(maxReach, intervals[i][1]);
+            i++;
+        }
+
+        if(maxReach == currentEnd) return -1; // Can't extend further
+
+        count++;
+        currentEnd = maxReach;
+    }
+    return count;
+}
+```
+
+**Common Problems:**
+- Meeting Rooms I & II
+- Merge Intervals
+- Insert Interval
+- The Skyline Problem
+- My Calendar I/II/III
+- Car Pooling
+- Minimum Number of Arrows to Burst Balloons
+- Non-overlapping Intervals
+- Employee Free Time
+
+**Time Complexity:** O(n log n) for sorting + O(n) for processing = **O(n log n)**
+
+</details>
+
 
 ## Bitwise
 <details>
