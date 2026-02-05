@@ -548,18 +548,24 @@ header h1 {
 
 .tip strong {
     color: #f59e0b;
-    margin-right: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .similar-problems {
     margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
 }
 
 .similar-problems strong {
-    color: var(--success);
-    margin-right: 0.5rem;
+    color: var(--secondary-color);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
 }
 
 .similar-tags {
