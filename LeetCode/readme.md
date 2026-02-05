@@ -17,7 +17,7 @@
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs">251</td>
+            <td id="cs">252</td>
         </tr>
         <tr>
             <td>Go</td>
