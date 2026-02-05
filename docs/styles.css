@@ -366,6 +366,8 @@ header h1 {
     padding: 2rem;
     box-shadow: 0 2px 8px var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .solution-card:hover {
@@ -593,6 +595,8 @@ header h1 {
 
 .code-section {
     margin-top: 1.5rem;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .code-section summary {
@@ -640,12 +644,15 @@ header h1 {
     background: var(--code-bg);
     border: 1px solid var(--code-border);
     padding: 1rem;
+    max-width: 100%;
 }
 
 .code-section code {
     font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
     font-size: 0.9rem;
     line-height: 1.6;
+    display: block;
+    max-width: 100%;
 }
 
 /* Copy Button */
