@@ -48,7 +48,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js">17</td>
+            <td id="js">18</td>
         </tr>
         <tr>
             <td>Python</td>
