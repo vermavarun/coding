@@ -125,14 +125,36 @@ function createSolutionPage(problemGroup, template) {
     html = html.replace(/\{\{TITLE\}\}/g, title);
     html = html.replace(/\{\{DESCRIPTION\}\}/g, description);
     html = html.replace('{{KEYWORDS}}', `LeetCode ${problemGroup.problemNumber}, ${escapeHtml(problemGroup.title)}, ${languages}, ${problemGroup.tags.join(', ')}`);
-    html = html.replace('{{SLUG}}', slug);
-    html = html.replace('{{PROBLEM_NUMBER}}', problemGroup.problemNumber);
-    html = html.replace('{{PROBLEM_TITLE}}', escapeHtml(problemGroup.title));
+    html = html.replace(/{{SLUG}}/g, slug);
+    html = html.replace(/{{SLUG_FINAL}}/g, slug);
+    html = html.replace(/{{PROBLEM_NUMBER}}/g, problemGroup.problemNumber);
+    html = html.replace(/{{PROBLEM_TITLE}}/g, escapeHtml(problemGroup.title));
+    html = html.replace(/{{PROBLEM_TITLE_PLAIN}}/g, problemGroup.title);
     html = html.replace('{{DIFFICULTY_BADGE}}', problemGroup.difficulty && problemGroup.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${problemGroup.difficulty.toLowerCase()}">${problemGroup.difficulty}</span>` : '');
-    html = html.replace('{{TAGS}}', problemGroup.tags.length > 0 ? `<div class="tags">${tagsHtml}</div>` : '');
+
+    // Render tags as styled badges
+    html = html.replace(/{{TAGS}}/g, problemGroup.tags.length > 0 ? `<div class="tags">${tagsHtml}</div>` : '');
+
     html = html.replace('{{LANGUAGE_TABS}}', languageTabs);
     html = html.replace('{{TAB_CONTENTS}}', tabContents);
     html = html.replace('{{HL_THEME}}', hlTheme);
+
+    // SEO: Add dates for structured data
+    const currentDate = new Date().toISOString();
+    html = html.replace('{{DATE_PUBLISHED}}', currentDate);
+    html = html.replace('{{DATE_MODIFIED}}', currentDate);
+    html = html.replace('{{DIFFICULTY}}', problemGroup.difficulty || 'Medium');
+
+    // SEO: Add problem description if available
+    const problemDescription = problemGroup.description || `Solve ${escapeHtml(problemGroup.title)} - LeetCode problem #${problemGroup.problemNumber}. This ${problemGroup.difficulty || 'coding'} problem involves ${problemGroup.tags.slice(0, 3).join(', ')} concepts.`;
+    const descriptionHtml = `
+        <section class="problem-description">
+            <h2>Problem Description</h2>
+            <p>${problemDescription}</p>
+            ${problemGroup.solutionLink ? `<p><a href="${problemGroup.solutionLink}" target="_blank" rel="noopener" class="btn-link">View Problem on LeetCode →</a></p>` : ''}
+        </section>
+    `;
+    html = html.replace('{{PROBLEM_DESCRIPTION}}', descriptionHtml);
 
     return html;
 }
