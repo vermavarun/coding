@@ -31,8 +31,7 @@ function generateSitemap() {
             .replace(/\s+/g, '-')
             .replace(/-+/g, '-')
             .trim();
-        const langSlug = solution.language.toLowerCase().replace('#', 'sharp').replace(/\s+/g, '-');
-        const slug = `${solution.problemNumber}-${titleSlug}-${langSlug}`;
+        const slug = `${solution.problemNumber}-${titleSlug}`;
 
         xml += '  <url>\n';
         xml += `    <loc>${BASE_URL}/solutions/${slug}.html</loc>\n`;
