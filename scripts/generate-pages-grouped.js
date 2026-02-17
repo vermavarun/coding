@@ -131,7 +131,10 @@ function createSolutionPage(problemGroup, template) {
     html = html.replace(/{{PROBLEM_TITLE}}/g, escapeHtml(problemGroup.title));
     html = html.replace(/{{PROBLEM_TITLE_PLAIN}}/g, problemGroup.title);
     html = html.replace('{{DIFFICULTY_BADGE}}', problemGroup.difficulty && problemGroup.difficulty !== 'Unknown' ? `<span class="difficulty-badge difficulty-${problemGroup.difficulty.toLowerCase()}">${problemGroup.difficulty}</span>` : '');
-    html = html.replace(/{{TAGS}}/g, problemGroup.tags.length > 0 ? problemGroup.tags.map(tag => `${escapeHtml(tag)}`).join(', ') : '');
+
+    // Render tags as styled badges
+    html = html.replace(/{{TAGS}}/g, problemGroup.tags.length > 0 ? `<div class="tags">${tagsHtml}</div>` : '');
+
     html = html.replace('{{LANGUAGE_TABS}}', languageTabs);
     html = html.replace('{{TAB_CONTENTS}}', tabContents);
     html = html.replace('{{HL_THEME}}', hlTheme);
