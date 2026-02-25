@@ -36,7 +36,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs">277</td>
+            <td id="cs">278</td>
         </tr>
         <tr>
             <td>Go</td>
