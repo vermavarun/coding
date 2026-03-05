@@ -52,7 +52,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">20</td>
+            <td id="py">21</td>
         </tr>
         <tr>
             <td>SQL</td>
