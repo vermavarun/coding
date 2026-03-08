@@ -1,6 +1,6 @@
 /*
 Title: 999. Available Captures for Rook
-Solution: https://leetcode.com/problems/available-captures-for-rook/submissions/1941906579/?envType=problem-list-v2&envId=simulation
+Solution: https://leetcode.com/problems/available-captures-for-rook/solutions/7634821/simplest-solution-c-time-o1-space-o1-ple-uda9/
 Difficulty: Easy
 Approach: Simulation - Directional search from rook position
 Tags: Array, Matrix, Simulation
