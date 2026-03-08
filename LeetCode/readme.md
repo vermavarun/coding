@@ -17,7 +17,7 @@
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs">289</td>
+            <td id="cs">290</td>
         </tr>
         <tr>
             <td>Go</td>
@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">21</td>
+            <td id="py">22</td>
         </tr>
         <tr>
             <td>SQL</td>
