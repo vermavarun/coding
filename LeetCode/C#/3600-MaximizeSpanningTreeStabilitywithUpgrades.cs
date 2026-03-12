@@ -1,6 +1,6 @@
 /*
 Title: 3600. Maximize Spanning Tree Stability with Upgrades
-Solution:
+Solution: https://leetcode.com/problems/maximize-spanning-tree-stability-with-upgrades/solutions/7643708/simplest-solution-c-time-oe-logmaxstabil-bdcr/
 Difficulty: Hard
 Approach: Binary Search + Union-Find (Disjoint Set Union)
 Tags: Graph, Union-Find, Binary Search, Spanning Tree
