@@ -36,7 +36,7 @@ All solution pages are automatically generated and deployed via GitHub Actions:
     <tbody>
         <tr>
             <td>C#</td>
-            <td id="cs">232</td>
+            <td id="cs">298</td>
         </tr>
         <tr>
             <td>Go</td>
@@ -44,15 +44,15 @@ All solution pages are automatically generated and deployed via GitHub Actions:
         </tr>
         <tr>
             <td>Java</td>
-            <td id="java">2</td>
+            <td id="java">3</td>
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td id="js">17</td>
+            <td id="js">18</td>
         </tr>
         <tr>
             <td>Python</td>
-            <td id="py">19</td>
+            <td id="py">23</td>
         </tr>
         <tr>
             <td>SQL</td>

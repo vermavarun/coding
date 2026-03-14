@@ -352,7 +352,46 @@
 
         .tip strong {
             color: #f59e0b;
-            margin-right: 0.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .similar-problems {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border-left: 4px solid var(--success);
+            border-radius: 8px;
+        }
+
+        .similar-problems strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .similar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .similar-tag {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .similar-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
         }
 
         .code-section {
@@ -560,6 +599,7 @@
                     {{SPACE_COMPLEXITY}}
                 </div>
                 {{TIP}}
+                {{SIMILAR_PROBLEMS}}
             </div>
 
             <div class="section">

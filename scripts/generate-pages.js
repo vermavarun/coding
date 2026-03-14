@@ -67,6 +67,7 @@ function createSolutionPage(solution, template) {
     html = html.replace('{{TIME_COMPLEXITY}}', solution.timeComplexity ? `<div><strong>Time:</strong> ${escapeHtml(solution.timeComplexity)}</div>` : '');
     html = html.replace('{{SPACE_COMPLEXITY}}', solution.spaceComplexity ? `<div><strong>Space:</strong> ${escapeHtml(solution.spaceComplexity)}</div>` : '');
     html = html.replace('{{TIP}}', solution.tip ? `<div class="tip"><strong>💡 Tip:</strong> ${escapeHtml(solution.tip)}</div>` : '');
+    html = html.replace('{{SIMILAR_PROBLEMS}}', solution.similarProblems ? `<div class="similar-problems"><strong>🔗 Similar Problems:</strong><div class="similar-tags">${solution.similarProblems.split(',').map(p => `<span class="similar-tag">${escapeHtml(p.trim())}</span>`).join('')}</div></div>` : '');
     html = html.replace('{{LEETCODE_LINK}}', solution.solutionLink ? `<a href="${solution.solutionLink}" target="_blank" rel="noopener" class="btn-link">Solution on LeetCode</a>` : '');
     html = html.replace('{{GITHUB_LINK}}', solution.githubUrl);
     html = html.replace('{{LANG_CLASS}}', langClass);
