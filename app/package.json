@@ -1,12 +1,13 @@
 {
-  "name": "app",
-  "version": "0.1.0",
+  "name": "leetcode-solutions-app",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/postbuild.js",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate": "cd .. && node scripts/generate-solutions.js"
   },
   "dependencies": {
     "next": "16.2.2",

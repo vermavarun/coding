@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LeetCode Solutions Next.js App
+
+This is a Next.js application that displays LeetCode solutions with server-side rendering for optimal SEO and Google indexing.
+
+## Features
+
+- 🚀 **Server-Side Rendering (SSR)** - All solution pages are pre-rendered for search engines
+- 🔍 **SEO Optimized** - Comprehensive metadata, sitemap, and robots.txt
+- 🎨 **Modern UI** - Clean, responsive design with Tailwind CSS
+- 🔎 **Search & Filter** - Filter by difficulty, language, and search by problem name
+- 📱 **Mobile Responsive** - Works perfectly on all devices
+- 🏷️ **Rich Metadata** - Each solution includes tags, complexity analysis, and tips
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Make sure the `solutions.json` file is generated:
+
+```bash
+cd ..
+node scripts/generate-solutions.js
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+The static site will be exported to the `out` directory.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/
+├── app/
+│   ├── layout.tsx           # Root layout with metadata
+│   ├── page.tsx             # Home page with all problems
+│   ├── robots.ts            # Robots.txt configuration
+│   ├── sitemap.ts           # Dynamic sitemap generation
+│   └── problems/
+│       └── [problemNumber]/ # Dynamic routes for each problem
+│           ├── page.tsx     # Individual problem page
+│           └── not-found.tsx
+├── components/
+│   ├── CodeBlock.tsx        # Code display component
+│   ├── FilterBar.tsx        # Search and filter UI
+│   ├── ProblemsClient.tsx   # Client-side filtering logic
+│   └── SolutionCard.tsx     # Problem card component
+└── lib/
+    └── solutions.ts         # Data fetching utilities
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO Features
 
-## Deploy on Vercel
+- ✅ Semantic HTML structure
+- ✅ Meta tags for each page
+- ✅ Open Graph tags for social sharing
+- ✅ Dynamic sitemap generation
+- ✅ Robots.txt configuration
+- ✅ Static site generation for all pages
+- ✅ Fast page load times
+- ✅ Mobile-responsive design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16.2.2** - React framework with SSR and static generation
+- **React 19.2.4** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+
+## License
+
+© 2026 Varun Verma. All rights reserved.
