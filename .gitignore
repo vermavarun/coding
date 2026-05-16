@@ -13,3 +13,4 @@ docs/sitemap.xml
 # scripts/generate-pages.js
 # scripts/solution-template.html
 # docs/app.js
+*.lscache
