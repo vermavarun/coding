@@ -1,6 +1,6 @@
 /*
 Title: 3121. Count the Number of Special Characters II
-Solution:
+Solution: https://leetcode.com/problems/count-the-number-of-special-characters-ii/solutions/8296858/simplest-solution-c-time-on-space-o1-ple-na3s/
 Difficulty: Medium
 Approach: Track last occurrence of lowercase and first occurrence of uppercase for each letter
 Tags: String, Array, Character Mapping
