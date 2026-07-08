@@ -1,7 +1,7 @@
 /*
 Title: 3756. Concatenate Non-Zero Digits and Multiply by Sum II
 Solution: https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/solutions/8383515/simplest-solution-c-time-onq-space-on-pl-ib5y/
-Difficulty: Hard
+Difficulty: Medium
 Approach: Prefix Arrays with Modular Arithmetic
 Tags: Array, String, Math, Prefix Sum
 1) Precompute prefix arrays: non-zero digit count, concatenated non-zero number (mod), and digit sum.
