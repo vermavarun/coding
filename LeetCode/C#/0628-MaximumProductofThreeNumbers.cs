@@ -1,6 +1,6 @@
 /*
 Title: 628. Maximum Product of Three Numbers
-Solution: https://leetcode.com/problems/maximum-product-of-three-numbers/submissions/2081627940/?envType=daily-question&envId=2026-07-26
+Solution: https://leetcode.com/problems/maximum-product-of-three-numbers/solutions/8420853/simplest-solution-c-time-on-log-n-space-118dv/
 Difficulty: Easy
 Approach: Sorting with negative number optimization
 Tags: Array, Math, Sorting
