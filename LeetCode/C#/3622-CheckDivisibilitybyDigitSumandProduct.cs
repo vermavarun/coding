@@ -1,6 +1,6 @@
 /*
 Title: 3622. Check Divisibility by Digit Sum and Product
-Solution:
+Solution: https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product/solutions/8476139/simplest-solution-c-time-od-space-o1-ple-grjf/
 Difficulty: Easy
 Approach: Digit extraction with sum/product aggregation
 Tags: Math
