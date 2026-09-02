@@ -1,6 +1,6 @@
 /*
 Title: 3875. Construct Uniform Parity Array I
-Solution: Always possible
+Solution: https://leetcode.com/problems/construct-uniform-parity-array-i/solutions/8497206/simplest-solution-c-time-o1-space-o1-ple-rrpv/
 Difficulty: Easy
 Approach: Parity transformation
 Tags: Array, Math
