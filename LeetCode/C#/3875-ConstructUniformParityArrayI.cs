@@ -1,3 +1,19 @@
+/*
+Title: 3875. Construct Uniform Parity Array I
+Solution: Always possible
+Difficulty: Easy
+Approach: Parity transformation
+Tags: Array, Math
+1) If every number has the same parity, keep the array unchanged.
+2) If both parities occur, choose an odd number as a reference.
+3) Subtracting an odd number from an even number produces an odd number.
+4) Convert each even number to odd while leaving odd numbers unchanged.
+5) Therefore, a uniform-parity array can always be constructed.
+
+Time Complexity: O(1)
+Space Complexity: O(1)
+Tip: The operation lets every even value become odd when an odd value exists; otherwise, the array is already uniform.
+*/
 public class Solution
 {
     public bool UniformArray(int[] nums1)
@@ -36,6 +52,6 @@ public class Solution
          * it is always possible to construct a uniform parity array.
          */
 
-        return true;
+        return true; // A uniform-parity array can always be constructed.
     }
 }
