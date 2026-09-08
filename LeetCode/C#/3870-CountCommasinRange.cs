@@ -1,6 +1,6 @@
 /*
 Title: 3870. Count Commas in Range
-Solution:
+Solution: https://leetcode.com/problems/count-commas-in-range/solutions/8509101/simplest-solution-c-time-o1-space-o1-ple-faqv/
 Difficulty: Easy
 Approach: Count all numbers from 1,000 through n, because each contains exactly one comma.
 1) Numbers below 1,000 contain no commas.
